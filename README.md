@@ -1,10 +1,10 @@
-[![Build LaTeX document](https://github.com/gamma-opt/optimisation-notes/actions/workflows/compile_files.yml/badge.svg?branch=main)](https://github.com/gamma-opt/optimisation-notes/actions/workflows/compile_files.yml)
+[![Build LaTeX document](https://github.com/gamma-opt/linopt-notes/actions/workflows/compile_tex.yml/badge.svg?branch=main)](https://github.com/gamma-opt/linopt-notes/actions/workflows/compile_tex.yml)
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 
 # Optimisation notes
 
-Download the notes here: [download](https://gamma-opt.github.io/optimisation-notes/pdfs/optimisation-notes.pdf)
+Download the notes here: [download](https://gamma-opt.github.io/linopt-notes/pdfs/linopt-notes.pdf)
 
 
 ## About
@@ -24,7 +24,7 @@ Though I wrote those, these were improved by the work of many people to whom I a
 
 ## Contributing
 
-The material is constantly developing and therefore, subject to error and typos. If you find anything that you suspect to be a problem, please post an [issue](https://github.com/gamma-opt/optimisation-notes/issues) describing where the problem is and how to solve it. Even better, if you are confident with Githb (or would like to try it out) you can file a [pull request](https://github.com/gamma-opt/optimisation-notes/pulls) directly! 
+The material is constantly developing and therefore, subject to error and typos. If you find anything that you suspect to be a problem, please post an [issue](https://github.com/gamma-opt/linopt-notes/issues) describing where the problem is and how to solve it. Even better, if you are confident with Githb (or would like to try it out) you can file a [pull request](https://github.com/gamma-opt/linopt-notes/pulls) directly! 
 
 
 ## License
