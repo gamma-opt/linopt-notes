@@ -9,20 +9,10 @@ Download the notes here: [download](https://gamma-opt.github.io/optimisation-not
 
 ## About
 
-This repository contains the lecture notes that have been prepared for graduate level courses at Aalto University. 
-- MS-E2121 - Linear optimisation
-- MS-E2122 - Nonlinear optimisation
+This repository contains the lecture notes that have been prepared for graduate-level linear optimisation courses at Aalto University. These lecture notes were written by [Fabricio Oliveira](https://gamma-opt.aalto.fi/author/fabricio-oliveira/) based on the following references:
 
-These lecture notes were written by [Fabricio Oliveira](https://gamma-opt.aalto.fi/author/fabricio-oliveira/) based on the following references:
-
-**Part 1**
 - Bertsimas and Tsitsiklis (2008), Introduction to Linear Optimization, 2nd edition, Athena Scientific
 - Wolsey (2020), Integer Programming, 2nd edition, Wiley
-
-**Part 2**
-- Bazaraa, Sherali, and Shetty (1993), Nonlinear Programming: Theory and Algorithms, 3rd edition, Wiley
-- Boyd and Vandenberghe (2004), Convex Optimization, 1st edition, Cambridge University Press
-- Bertsekas (2016), Nonlinear Programming, 3rd edition, Athena Scientific
 
 Though I wrote those, these were improved by the work of many people to whom I am forever thankful, including but not limited to:
 - Juho Andelmin
