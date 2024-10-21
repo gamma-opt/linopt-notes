@@ -2,7 +2,7 @@
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 
-# Optimisation notes
+# Linear optimisation notes
 
 Download the notes here: [download](https://gamma-opt.github.io/linopt-notes/pdfs/linopt-notes.pdf)
 
