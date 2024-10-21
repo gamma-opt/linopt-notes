@@ -1,0 +1,147 @@
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}What is optimisation?}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Mathematical programming and optimisation}{7}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Types of mathematical optimisation models}{8}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Linear programming applications}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Resource allocation}{9}{subsection.1.2.1}%
+\contentsline {subsubsection}{Illustrative example: the paint factory problem \cite {taha2003operations}}{10}{section*.2}%
+\contentsline {subsection}{\numberline {1.2.2}Transportation problem}{11}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Production planning (lot-sizing)}{13}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}The geometry of LPs - graphical method}{14}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}The graphical method}{14}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Geometrical properties of LPs}{16}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Exercises}{17}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Basics of Linear Algebra}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Basics of linear problems}{23}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Subspaces and bases}{24}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Affine subspaces}{26}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Convex polyhedral set}{27}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Hyperplanes, half-spaces and polyhedral sets}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Convexity of polyhedral sets}{28}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Extreme points, vertices, and basic feasible solutions}{31}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Exercises}{35}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Basis, Extreme Points and Optimality in Linear Programming}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Polyhedral sets in standard form}{39}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The standard form of linear programming problems}{39}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Forming bases for standard-form linear programming problems}{41}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Adjacent basic solutions}{42}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Redundancy and degeneracy}{43}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Optimality of extreme points}{44}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The existence of extreme points}{45}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Finding optimal solutions}{47}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Moving towards improved solutions}{49}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Optimality conditions}{51}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Exercises}{52}{section.3.3}%
+\contentsline {chapter}{\numberline {4}The simplex method}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Developing the simplex method}{55}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Calculating step sizes}{55}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Moving between adjacent bases}{56}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}A remark on degeneracy}{58}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Implementing the simplex method}{59}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Pivot or variable selection}{59}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}The revised simplex method}{60}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Tableau representation}{62}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Generating initial feasible solutions (two-phase simplex)}{64}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Column geometry of the simplex method}{66}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Exercises}{70}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Linear Programming Duality - Part I}{73}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Formulating duals}{73}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Motivation}{73}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}General form of duals}{74}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Duality theory}{77}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Weak duality}{77}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Strong duality}{78}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Geometric interpretation of duality}{79}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Complementary slackness}{79}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Dual feasibility and optimality}{80}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}The dual simplex method}{81}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Exercises}{85}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Linear Programming Duality - Part II}{89}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sensitivity analysis}{89}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Adding a new variable}{90}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Adding a new constraint}{91}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Changing input data}{92}{subsection.6.1.3}%
+\contentsline {subsubsection}{Optimal dual variables as marginal costs}{93}{section*.69}%
+\contentsline {subsubsection}{Changes in the vector $b$}{94}{section*.70}%
+\contentsline {subsubsection}{Changes in the vector $c$}{94}{section*.71}%
+\contentsline {section}{\numberline {6.2}Cones and extreme rays}{96}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Recession cones and extreme rays}{97}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Unbounded problems}{97}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Farkas' lemma}{99}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Exercises}{101}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Barrier Method for Linear Programming}{103}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Barrier methods}{103}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Newton's method with equality constraints}{103}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Interior point methods linear programming problems}{105}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Barrier methods for linear programming problems}{107}{section.7.4}%
+\contentsline {subsubsection}{The notion of interiority}{109}{section*.82}%
+\contentsline {section}{\numberline {7.5}Barrier methods for linear programming problems}{110}{section.7.5}%
+\contentsline {subsubsection}{A practical implementation of the barrier method}{111}{section*.83}%
+\contentsline {section}{\numberline {7.6}Exercises}{115}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Integer Programming Models}{117}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Types of integer programming problems}{117}{section.8.1}%
+\contentsline {section}{\numberline {8.2}(Mixed-)integer programming applications}{118}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}The assignment problem}{118}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}The knapsack problem}{119}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}The generalised assignment problem}{119}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}The set covering problem}{120}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Travelling salesperson problem}{122}{subsection.8.2.5}%
+\contentsline {subsection}{\numberline {8.2.6}Uncapacitated facility location}{123}{subsection.8.2.6}%
+\contentsline {subsection}{\numberline {8.2.7}Uncapacitated lot-sizing}{125}{subsection.8.2.7}%
+\contentsline {section}{\numberline {8.3}Good formulations}{125}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Comparing formulations}{126}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Exercises}{129}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Branch-and-bound Method}{135}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Optimality for integer programming problems}{135}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Relaxations}{135}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Linear programming relaxation}{137}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Relaxation for combinatorial optimisation}{138}{subsection.9.2.2}%
+\contentsline {section}{\numberline {9.3}Branch-and-bound method}{139}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Bounding in enumerative trees}{140}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Linear-programming-based branch-and-bound}{141}{subsection.9.3.2}%
+\contentsline {section}{\numberline {9.4}Exercises}{146}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Cutting-planes Method}{149}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Valid inequalities}{149}{section.10.1}%
+\contentsline {section}{\numberline {10.2}The Chv\'atal-Gomory procedure}{150}{section.10.2}%
+\contentsline {section}{\numberline {10.3}The cutting-plane method}{152}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Gomory's fractional cutting-plane method}{153}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Obtaining stronger inequalities}{156}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Strong inequalities}{156}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Strengthening 0-1 knapsack inequalities}{158}{subsection.10.5.2}%
+\contentsline {section}{\numberline {10.6}Exercises}{160}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Mixed-integer Programming Solvers}{163}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Modern mixed-integer linear programming solvers}{163}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Presolving methods}{164}{section.11.2}%
+\contentsline {subsubsection}{Detecting infeasibility and redundancy}{164}{section*.129}%
+\contentsline {subsubsection}{Bound tightening}{165}{section*.130}%
+\contentsline {subsubsection}{Coefficient tightening}{166}{section*.131}%
+\contentsline {subsubsection}{Other methods}{166}{section*.132}%
+\contentsline {section}{\numberline {11.3}Cut generation}{167}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Cut management: generation, selection and discarding}{168}{subsection.11.3.1}%
+\contentsline {section}{\numberline {11.4}Variable selection: branching strategy}{168}{section.11.4}%
+\contentsline {subsubsection}{Maximum infeasibility}{169}{section*.133}%
+\contentsline {subsubsection}{Strong branching}{169}{section*.134}%
+\contentsline {subsubsection}{Pseudo-cost branching}{170}{section*.135}%
+\contentsline {subsubsection}{GUB branching}{170}{section*.136}%
+\contentsline {section}{\numberline {11.5}Node selection}{171}{section.11.5}%
+\contentsline {subsubsection}{Depth-first search (DFS) and breadth-first search (BFS)}{172}{section*.137}%
+\contentsline {subsubsection}{Best bound}{172}{section*.138}%
+\contentsline {subsubsection}{Best estimate or best projection}{172}{section*.139}%
+\contentsline {section}{\numberline {11.6}Primal heuristics}{173}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Diving heuristics}{173}{subsection.11.6.1}%
+\contentsline {subsection}{\numberline {11.6.2}Local searches and large-neighbourhood searches}{174}{subsection.11.6.2}%
+\contentsline {subsubsection}{Relaxation-induced neighbourhood search (RINS) and Relaxation-enforced neighbourhood search}{174}{section*.140}%
+\contentsline {subsubsection}{Local branching}{175}{section*.141}%
+\contentsline {subsubsection}{Feasibility pump}{175}{section*.142}%
+\contentsline {section}{\numberline {11.7}Exercises}{177}{section.11.7}%
+\contentsline {chapter}{\numberline {12}Decomposition Methods}{179}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Large-scale problems}{179}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Dantzig-Wolfe decomposition and column generation*}{181}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Resolution theorem}{181}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Dantzig-Wolfe decomposition}{182}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Delayed column generation}{185}{subsection.12.2.3}%
+\contentsline {section}{\numberline {12.3}Benders decomposition}{187}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Parametric optimisation problems}{187}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Properties of the optimal value function $F(b)$}{188}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Benders decomposition}{190}{subsection.12.3.3}%
+\contentsline {section}{\numberline {12.4}Exercises}{196}{section.12.4}%

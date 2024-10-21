@@ -1,0 +1,967 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {part}{I\hspace  {1em}Linear Optimisation}{11}{part.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{13}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_1}{{1}{13}{Introduction}{chapter.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}What is optimisation?}{13}{section.1.1}\protected@file@percent }
+\newlabel{p1c1:eq:opt_prob}{{1.1}{13}{What is optimisation?}{equation.1.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Mathematical programming and optimisation}{13}{subsection.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Types of mathematical optimisation models}{14}{subsection.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Linear programming applications}{15}{section.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Resource allocation}{15}{subsection.1.2.1}\protected@file@percent }
+\newlabel{section_121}{{1.2.1}{15}{Resource allocation}{subsection.1.2.1}{}}
+\citation{taha2003operations}
+\newlabel{p1c1:eq:LP_objective}{{1.2}{16}{Resource allocation}{equation.1.2.2}{}}
+\newlabel{p1c1:eq:LP_constraint}{{1.3}{16}{Resource allocation}{equation.1.2.3}{}}
+\newlabel{p1c1:eq:LP_domain}{{1.4}{16}{Resource allocation}{equation.1.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Illustrative example: the paint factory problem \cite  {taha2003operations}}{16}{section*.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Paint factory problem data}}{16}{table.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{p1c1:tab:paint_factory_problem_data}{{1.1}{16}{Paint factory problem data}{table.caption.3}{}}
+\newlabel{p1c1:eq:constM1}{{1.5}{16}{Illustrative example: the paint factory problem \cite {taha2003operations}}{equation.1.2.5}{}}
+\newlabel{p1c1:eq:constM2}{{1.6}{16}{Illustrative example: the paint factory problem \cite {taha2003operations}}{equation.1.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Transportation problem}{17}{subsection.1.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Schematic illustration of a network with two source nodes and three demand nodes}}{17}{figure.caption.4}\protected@file@percent }
+\newlabel{p1c1:fig1:transport_network}{{1.1}{17}{Schematic illustration of a network with two source nodes and three demand nodes}{figure.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces Problem data: unit transportation costs, demands and capacities}}{17}{table.caption.5}\protected@file@percent }
+\newlabel{p1c1:tab:transport_problem_data}{{1.2}{17}{Problem data: unit transportation costs, demands and capacities}{table.caption.5}{}}
+\newlabel{p1c1:eq:transportation_constraint_supply}{{1.11}{18}{Transportation problem}{equation.1.2.11}{}}
+\newlabel{p1c1:eq:transportation_constraint_demand}{{1.12}{18}{Transportation problem}{equation.1.2.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Production planning (lot-sizing)}{19}{subsection.1.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces A schematic representation of the lot-sizing problem. Each node represents the material balance at each time period $t$.}}{19}{figure.caption.6}\protected@file@percent }
+\newlabel{p1c1:fig:lot-sizing_diagram}{{1.2}{19}{A schematic representation of the lot-sizing problem. Each node represents the material balance at each time period $t$}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}The geometry of LPs - graphical method}{20}{section.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}The graphical method}{20}{subsection.1.3.1}\protected@file@percent }
+\newlabel{p1c1:fig:fig3a}{{1.3a}{20}{\relax }{figure.caption.7}{}}
+\newlabel{sub@p1c1:fig:fig3a}{{a}{20}{\relax }{figure.caption.7}{}}
+\newlabel{p1c1:fig:fig3b}{{1.3b}{20}{\relax }{figure.caption.7}{}}
+\newlabel{sub@p1c1:fig:fig3b}{{b}{20}{\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces The feasible region of the paint factory problem (in Figure \ref {p1c1:fig:fig3b}), represented as the intersection of the four closed-half spaces formed by each of the constraints (as shown in Figure \ref {p1c1:fig:fig3a}). Notice how the feasible region is a polyhedral set in $\mathbb  {R}^2$, as there are two decision variables ($x_1$ and $x_2$).}}{20}{figure.caption.7}\protected@file@percent }
+\newlabel{p1c1:fig:feasible_region_plot}{{1.3}{20}{The feasible region of the paint factory problem (in Figure \ref {p1c1:fig:fig3b}), represented as the intersection of the four closed-half spaces formed by each of the constraints (as shown in Figure \ref {p1c1:fig:fig3a}). Notice how the feasible region is a polyhedral set in $\reals ^2$, as there are two decision variables ($x_1$ and $x_2$)}{figure.caption.7}{}}
+\newlabel{p1c1:fig:level_curves_a}{{1.4a}{21}{\relax }{figure.caption.8}{}}
+\newlabel{sub@p1c1:fig:level_curves_a}{{a}{21}{\relax }{figure.caption.8}{}}
+\newlabel{p1c1:fig:level_curves_b}{{1.4b}{21}{\relax }{figure.caption.8}{}}
+\newlabel{sub@p1c1:fig:level_curves_b}{{b}{21}{\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Graphical representation of some of the level curves of the objective function $z = 5x_1 + 4x_2$. Notice that the constant gradient vector $\nabla z = (5,4)^\top $ points to the direction in which the level curves increase in value. The optimal point is represented by $x^*=(3, 1.5)^\top $ with the furthermost level curve being that associated with the value $z^* = 21$}}{21}{figure.caption.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Geometrical properties of LPs}{22}{subsection.1.3.2}\protected@file@percent }
+\citation{kwon2019julia}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Exercises}{23}{section.1.4}\protected@file@percent }
+\citation{birge2011introduction}
+\@writefile{lot}{\contentsline {table}{\numberline {1.3}{\ignorespaces Problem data: unit transportation costs, demands and capacities}}{24}{table.caption.12}\protected@file@percent }
+\citation{williams2013model}
+\newlabel{p1c1:tab:ex1-4_suplly_demand}{{1.4a}{25}{Supply availability and demand per oil type [in L]}{table.caption.14}{}}
+\newlabel{sub@p1c1:tab:ex1-4_suplly_demand}{{a}{25}{Supply availability and demand per oil type [in L]}{table.caption.14}{}}
+\newlabel{p1c1:tab:ex1-4_arcs}{{1.4b}{25}{Arcs costs per oil type [in \euro \ per L] and arc capacities [in L]}{table.caption.14}{}}
+\newlabel{sub@p1c1:tab:ex1-4_arcs}{{b}{25}{Arcs costs per oil type [in \euro \ per L] and arc capacities [in L]}{table.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.4}{\ignorespaces Supply chain data}}{25}{table.caption.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1.5}{\ignorespaces Product yields}}{26}{table.caption.17}\protected@file@percent }
+\newlabel{p1c1:tab:ex1-5_prod_yield}{{1.5}{26}{Product yields}{table.caption.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.6}{\ignorespaces Maximum demand}}{26}{table.caption.18}\protected@file@percent }
+\newlabel{p1c1:tab:ex1-5_max_demand}{{1.6}{26}{Maximum demand}{table.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Two sets of data points defined by two features, separated by a line $ax=b$}}{27}{figure.caption.20}\protected@file@percent }
+\newlabel{p1c1:fig:fig_e16}{{1.5}{27}{Two sets of data points defined by two features, separated by a line $ax=b$}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Basics of Linear Algebra}{29}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_2}{{2}{29}{Basics of Linear Algebra}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Basics of linear problems}{29}{section.2.1}\protected@file@percent }
+\newlabel{p1c2:eq:feasible_region_inequality}{{2.1}{29}{Basics of linear problems}{equation.2.1.1}{}}
+\newlabel{p1c2:def:matrix_inversion}{{2.1}{29}{Matrix inversion}{theorem.2.1}{}}
+\newlabel{p1c2:def:linear_independence}{{2.2}{29}{Linearly independent vectors}{theorem.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Linearly independent (top) and dependent (bottom) vectors in $\mathbb  {R}^2$. Notice how, in the bottom picture, any of the vectors can be obtained by appropriately scaling and adding the other two}}{30}{figure.caption.21}\protected@file@percent }
+\newlabel{p1c2:fig:linear_independence}{{2.1}{30}{Linearly independent (top) and dependent (bottom) vectors in $\reals ^2$. Notice how, in the bottom picture, any of the vectors can be obtained by appropriately scaling and adding the other two}{figure.caption.21}{}}
+\newlabel{p1c2:thm:fundamental_linear_algebra}{{2.3}{30}{Inverses, linear independence, and solving $Ax = b$}{theorem.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Subspaces and bases}{30}{subsection.2.1.1}\protected@file@percent }
+\newlabel{p1c2:thm:LI_and_bases}{{2.4}{31}{Forming bases from linearly independent vectors}{theorem.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces One- (left) and two-dimensional subspaces (right) in $\mathbb  {R}^3$.}}{32}{figure.caption.22}\protected@file@percent }
+\newlabel{p1c2:fig:proper_subpaces}{{2.2}{32}{One- (left) and two-dimensional subspaces (right) in $\reals ^3$}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Affine subspaces}{32}{subsection.2.1.2}\protected@file@percent }
+\newlabel{p1c2:eq:equality_constraint_feasible_set}{{2.2}{32}{Affine subspaces}{equation.2.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The affine subspace $S$ generated by $x_0$ and $\mathop {\bf  null}(a)$. Notice that all vectors in $S$, exemplified by $x_1$ and $x_2$ are perpendicular (i.e., have null dot product) to $a$}}{33}{figure.caption.23}\protected@file@percent }
+\newlabel{p1c2:fig:nill_space_a}{{2.3}{33}{The affine subspace $S$ generated by $x_0$ and $\nulls (a)$. Notice that all vectors in $S$, exemplified by $x_1$ and $x_2$ are perpendicular (i.e., have null dot product) to $a$}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Convex polyhedral set}{33}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Hyperplanes, half-spaces and polyhedral sets}{33}{subsection.2.2.1}\protected@file@percent }
+\newlabel{p1c2:def:polyhedral_sets}{{2.5}{33}{Polyhedral set}{theorem.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces A hyperplane and its respective halfspaces (left) and the polyhedral set $\left \{ x\in \mathbb  {R}^{2} : a_i^x \geq b_i, i =1,\dots  , 5 \right \}$ (right).}}{34}{figure.caption.24}\protected@file@percent }
+\newlabel{p1c2:fig:hyperplanes_and_polyhedral_set}{{2.4}{34}{A hyperplane and its respective halfspaces (left) and the polyhedral set $\braces {x\in \reals ^{2} : a_i^x \geq b_i, i =1,\dots , 5}$ (right)}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Convexity of polyhedral sets}{34}{subsection.2.2.2}\protected@file@percent }
+\newlabel{p1c2:def:convex_set}{{2.6}{34}{Convex set}{theorem.2.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Two convex sets (left and middle) and one nonconvex set (right)}}{35}{figure.caption.25}\protected@file@percent }
+\newlabel{p1c2:fig:convex_sets}{{2.5}{35}{Two convex sets (left and middle) and one nonconvex set (right)}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The convex hull of two points is the line segment connecting them (left); The convex hull of three (centre) and six (right) points in $\mathbb  {R}^2$}}{35}{figure.caption.26}\protected@file@percent }
+\newlabel{p1c2:fig:convex_hulls}{{2.6}{35}{The convex hull of two points is the line segment connecting them (left); The convex hull of three (centre) and six (right) points in $\reals ^2$}{figure.caption.26}{}}
+\newlabel{p1c2:def:convex_combination_hull}{{2.7}{35}{Convex combinations and convex hulls}{theorem.2.7}{}}
+\newlabel{p1c2:thm:convexity}{{2.8}{35}{Convexity of polyhedral sets}{theorem.2.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Illustration of statement 1 (left), 2 (centre), and 3 and 4 (right)}}{36}{figure.caption.27}\protected@file@percent }
+\newlabel{p1c2:fig:convexity_theorem_examples}{{2.7}{36}{Illustration of statement 1 (left), 2 (centre), and 3 and 4 (right)}{figure.caption.27}{}}
+\newlabel{p1c2:eq:induction}{{2.4}{36}{Convexity of polyhedral sets}{equation.2.2.4}{}}
+\newlabel{p1c2:thm:convexity_and_optimality}{{2.9}{36}{Global optimality for convex problems}{theorem.2.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Extreme points, vertices, and basic feasible solutions}{37}{section.2.3}\protected@file@percent }
+\newlabel{p1c2:def:vertex}{{2.10}{37}{Vertex}{theorem.2.10}{}}
+\newlabel{p1c2:def:extreme_point}{{2.11}{37}{Extreme points}{theorem.2.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Representation of a vertex (left) and a extreme point (right)}}{38}{figure.caption.28}\protected@file@percent }
+\newlabel{p1c2:fig:vertex_and_extreme_point}{{2.8}{38}{Representation of a vertex (left) and a extreme point (right)}{figure.caption.28}{}}
+\newlabel{p1c2:fig:active_constraint}{{2.12}{38}{Active (or binding) constraints}{theorem.2.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Representation of $P$ in $\mathbb  {R}^3$.}}{38}{figure.caption.29}\protected@file@percent }
+\newlabel{p1c2:fig:active_constraints}{{2.9}{38}{Representation of $P$ in $\reals ^3$}{figure.caption.29}{}}
+\newlabel{p1c2:thm:active_const}{{2.13}{38}{Properties of active constraints}{theorem.2.13}{}}
+\newlabel{p1c2:def:basic_feasible_solution}{{2.14}{39}{Basic feasible solution (BFS)}{theorem.2.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Points $A$ to $F$ are basic solutions; $B$,$C$,$D$, and $E$ are BFS.}}{39}{figure.caption.30}\protected@file@percent }
+\newlabel{p1c2:fig:BFS}{{2.10}{39}{Points $A$ to $F$ are basic solutions; $B$,$C$,$D$, and $E$ are BFS}{figure.caption.30}{}}
+\newlabel{p1c2:thm:BFS_vertex_extreme_point}{{2.15}{40}{BFS, extreme points and vertices}{theorem.2.15}{}}
+\citation{bertsimas1997introduction}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Exercises}{41}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Basis, Extreme Points and Optimality in Linear Programming}{45}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_3}{{3}{45}{Basis, Extreme Points and Optimality in Linear Programming}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Polyhedral sets in standard form}{45}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}The standard form of linear programming problems}{45}{subsection.3.1.1}\protected@file@percent }
+\newlabel{p1c3:thm:LI_and_bases}{{3.1}{46}{Linear independence and basic solutions}{theorem.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Forming bases for standard-form linear programming problems}{47}{subsection.3.1.2}\protected@file@percent }
+\newlabel{p1c3:eq:example_P}{{3.1}{48}{Forming bases for standard-form linear programming problems}{equation.3.1.1}{}}
+\newlabel{p1c3:eq:example_P}{{3.2}{48}{Forming bases for standard-form linear programming problems}{equation.3.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Adjacent basic solutions}{48}{subsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Redundancy and degeneracy}{49}{subsection.3.1.4}\protected@file@percent }
+\newlabel{p1c3:thm:red_const}{{3.3}{49}{Redundant constraints}{theorem.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces $A$ is a degenerate basic solution, $B$ and $C$ are degenerate BFS, and $D$ is a BFS.}}{50}{figure.caption.38}\protected@file@percent }
+\newlabel{p1c3:fig:figure1}{{3.1}{50}{$A$ is a degenerate basic solution, $B$ and $C$ are degenerate BFS, and $D$ is a BFS}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Optimality of extreme points}{50}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces $(0,0,1)$ is degenerate if you add the constraint $x_2 \ge 0$.}}{51}{figure.caption.39}\protected@file@percent }
+\newlabel{p1c3:fig:redundancy_and_degeneration}{{3.2}{51}{$(0,0,1)$ is degenerate if you add the constraint $x_2 \ge 0$}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}The existence of extreme points}{51}{subsection.3.2.1}\protected@file@percent }
+\newlabel{p1c3:def:line_containing}{{3.4}{51}{Existence of extreme points}{theorem.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces $P$ contains a line (left) and $Q$ does not contain a line (right)}}{51}{figure.caption.40}\protected@file@percent }
+\newlabel{p1c3:fig:line_containing}{{3.3}{51}{$P$ contains a line (left) and $Q$ does not contain a line (right)}{figure.caption.40}{}}
+\newlabel{p1c3:thm:exist_extreme_point}{{3.5}{51}{Existence of extreme points}{theorem.3.5}{}}
+\newlabel{p1c3:thm:opt_extreme}{{3.6}{52}{Optimality of extreme points}{theorem.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Finding optimal solutions}{53}{subsection.3.2.2}\protected@file@percent }
+\newlabel{p1c3:def:feasible_direction}{{3.7}{53}{Feasible directions}{theorem.3.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Feasible directions at different points of $P$}}{54}{figure.caption.41}\protected@file@percent }
+\newlabel{p1c3:fig:feasible_directions}{{3.4}{54}{Feasible directions at different points of $P$}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Example: $n = 5$ and $n-m = 2$. At $A$, $x_1 = x_3 = 0$ and $x_2, x_4, x_5 \geq 0$. Increasing $x_1$ while keeping $x_3$ zero leads to $B$. At $B$, suppose $I_N = \left \{ 3,5 \right \}$; by increasing $x_3$ while keeping $x_5$ zero would leads to $C$.}}{55}{figure.caption.42}\protected@file@percent }
+\newlabel{p1c3:fig:adjacent_vertices}{{3.5}{55}{Example: $n = 5$ and $n-m = 2$. At $A$, $x_1 = x_3 = 0$ and $x_2, x_4, x_5 \geq 0$. Increasing $x_1$ while keeping $x_3$ zero leads to $B$. At $B$, suppose $I_N = \braces {3,5}$; by increasing $x_3$ while keeping $x_5$ zero would leads to $C$}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Moving towards improved solutions}{55}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Optimality conditions}{57}{subsection.3.2.4}\protected@file@percent }
+\newlabel{p1c3:thm:opt_conditions}{{3.9}{57}{Optimality conditions}{theorem.3.9}{}}
+\newlabel{p1c3:eq:red_cost_opt_cond}{{3.3}{57}{Optimality conditions}{equation.3.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Exercises}{58}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}The simplex method}{61}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_4}{{4}{61}{The simplex method}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Developing the simplex method}{61}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Calculating step sizes}{61}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Moving between adjacent bases}{62}{subsection.4.1.2}\protected@file@percent }
+\newlabel{p1c4:eq:selected_basic_variable}{{4.1}{62}{Moving between adjacent bases}{equation.4.1.1}{}}
+\newlabel{p1c4:thm:adjacent_basis}{{4.1}{63}{Adjacent bases}{theorem.4.1}{}}
+\newlabel{p1c4:thm:convergece_simplex}{{4.2}{63}{Convergence of the simplex method}{theorem.4.2}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Simplex method}}{64}{algorithm.caption.48}\protected@file@percent }
+\newlabel{p1c4:alg:simplex}{{1}{64}{Simplex method}{algorithm.caption.48}{}}
+\newlabel{p1c4:alg:opt_condition}{{2}{64}{Simplex method}{algorithm.caption.48}{}}
+\newlabel{p1c4:alg:unb_condition}{{4}{64}{Simplex method}{algorithm.caption.48}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}A remark on degeneracy}{64}{subsection.4.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces  $I_N = \left \{ 4,5 \right \}$ for $x$; $f$ ($x_5 > 0$) and $g$ ($x_4 >0$) are basic directions. Making $I_N = \left \{ 2,5 \right \}$ lead to new basic directions $h$ ($x_4 > 0$) and $-g$ ($x_2 > 0$).}}{65}{figure.caption.49}\protected@file@percent }
+\newlabel{p1c4:fig:degenerate_basis}{{4.1}{65}{$I_N = \braces {4,5}$ for $x$; $f$ ($x_5 > 0$) and $g$ ($x_4 >0$) are basic directions. Making $I_N = \braces {2,5}$ lead to new basic directions $h$ ($x_4 > 0$) and $-g$ ($x_2 > 0$)}{figure.caption.49}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Implementing the simplex method}{65}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Pivot or variable selection}{65}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}The revised simplex method}{66}{subsection.4.2.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Revised simplex method}}{68}{algorithm.caption.50}\protected@file@percent }
+\newlabel{p1c4:alg:revised_ximplex_method}{{2}{68}{Revised simplex method}{algorithm.caption.50}{}}
+\newlabel{p1c4:alg:opt_condition_rev}{{3}{68}{Revised simplex method}{algorithm.caption.50}{}}
+\newlabel{p1c4:alg:unb_condition_rev}{{5}{68}{Revised simplex method}{algorithm.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Tableau representation}{68}{subsection.4.2.3}\protected@file@percent }
+\newlabel{p1c1:eq:constM1}{{4.2}{70}{Tableau representation}{equation.4.2.2}{}}
+\newlabel{p1c1:eq:constM2}{{4.3}{70}{Tableau representation}{equation.4.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Generating initial feasible solutions (two-phase simplex)}{70}{subsection.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Column geometry of the simplex method}{72}{section.4.3}\protected@file@percent }
+\newlabel{p1c4:def:simplex}{{4.4}{73}{$k$-dimensional simplex}{theorem.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces A solution $x$ is a convex combinations of $(A_i,c_i)$ such that $Ax= b$.}}{73}{figure.caption.51}\protected@file@percent }
+\newlabel{p1c4:fig:column_geometry}{{4.2}{73}{A solution $x$ is a convex combinations of $(A_i,c_i)$ such that $Ax= b$}{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces A solution $x$ is a convex combinations of $(A_i,c_i)$ such that $Ax= b$.}}{74}{figure.caption.52}\protected@file@percent }
+\newlabel{p1c4:fig:column_geometry_3d}{{4.3}{74}{A solution $x$ is a convex combinations of $(A_i,c_i)$ such that $Ax= b$}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Pivots from initial basis $[A_3, A_6]$ to $[A_3, A_5]$ and to the optimal basis $[A_8, A_5]$}}{74}{figure.caption.53}\protected@file@percent }
+\newlabel{p1c4:fig:column_geometry_projection}{{4.4}{74}{Pivots from initial basis $[A_3, A_6]$ to $[A_3, A_5]$ and to the optimal basis $[A_8, A_5]$}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Exercises}{76}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Linear Programming Duality - Part I}{79}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_5}{{5}{79}{Linear Programming Duality - Part I}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Formulating duals}{79}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Motivation}{79}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}General form of duals}{80}{subsection.5.1.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Primal-dual conversion table}}{82}{table.caption.58}\protected@file@percent }
+\newlabel{p1c5:tab:primal-dual_conversion}{{5.1}{82}{Primal-dual conversion table}{table.caption.58}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Duality theory}{83}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Weak duality}{83}{subsection.5.2.1}\protected@file@percent }
+\newlabel{p1c5:thm:weak_duality}{{5.1}{83}{Weak duality}{theorem.5.1}{}}
+\newlabel{p1c5:cor:weak_duality}{{5.2}{83}{Consequences of weak duality}{theorem.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Strong duality}{84}{subsection.5.2.2}\protected@file@percent }
+\newlabel{p1c5:thm:strong_duality}{{5.3}{84}{Strong duality}{theorem.5.3}{}}
+\newlabel{p1c5:eq:primal-dual}{{5.1}{84}{Strong duality}{equation.5.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Geometric interpretation of duality}{85}{section.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces A geometric representation of duality for linear programming problems}}{85}{figure.caption.59}\protected@file@percent }
+\newlabel{p1c5:fig:duality_geometry}{{5.1}{85}{A geometric representation of duality for linear programming problems}{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Complementary slackness}{85}{subsection.5.3.1}\protected@file@percent }
+\newlabel{p1c2:thm:complemetarity_slackness}{{5.4}{86}{Complementary slackness}{theorem.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Dual feasibility and optimality}{86}{subsection.5.3.2}\protected@file@percent }
+\newlabel{p1c5:eq:primal_feas}{{5.2}{86}{Dual feasibility and optimality}{equation.5.3.2}{}}
+\newlabel{p1c5:eq:cc}{{5.3}{86}{Dual feasibility and optimality}{equation.5.3.3}{}}
+\newlabel{p1c5:eq:dual_feasI}{{5.4}{86}{Dual feasibility and optimality}{equation.5.3.4}{}}
+\newlabel{p1c5:eq:dual_feasII}{{5.5}{86}{Dual feasibility and optimality}{equation.5.3.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces $A$ is both primal and dual infeasible; $B$ is primal feasible and dual infeasible; $C$ is primal and dual feasible; $D$ is degenerate.}}{87}{figure.caption.60}\protected@file@percent }
+\newlabel{p1c5:fig:dual_feasibility}{{5.2}{87}{$A$ is both primal and dual infeasible; $B$ is primal feasible and dual infeasible; $C$ is primal and dual feasible; $D$ is degenerate}{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}The dual simplex method}{87}{section.5.4}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Dual simplex method}}{88}{algorithm.caption.61}\protected@file@percent }
+\newlabel{p1c5:alg:dual_simplex}{{3}{88}{Dual simplex method}{algorithm.caption.61}{}}
+\newlabel{alg:opt_condition}{{2}{88}{Dual simplex method}{algorithm.caption.61}{}}
+\newlabel{alg:unb_condition}{{4}{88}{Dual simplex method}{algorithm.caption.61}{}}
+\newlabel{p1c5:fig:ex1_P}{{5.3a}{90}{The primal-variable space}{figure.caption.62}{}}
+\newlabel{sub@p1c5:fig:ex1_P}{{a}{90}{The primal-variable space}{figure.caption.62}{}}
+\newlabel{p1c5:fig:ex1_D}{{5.3b}{90}{The dual-variable space}{figure.caption.62}{}}
+\newlabel{sub@p1c5:fig:ex1_D}{{b}{90}{The dual-variable space}{figure.caption.62}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces The progress of the dual simplex method in the primal and dual space.}}{90}{figure.caption.62}\protected@file@percent }
+\newlabel{p1c5:fig:ex1}{{5.3}{90}{The progress of the dual simplex method in the primal and dual space}{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Exercises}{91}{section.5.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Problem data: unit transportation costs, demands and capacities}}{91}{table.caption.64}\protected@file@percent }
+\newlabel{p1c5:tab:E51_transport_problem_data}{{5.2}{91}{Problem data: unit transportation costs, demands and capacities}{table.caption.64}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Linear Programming Duality - Part II}{95}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_6}{{6}{95}{Linear Programming Duality - Part II}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Sensitivity analysis}{95}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}Adding a new variable}{96}{subsection.6.1.1}\protected@file@percent }
+\newlabel{section_611}{{6.1.1}{96}{Adding a new variable}{subsection.6.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Adding a new constraint}{97}{subsection.6.1.2}\protected@file@percent }
+\newlabel{section_612}{{6.1.2}{97}{Adding a new constraint}{subsection.6.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Changing input data}{98}{subsection.6.1.3}\protected@file@percent }
+\newlabel{section_613}{{6.1.3}{98}{Changing input data}{subsection.6.1.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Optimal dual variables as marginal costs}{99}{section*.69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Changes in the vector $b$}{100}{section*.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Changes in the vector $c$}{100}{section*.71}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Cones and extreme rays}{102}{section.6.2}\protected@file@percent }
+\newlabel{p1c6:def:cone}{{6.1}{102}{Cones}{theorem.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces A polyhedral cone in $\mathbb  {R}^3$ formed by 3 half-space}}{102}{figure.caption.72}\protected@file@percent }
+\newlabel{p1c6:fig:poly_cone}{{6.1}{102}{A polyhedral cone in $\reals ^3$ formed by 3 half-space}{figure.caption.72}{}}
+\newlabel{p1c6:cor:polyhedral_cones}{{6.2}{102}{}{theorem.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Recession cones and extreme rays}{103}{subsection.6.2.1}\protected@file@percent }
+\newlabel{section_621}{{6.2.1}{103}{Recession cones and extreme rays}{subsection.6.2.1}{}}
+\newlabel{c1_p6:def:recession_cone}{{6.3}{103}{Recession cone}{theorem.6.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Representation of the recession cone of a polyhedral set}}{103}{figure.caption.73}\protected@file@percent }
+\newlabel{p1c6:fig:recession_cone}{{6.2}{103}{Representation of the recession cone of a polyhedral set}{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Unbounded problems}{103}{subsection.6.2.2}\protected@file@percent }
+\newlabel{p1c6:def:extreme_ray}{{6.4}{103}{Extreme ray}{theorem.6.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces A polyhedral cone formed by the intersection of three half-spaces (the normal vector $a_3$ is perpendicular to the plane of the picture and cannot be seen). Directions $d_1$, $d_2$, and $d_3$ represent extreme rays.}}{104}{figure.caption.74}\protected@file@percent }
+\newlabel{p1c6:fig:extreme_rays}{{6.3}{104}{A polyhedral cone formed by the intersection of three half-spaces (the normal vector $a_3$ is perpendicular to the plane of the picture and cannot be seen). Directions $d_1$, $d_2$, and $d_3$ represent extreme rays}{figure.caption.74}{}}
+\newlabel{p1c6:thm:unb_cones}{{6.5}{104}{Unboundedness in polyhedral cones}{theorem.6.5}{}}
+\newlabel{p1c6:thm:unb_polyhedra}{{6.6}{104}{Unboundedness in polyhedral sets}{theorem.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Farkas' lemma}{105}{subsection.6.2.3}\protected@file@percent }
+\newlabel{p1c6:thm:farkas}{{6.7}{105}{Farkas' lemma}{theorem.6.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Since $b \not \in X$, $p^\top x=0$ separates them}}{106}{figure.caption.75}\protected@file@percent }
+\newlabel{p1c6:fig:farkas}{{6.4}{106}{Since $b \not \in X$, $p^\top x=0$ separates them}{figure.caption.75}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Exercises}{107}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Barrier Method for Linear Programming}{109}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_7}{{7}{109}{Barrier Method for Linear Programming}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Barrier methods}{109}{section.7.1}\protected@file@percent }
+\newlabel{section_71}{{7.1}{109}{Barrier methods}{section.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Newton's method with equality constraints}{109}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Interior point methods linear programming problems}{111}{section.7.3}\protected@file@percent }
+\newlabel{p1c7:eq:optimality_conditions_primal}{{7.1}{111}{Interior point methods linear programming problems}{equation.7.3.1}{}}
+\newlabel{p1c7:eq:optimality_conditions_dual}{{7.2}{111}{Interior point methods linear programming problems}{equation.7.3.2}{}}
+\newlabel{p1c7:eq:optimality_conditions_cc}{{7.3}{111}{Interior point methods linear programming problems}{equation.7.3.3}{}}
+\newlabel{p1c7:eq:optimality_conditions_matrix_primal}{{7.4}{112}{Interior point methods linear programming problems}{equation.7.3.4}{}}
+\newlabel{p1c7:eq:optimality_conditions_matrix_dual}{{7.5}{112}{Interior point methods linear programming problems}{equation.7.3.5}{}}
+\newlabel{p1c7:eq:optimality_conditions_matrix_relaxed_cc}{{7.6}{112}{Interior point methods linear programming problems}{equation.7.3.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Barrier methods for linear programming problems}{113}{section.7.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Alternative barrier functions for different values of $\mu $. The dashed line represents the indicator function $I(x)$ going to infinity when $x > 0$}}{114}{figure.caption.80}\protected@file@percent }
+\newlabel{p1c7:fig:barrier_function}{{7.1}{114}{Alternative barrier functions for different values of $\mu $. The dashed line represents the indicator function $I(x)$ going to infinity when $x > 0$}{figure.caption.80}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces The optimal values of $P_\mu $ for different values of $\mu $. Notice the trajectory formed by the points $x^*(\mu )$ as $\mu \to 0$.}}{115}{figure.caption.81}\protected@file@percent }
+\newlabel{p1c7:fig:example-barrier}{{7.2}{115}{The optimal values of $P_\mu $ for different values of $\mu $. Notice the trajectory formed by the points $x^*(\mu )$ as $\mu \to 0$}{figure.caption.81}{}}
+\@writefile{toc}{\contentsline {subsubsection}{The notion of interiority}{115}{section*.82}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}Barrier methods for linear programming problems}{116}{section.7.5}\protected@file@percent }
+\citation{gondzio2012interior}
+\@writefile{toc}{\contentsline {subsubsection}{A practical implementation of the barrier method}{117}{section*.83}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces An illustrative representation of the central path and how the method follows it approximately}}{118}{figure.caption.84}\protected@file@percent }
+\newlabel{p1c7:fig:central-path-and-neighbourhoods}{{7.3}{118}{An illustrative representation of the central path and how the method follows it approximately}{figure.caption.84}{}}
+\newlabel{p1c7:eq:infeasible_perturbed_system}{{7.7}{118}{A practical implementation of the barrier method}{equation.7.5.7}{}}
+\citation{gondzio2012interior}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Barrier method for LP}}{119}{algorithm.caption.85}\protected@file@percent }
+\newlabel{p1c7:alg:barrier_method}{{4}{119}{Barrier method for LP}{algorithm.caption.85}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}Exercises}{121}{section.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Integer Programming Models}{123}{chapter.8}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_8}{{8}{123}{Integer Programming Models}{chapter.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Types of integer programming problems}{123}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}(Mixed-)integer programming applications}{124}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.1}The assignment problem}{124}{subsection.8.2.1}\protected@file@percent }
+\newlabel{p1c8:fig:assignment_a}{{8.1a}{124}{\relax }{figure.caption.87}{}}
+\newlabel{sub@p1c8:fig:assignment_a}{{a}{124}{\relax }{figure.caption.87}{}}
+\newlabel{p1c8:fig:assignment_b}{{8.1b}{124}{\relax }{figure.caption.87}{}}
+\newlabel{sub@p1c8:fig:assignment_b}{{b}{124}{\relax }{figure.caption.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.1}{\ignorespaces An illustration of all potential assignments as a graph and an example of one possible assignment, with total cost $C_{12}$ + $C_{31}$ + $C_{24}$ + $C_{43}$}}{124}{figure.caption.87}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.2}The knapsack problem}{125}{subsection.8.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.3}The generalised assignment problem}{125}{subsection.8.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8.2}{\ignorespaces An example of a bin packing with total cost $C_{11}$ + $C_{12}$ + $C_{23}$ + $C_{44}$}}{126}{figure.caption.88}\protected@file@percent }
+\newlabel{p1c8:fig:bin_packing}{{8.2}{126}{An example of a bin packing with total cost $C_{11}$ + $C_{12}$ + $C_{23}$ + $C_{44}$}{figure.caption.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.4}The set covering problem}{126}{subsection.8.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8.3}{\ignorespaces The hive map illustrating the set covering problem. Our objective is to cover all of the regions while minimising the total cost incurred by opening the centres at the blue cells}}{127}{figure.caption.89}\protected@file@percent }
+\newlabel{p1c8:fig:set_covering}{{8.3}{127}{The hive map illustrating the set covering problem. Our objective is to cover all of the regions while minimising the total cost incurred by opening the centres at the blue cells}{figure.caption.89}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.5}Travelling salesperson problem}{128}{subsection.8.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8.4}{\ignorespaces An example of a tour between the six cities}}{128}{figure.caption.90}\protected@file@percent }
+\newlabel{p1c8:fig:TSP}{{8.4}{128}{An example of a tour between the six cities}{figure.caption.90}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.5}{\ignorespaces A feasible solution for the naive TSP model. Notice the two sub-tours formed}}{129}{figure.caption.91}\protected@file@percent }
+\newlabel{p1c8:fig:TSP_subtours}{{8.5}{129}{A feasible solution for the naive TSP model. Notice the two sub-tours formed}{figure.caption.91}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.6}Uncapacitated facility location}{129}{subsection.8.2.6}\protected@file@percent }
+\newlabel{p1c8:fig:facility_location_a}{{8.6a}{130}{\relax }{figure.caption.92}{}}
+\newlabel{sub@p1c8:fig:facility_location_a}{{a}{130}{\relax }{figure.caption.92}{}}
+\newlabel{p1c8:fig:facility_location_b}{{8.6b}{130}{\relax }{figure.caption.92}{}}
+\newlabel{sub@p1c8:fig:facility_location_b}{{b}{130}{\relax }{figure.caption.92}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.6}{\ignorespaces An illustration of the facility location problem and one possible solution with two facilities located (right)}}{130}{figure.caption.92}\protected@file@percent }
+\newlabel{p1c8:eq:big-M_UFL}{{8.3}{130}{Uncapacitated facility location}{equation.8.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2.7}Uncapacitated lot-sizing}{131}{subsection.8.2.7}\protected@file@percent }
+\newlabel{p1c8:eq:big_M_ULS}{{8.6}{131}{Uncapacitated lot-sizing}{equation.8.2.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Good formulations}{131}{section.8.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8.7}{\ignorespaces Graphical representation of the feasible region of the example}}{132}{figure.caption.93}\protected@file@percent }
+\newlabel{p1c8:fig:IP_feasible_region}{{8.7}{132}{Graphical representation of the feasible region of the example}{figure.caption.93}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Comparing formulations}{132}{subsection.8.3.1}\protected@file@percent }
+\newlabel{p1c8:def:formulation}{{8.1}{133}{}{theorem.8.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.8}{\ignorespaces An illustration of three alternative formulations for $X$. Notice that $P_3$ is an ideal formulation, representing the convex hull of $X$.}}{133}{figure.caption.94}\protected@file@percent }
+\newlabel{p1c8:fig:alternative_formulations}{{8.8}{133}{An illustration of three alternative formulations for $X$. Notice that $P_3$ is an ideal formulation, representing the convex hull of $X$}{figure.caption.94}{}}
+\newlabel{p1c8:prop:polyhedra_convex_hull}{{8.2}{133}{}{theorem.8.2}{}}
+\newlabel{p1c8:def:better_formulations}{{8.3}{134}{}{theorem.8.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Exercises}{135}{section.8.4}\protected@file@percent }
+\newlabel{eq:31}{{8.7}{137}{Exercise 8.4: TSP formulation - tightening the MTZ formulation}{equation.8.4.7}{}}
+\newlabel{eq:32}{{8.8}{137}{Exercise 8.4: TSP formulation - tightening the MTZ formulation}{equation.8.4.8}{}}
+\newlabel{eq:34}{{8.10}{137}{Exercise 8.4: TSP formulation - tightening the MTZ formulation}{equation.8.4.10}{}}
+\newlabel{p1c1:eq:constM1}{{8.11}{138}{Exercise 8.6: Piecewise linear objective functions and logical constraints}{equation.8.4.11}{}}
+\newlabel{p1c1:eq:constM2}{{8.12}{138}{Exercise 8.6: Piecewise linear objective functions and logical constraints}{equation.8.4.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.9}{\ignorespaces The feasible region of the problem, and the contours of the objective function}}{139}{figure.caption.101}\protected@file@percent }
+\newlabel{p1c8:fig:E86-plot}{{8.9}{139}{The feasible region of the problem, and the contours of the objective function}{figure.caption.101}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Branch-and-bound Method}{141}{chapter.9}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_9}{{9}{141}{Branch-and-bound Method}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Optimality for integer programming problems}{141}{section.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Relaxations}{141}{section.9.2}\protected@file@percent }
+\newlabel{p1c9:def:relaxation}{{9.1}{142}{Relaxation}{theorem.9.1}{}}
+\newlabel{p1c9:prop:relaxation_bounding}{{9.2}{142}{}{theorem.9.2}{}}
+\newlabel{p1c9:prop:relaxation_optimality}{{9.3}{143}{}{theorem.9.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}Linear programming relaxation}{143}{subsection.9.2.1}\protected@file@percent }
+\newlabel{p1c9:prop:tighter_relaxations}{{9.5}{143}{}{theorem.9.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces The feasible region of the example (represented by the blue dots) and the solution of the LP relaxation, with objective function value $z_{LP} = 8.42$}}{144}{figure.caption.102}\protected@file@percent }
+\newlabel{p1c9:fig:LP_relaxation}{{9.1}{144}{The feasible region of the example (represented by the blue dots) and the solution of the LP relaxation, with objective function value $z_{LP} = 8.42$}{figure.caption.102}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.2}Relaxation for combinatorial optimisation}{144}{subsection.9.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces An example of a 1-tree considering eight nodes}}{145}{figure.caption.103}\protected@file@percent }
+\newlabel{p1c9:fig:1-tree}{{9.2}{145}{An example of a 1-tree considering eight nodes}{figure.caption.103}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Branch-and-bound method}{145}{section.9.3}\protected@file@percent }
+\newlabel{p1c9:prop:divide-and-conquer}{{9.6}{145}{}{theorem.9.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.3}{\ignorespaces A enumeration tree using binary branching for a problem with three binary variables}}{146}{figure.caption.104}\protected@file@percent }
+\newlabel{p1c9:fig:binary_tree}{{9.3}{146}{A enumeration tree using binary branching for a problem with three binary variables}{figure.caption.104}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Bounding in enumerative trees}{146}{subsection.9.3.1}\protected@file@percent }
+\newlabel{section_913}{{9.3.1}{146}{Bounding in enumerative trees}{subsection.9.3.1}{}}
+\newlabel{p1c9:prop:bounding}{{9.7}{146}{}{theorem.9.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.2}Linear-programming-based branch-and-bound}{147}{subsection.9.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9.4}{\ignorespaces An example of pruning by optimality. Since the solution of LP relaxation of subproblem $S_1$ is integer, $x = (2,2)$ must be optimal for $S_1$}}{148}{figure.caption.105}\protected@file@percent }
+\newlabel{p1c9:fig:prune_by_optimality}{{9.4}{148}{An example of pruning by optimality. Since the solution of LP relaxation of subproblem $S_1$ is integer, $x = (2,2)$ must be optimal for $S_1$}{figure.caption.105}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.5}{\ignorespaces An example of pruning by bound. Notice that the newly found global bound holds for all subproblems. After solving the LP relaxation of $S_2$, we notice that $\overline  {z}_2 \le \underline  {z}$, which renders the pruning.}}{148}{figure.caption.106}\protected@file@percent }
+\newlabel{p1c9:fig:pruning_by_bound}{{9.5}{148}{An example of pruning by bound. Notice that the newly found global bound holds for all subproblems. After solving the LP relaxation of $S_2$, we notice that $\overline {z}_2 \le \underline {z}$, which renders the pruning}{figure.caption.106}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces LP-relaxation-based branch-and-bound}}{149}{algorithm.caption.107}\protected@file@percent }
+\newlabel{p1c9:alg:BB}{{5}{149}{LP-relaxation-based branch-and-bound}{algorithm.caption.107}{}}
+\newlabel{p1c9:alg:BB_loop}{{2}{149}{LP-relaxation-based branch-and-bound}{algorithm.caption.107}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.6}{\ignorespaces LP relaxation of the problem $S$}}{149}{figure.caption.108}\protected@file@percent }
+\newlabel{p1c9:fig:example_LP_relaxation_solution}{{9.6}{149}{LP relaxation of the problem $S$}{figure.caption.108}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.7}{\ignorespaces The branch-and-bound tree after branching $S$ onto $S_1$ and $S_2$}}{150}{figure.caption.109}\protected@file@percent }
+\newlabel{p1c9:fig:example_bb_tree_1}{{9.7}{150}{The branch-and-bound tree after branching $S$ onto $S_1$ and $S_2$}{figure.caption.109}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.8}{\ignorespaces LP relaxation of subproblem $S_1$}}{150}{figure.caption.110}\protected@file@percent }
+\newlabel{p1c9:fig:example_LP_relaxation_solution_2}{{9.8}{150}{LP relaxation of subproblem $S_1$}{figure.caption.110}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.9}{\ignorespaces The branch-and-bound tree after branching $S_1$ onto $S_{11}$ and $S_{12}$}}{151}{figure.caption.111}\protected@file@percent }
+\newlabel{p1c9:fig:example_bb_tree_2}{{9.9}{151}{The branch-and-bound tree after branching $S_1$ onto $S_{11}$ and $S_{12}$}{figure.caption.111}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.10}{\ignorespaces LP relaxations of all subproblems. Notice that $S_{11}$ and $S_{12}$ includes the constraints $x_1 \le 2$ from the parent node $S_1$}}{151}{figure.caption.112}\protected@file@percent }
+\newlabel{p1c9:fig:example_LP_relaxation_solution_3}{{9.10}{151}{LP relaxations of all subproblems. Notice that $S_{11}$ and $S_{12}$ includes the constraints $x_1 \le 2$ from the parent node $S_1$}{figure.caption.112}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9.11}{\ignorespaces The final branch-and-bound tree}}{151}{figure.caption.113}\protected@file@percent }
+\newlabel{p1c9:fig:example_bb_tree_3}{{9.11}{151}{The final branch-and-bound tree}{figure.caption.113}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.4}Exercises}{152}{section.9.4}\protected@file@percent }
+\newlabel{IP:1}{{9.1}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.1}{}}
+\newlabel{IP:2}{{9.2}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.2}{}}
+\newlabel{IP:3}{{9.3}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.3}{}}
+\newlabel{IP:4}{{9.4}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.4}{}}
+\newlabel{IP:5}{{9.5}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.5}{}}
+\newlabel{SIP:1}{{9.6}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.6}{}}
+\newlabel{SIP:2}{{9.7}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.7}{}}
+\newlabel{SIP:3}{{9.8}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.8}{}}
+\newlabel{SIP:4}{{9.9}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.9}{}}
+\newlabel{SIP:5}{{9.10}{152}{Problem 9.1: Uncapacitated Facility Location (UFL)}{equation.9.4.10}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}Cutting-planes Method}{155}{chapter.10}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_10}{{10}{155}{Cutting-planes Method}{chapter.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.1}Valid inequalities}{155}{section.10.1}\protected@file@percent }
+\newlabel{p1c10:def:valid_inequality}{{10.1}{155}{Valid inequality}{theorem.10.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10.1}{\ignorespaces Illustration of a valid inequality being added to a formulation $P$. Notice how the inequality cuts off a portion of the polyhedral set $P$ while not removing any of the feasible points $X$ (represented by the dots)}}{156}{figure.caption.118}\protected@file@percent }
+\newlabel{p1c10:fig:valid_inequality}{{10.1}{156}{Illustration of a valid inequality being added to a formulation $P$. Notice how the inequality cuts off a portion of the polyhedral set $P$ while not removing any of the feasible points $X$ (represented by the dots)}{figure.caption.118}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.2}The Chv\'atal-Gomory procedure}{156}{section.10.2}\protected@file@percent }
+\newlabel{p1c10:prop:valid_inequality_LP}{{10.2}{156}{Valid inequalities for polyhedral sets}{theorem.10.2}{}}
+\newlabel{p1c10:prop:valid_inequality_IP}{{10.3}{157}{Valid inequalities for integer sets}{theorem.10.3}{}}
+\newlabel{p1c10:def:CG-procedure}{{10.4}{157}{Chv\'atal-Gomory procedure}{theorem.10.4}{}}
+\newlabel{p1c10:thm:VG_valid_inequality}{{10.5}{158}{}{theorem.10.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.3}The cutting-plane method}{158}{section.10.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Cutting-plane algorithm}}{158}{algorithm.caption.119}\protected@file@percent }
+\newlabel{p1c10:alg:cuting-plane}{{6}{158}{Cutting-plane algorithm}{algorithm.caption.119}{}}
+\newlabel{Alg2:loop}{{2}{158}{Cutting-plane algorithm}{algorithm.caption.119}{}}
+\newlabel{Alg2:SepProb}{{4}{158}{Cutting-plane algorithm}{algorithm.caption.119}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.4}Gomory's fractional cutting-plane method}{159}{section.10.4}\protected@file@percent }
+\newlabel{p1c10:eq:CG_cut}{{10.1}{159}{Gomory's fractional cutting-plane method}{equation.10.4.1}{}}
+\newlabel{p1c10:eq:gomorycut}{{10.2}{160}{Gomory's fractional cutting-plane method}{equation.10.4.2}{}}
+\newlabel{p1c10:prop:cuts_original}{{10.6}{161}{}{theorem.10.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10.2}{\ignorespaces Feasible region of the LP relaxation (polyhedral set) and of the integer programming problem (blue dots) at each of three iterations taken to solve the integer programming problem. The inequalities in orange represent the Gomory cut added at each iteration}}{162}{figure.caption.120}\protected@file@percent }
+\newlabel{p1c10:fig:LP_1}{{10.2}{162}{Feasible region of the LP relaxation (polyhedral set) and of the integer programming problem (blue dots) at each of three iterations taken to solve the integer programming problem. The inequalities in orange represent the Gomory cut added at each iteration}{figure.caption.120}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.5}Obtaining stronger inequalities}{162}{section.10.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5.1}Strong inequalities}{162}{subsection.10.5.1}\protected@file@percent }
+\newlabel{p1c10:def:dominance}{{10.7}{162}{Dominance}{theorem.10.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10.3}{\ignorespaces Illustration of dominance between constraints. Notice that $x_1 + 3x_2 \le 4$ dominates $2x_1 + 4x_2 \le 9$ and is thus stronger}}{163}{figure.caption.121}\protected@file@percent }
+\newlabel{p1c10:fig:dominance}{{10.3}{163}{Illustration of dominance between constraints. Notice that $x_1 + 3x_2 \le 4$ dominates $2x_1 + 4x_2 \le 9$ and is thus stronger}{figure.caption.121}{}}
+\newlabel{p1c10:def:redundancy}{{10.8}{163}{Redundancy}{theorem.10.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10.4}{\ignorespaces Illustration of a redundant inequality. Notice how the inequality $5x_1 - 2x_2 \le 6$ (in orange) does not dominate any of the other inequalities}}{163}{figure.caption.122}\protected@file@percent }
+\newlabel{p1c10:fig:redundant}{{10.4}{163}{Illustration of a redundant inequality. Notice how the inequality $5x_1 - 2x_2 \le 6$ (in orange) does not dominate any of the other inequalities}{figure.caption.122}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5.2}Strengthening 0-1 knapsack inequalities}{164}{subsection.10.5.2}\protected@file@percent }
+\newlabel{p1c10:def:minimal_cover}{{10.9}{164}{minimal cover}{theorem.10.9}{}}
+\newlabel{p1c10:prop:cover_inequalities}{{10.10}{164}{}{theorem.10.10}{}}
+\newlabel{p1c10:prop:extended_cover}{{10.11}{165}{}{theorem.10.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10.6}Exercises}{166}{section.10.6}\protected@file@percent }
+\newlabel{eq:M}{{10.3}{166}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.3}{}}
+\newlabel{eq:tau}{{10.4}{166}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.4}{}}
+\newlabel{eq:41}{{10.5}{166}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.5}{}}
+\newlabel{eq:42}{{10.6}{166}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.6}{}}
+\newlabel{eq:C4}{{10.7}{166}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.7}{}}
+\newlabel{eq:C51}{{10.8}{167}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.8}{}}
+\newlabel{eq:C52}{{10.9}{167}{Exercise 10.1: Chv\'atal-Gomory (C-G) procedure}{equation.10.6.9}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {11}Mixed-integer Programming Solvers}{169}{chapter.11}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_11}{{11}{169}{Mixed-integer Programming Solvers}{chapter.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.1}Modern mixed-integer linear programming solvers}{169}{section.11.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11.1}{\ignorespaces The flowchart of a typical MIP solver. The nodes represent phases of the algorithm}}{170}{figure.caption.128}\protected@file@percent }
+\newlabel{p1c11:fig:MIP_solver_flowchart}{{11.1}{170}{The flowchart of a typical MIP solver. The nodes represent phases of the algorithm}{figure.caption.128}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11.2}Presolving methods}{170}{section.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Detecting infeasibility and redundancy}{170}{section*.129}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bound tightening}{171}{section*.130}\protected@file@percent }
+\newlabel{p1c11:eq:upper_bound_ax}{{11.1}{171}{Bound tightening}{equation.11.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Coefficient tightening}{172}{section*.131}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Other methods}{172}{section*.132}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.3}Cut generation}{173}{section.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3.1}Cut management: generation, selection and discarding}{174}{subsection.11.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.4}Variable selection: branching strategy}{174}{section.11.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Maximum infeasibility}{175}{section*.133}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Strong branching}{175}{section*.134}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Pseudo-cost branching}{176}{section*.135}\protected@file@percent }
+\newlabel{p1c11:eq:fractionals}{{11.2}{176}{Pseudo-cost branching}{equation.11.4.2}{}}
+\newlabel{p1c11:eq:improvement_estimates}{{11.3}{176}{Pseudo-cost branching}{equation.11.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{GUB branching}{176}{section*.136}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.5}Node selection}{177}{section.11.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Depth-first search (DFS) and breadth-first search (BFS)}{178}{section*.137}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Best bound}{178}{section*.138}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Best estimate or best projection}{178}{section*.139}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.6}Primal heuristics}{179}{section.11.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.6.1}Diving heuristics}{179}{subsection.11.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.6.2}Local searches and large-neighbourhood searches}{180}{subsection.11.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Relaxation-induced neighbourhood search (RINS) and Relaxation-enforced neighbourhood search}{180}{section*.140}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Local branching}{181}{section*.141}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Feasibility pump}{181}{section*.142}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11.7}Exercises}{183}{section.11.7}\protected@file@percent }
+\newlabel{IP:1}{{11.4}{183}{Problem 11.1: Preprocessing and primal heuristics}{equation.11.7.4}{}}
+\newlabel{IP:2}{{11.5}{183}{Problem 11.1: Preprocessing and primal heuristics}{equation.11.7.5}{}}
+\newlabel{IP:3}{{11.6}{183}{Problem 11.1: Preprocessing and primal heuristics}{equation.11.7.6}{}}
+\newlabel{IP:4}{{11.7}{183}{Problem 11.1: Preprocessing and primal heuristics}{equation.11.7.7}{}}
+\newlabel{IP:5}{{11.8}{183}{Problem 11.1: Preprocessing and primal heuristics}{equation.11.7.8}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {12}Decomposition Methods}{185}{chapter.12}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter_12}{{12}{185}{Decomposition Methods}{chapter.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.1}Large-scale problems}{185}{section.12.1}\protected@file@percent }
+\newlabel{section_71}{{12.1}{185}{Large-scale problems}{section.12.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.2}Dantzig-Wolfe decomposition and column generation*}{187}{section.12.2}\protected@file@percent }
+\newlabel{section_72}{{12.2}{187}{Dantzig-Wolfe decomposition and column generation*}{section.12.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2.1}Resolution theorem}{187}{subsection.12.2.1}\protected@file@percent }
+\newlabel{p1c7:thm:resolution_theorem}{{12.1}{187}{Resolution theorem}{theorem.12.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12.1}{\ignorespaces Example showing that every point of $P = \left \{ x_1 - x_2 \geq -2; x_1 + x_2 \geq 1, x_1,x_2 \geq 0 \right \}$ can be represented as a convex combination of its extreme point and a linear combination of its extreme rays}}{188}{figure.caption.145}\protected@file@percent }
+\newlabel{p1c7:fig:resolution_example}{{12.1}{188}{Example showing that every point of $P = \braces {x_1 - x_2 \geq -2; x_1 + x_2 \geq 1, x_1,x_2 \geq 0}$ can be represented as a convex combination of its extreme point and a linear combination of its extreme rays}{figure.caption.145}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2.2}Dantzig-Wolfe decomposition}{188}{subsection.12.2.2}\protected@file@percent }
+\newlabel{p1c7:eq:resolution_representation}{{12.1}{189}{Dantzig-Wolfe decomposition}{equation.12.2.1}{}}
+\newlabel{p1c7:eq:pm_const}{{12.2}{189}{Dantzig-Wolfe decomposition}{equation.12.2.2}{}}
+\newlabel{p1c7:eq:cc_const}{{12.3}{189}{Dantzig-Wolfe decomposition}{equation.12.2.3}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Dantzig-Wolfe decomposition}}{191}{algorithm.caption.146}\protected@file@percent }
+\newlabel{p1c7:alg:DW}{{7}{191}{Dantzig-Wolfe decomposition}{algorithm.caption.146}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2.3}Delayed column generation}{191}{subsection.12.2.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces Column generation algorithm}}{192}{algorithm.caption.147}\protected@file@percent }
+\newlabel{p1c7:alg:CG}{{8}{192}{Column generation algorithm}{algorithm.caption.147}{}}
+\newlabel{Alg2:loop}{{2}{192}{Column generation algorithm}{algorithm.caption.147}{}}
+\newlabel{p1c7:alg:CGcolgen}{{6}{192}{Column generation algorithm}{algorithm.caption.147}{}}
+\newlabel{p1c7:thm:CG_bound}{{12.2}{192}{}{theorem.12.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.3}Benders decomposition}{193}{section.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3.1}Parametric optimisation problems}{193}{subsection.12.3.1}\protected@file@percent }
+\newlabel{section_731}{{12.3.1}{193}{Parametric optimisation problems}{subsection.12.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3.2}Properties of the optimal value function $F(b)$}{194}{subsection.12.3.2}\protected@file@percent }
+\newlabel{section_732}{{12.3.2}{194}{Properties of the optimal value function $F(b)$}{subsection.12.3.2}{}}
+\newlabel{p1c7:eq:function_F}{{12.7}{194}{Properties of the optimal value function $F(b)$}{equation.12.3.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12.2}{\ignorespaces The optimal cost function $F$ as a function of $b$ in the direction $d$. The feasibility set $S_D$ has three extreme points $p^1$, $p^2$, and $p_3$, each associated with a hyperplane $(p^i)^\top (\overline  {b} + \theta d)$}}{195}{figure.caption.148}\protected@file@percent }
+\newlabel{p1c7:fig:b_function_theta}{{12.2}{195}{The optimal cost function $F$ as a function of $b$ in the direction $d$. The feasibility set $S_D$ has three extreme points $p^1$, $p^2$, and $p_3$, each associated with a hyperplane $(p^i)^\top (\overline {b} + \theta d)$}{figure.caption.148}{}}
+\newlabel{p1c7:eq:subgradient_proof}{{12.9}{196}{Properties of the optimal value function $F(b)$}{equation.12.3.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12.3}{\ignorespaces The subgradients of the function $F$ at $\overline  {b}$. On the left, the unique subgradient of $F$ at $\overline  {b}$ is the gradient of the affine function $F(\overline  {b}) + p^\top (b - \overline  {b})$. On the right, the gradient of the affine function $F(\overline  {b}) + p^\top (b - \overline  {b})$ at $\overline  {b}$ is contained in a subgradient for $F$ at $\overline  {b}$.}}{196}{figure.caption.149}\protected@file@percent }
+\newlabel{p1c7:fig:b_function}{{12.3}{196}{The subgradients of the function $F$ at $\overline {b}$. On the left, the unique subgradient of $F$ at $\overline {b}$ is the gradient of the affine function $F(\overline {b}) + p^\top (b - \overline {b})$. On the right, the gradient of the affine function $F(\overline {b}) + p^\top (b - \overline {b})$ at $\overline {b}$ is contained in a subgradient for $F$ at $\overline {b}$}{figure.caption.149}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3.3}Benders decomposition}{196}{subsection.12.3.3}\protected@file@percent }
+\newlabel{p1c7:eq:feas_cut_all}{{12.11}{198}{Benders decomposition}{equation.12.3.11}{}}
+\newlabel{p1c7:eq:optimal_value_function_z}{{12.12}{198}{Benders decomposition}{equation.12.3.12}{}}
+\newlabel{p1c7:eq:opt_cut_all1}{{12.13}{198}{Benders decomposition}{equation.12.3.13}{}}
+\newlabel{p1c7:eq:opt_cut_all2}{{12.14}{198}{Benders decomposition}{equation.12.3.14}{}}
+\newlabel{p1c7:eq:opt_cut}{{12.15}{198}{Benders decomposition}{equation.12.3.15}{}}
+\newlabel{p1c7:eq:feas_cut}{{12.16}{198}{Benders decomposition}{equation.12.3.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12.4}{\ignorespaces $z_k(x)$ is described by 3 line segments. At iteration $l=3$, two are available. The solution to $P_M^3$ returns $\overline  {\theta }^3$, which is lower than $z(\overline  {x}^3)$, obtained solving $S_k^D$ for $\overline  {x}^l$. The solution $p^*_k = p^3_k$ from $z(\overline  {x}^l)$ defines the missing segment $(p^*_k)^\top (e_k - C_kx)$. A new optimality cut is added and in iteration $l=4$, $\overline  {x}^4$ is obtained from solving $P_M^4$. Notice that we would have $\overline  {\theta }^{4} = z(\overline  {x}^{4})$, meaning that the algorithm terminates.}}{200}{figure.caption.150}\protected@file@percent }
+\newlabel{p1c7:fig:benders_iteration}{{12.4}{200}{$z_k(x)$ is described by 3 line segments. At iteration $l=3$, two are available. The solution to $P_M^3$ returns $\overline {\theta }^3$, which is lower than $z(\overline {x}^3)$, obtained solving $S_k^D$ for $\overline {x}^l$. The solution $p^*_k = p^3_k$ from $z(\overline {x}^l)$ defines the missing segment $(p^*_k)^\top (e_k - C_kx)$. A new optimality cut is added and in iteration $l=4$, $\overline {x}^4$ is obtained from solving $P_M^4$. Notice that we would have $\overline {\theta }^{4} = z(\overline {x}^{4})$, meaning that the algorithm terminates}{figure.caption.150}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {9}{\ignorespaces Benders decomposition}}{200}{algorithm.caption.151}\protected@file@percent }
+\newlabel{p1c7:alg:benders}{{9}{200}{Benders decomposition}{algorithm.caption.151}{}}
+\newlabel{p1c7:alg:benders-loop}{{4}{200}{Benders decomposition}{algorithm.caption.151}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12.4}Exercises}{202}{section.12.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {part}{II\hspace  {1em}Nonlinear optimisation}{205}{part.2}\protected@file@percent }
+\newlabel{part_2}{{II}{207}{Exercise 12.3: Benders decomposition}{part.2}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {13}Introduction}{207}{chapter.13}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {13.1}What is optimisation?}{207}{section.13.1}\protected@file@percent }
+\newlabel{eq:opt_prob}{{13.1}{207}{What is optimisation?}{equation.13.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.1.1}Mathematical programming and optimisation}{207}{subsection.13.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.1.2}Types of mathematical optimisation models}{208}{subsection.13.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {13.2}Examples of applications}{209}{section.13.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.2.1}Resource allocation and portfolio optimisation}{209}{subsection.13.2.1}\protected@file@percent }
+\newlabel{sec:resource_allocation}{{13.2.1}{209}{Resource allocation and portfolio optimisation}{subsection.13.2.1}{}}
+\newlabel{ex1:obj}{{13.2}{209}{Resource allocation and portfolio optimisation}{equation.13.2.2}{}}
+\newlabel{ex1:const1}{{13.3}{209}{Resource allocation and portfolio optimisation}{equation.13.2.3}{}}
+\newlabel{ex1:const2}{{13.4}{209}{Resource allocation and portfolio optimisation}{equation.13.2.4}{}}
+\newlabel{ex2:obj}{{13.5}{210}{Resource allocation and portfolio optimisation}{equation.13.2.5}{}}
+\newlabel{ex2:const1}{{13.6}{210}{Resource allocation and portfolio optimisation}{equation.13.2.6}{}}
+\newlabel{ex2:const2}{{13.7}{210}{Resource allocation and portfolio optimisation}{equation.13.2.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.2.2}The pooling problem: refinery operations planning}{210}{subsection.13.2.2}\protected@file@percent }
+\newlabel{ex3:const2}{{13.9}{210}{The pooling problem: refinery operations planning}{equation.13.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.2.3}Robust optimisation}{211}{subsection.13.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13.1}{\ignorespaces One hundred random realisations for $\tilde  {a}_i$.}}{211}{figure.caption.155}\protected@file@percent }
+\newlabel{fig:random_observations}{{13.1}{211}{One hundred random realisations for $\tilde {a}_i$}{figure.caption.155}{}}
+\newlabel{eq:ellipsoid}{{13.10}{212}{Robust optimisation}{equation.13.2.10}{}}
+\newlabel{ex3:robust_const}{{13.11}{212}{Robust optimisation}{equation.13.2.11}{}}
+\newlabel{eq:robust_set1}{{13.12}{212}{Robust optimisation}{equation.13.2.12}{}}
+\newlabel{eq:robust_set2}{{13.13}{212}{Robust optimisation}{equation.13.2.13}{}}
+\newlabel{eq:robust_counter1}{{13.14}{212}{Robust optimisation}{equation.13.2.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13.2}{\ignorespaces One hundred random realisations for $\tilde  {a}_i$.}}{213}{figure.caption.156}\protected@file@percent }
+\newlabel{fig:ellipsoids}{{13.2}{213}{One hundred random realisations for $\tilde {a}_i$}{figure.caption.156}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.2.4}Classification: support-vector machines}{213}{subsection.13.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13.3}{\ignorespaces Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue).}}{214}{figure.caption.157}\protected@file@percent }
+\newlabel{fig:classified_observations}{{13.3}{214}{Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue)}{figure.caption.157}{}}
+\newlabel{ex4:obj}{{13.17}{214}{Classification: support-vector machines}{equation.13.2.17}{}}
+\newlabel{ex4:const1}{{13.18}{214}{Classification: support-vector machines}{equation.13.2.18}{}}
+\newlabel{ex4:const2}{{13.19}{214}{Classification: support-vector machines}{equation.13.2.19}{}}
+\newlabel{ex4:const3}{{13.20}{214}{Classification: support-vector machines}{equation.13.2.20}{}}
+\newlabel{ex4:end}{{13.23}{214}{Classification: support-vector machines}{equation.13.2.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13.4}{\ignorespaces Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue) with a classifier (green).}}{215}{figure.caption.158}\protected@file@percent }
+\newlabel{fig:observations_with_classifier}{{13.4}{215}{Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue) with a classifier (green)}{figure.caption.158}{}}
+\newlabel{ex5:obj}{{13.24}{216}{Classification: support-vector machines}{equation.13.2.24}{}}
+\newlabel{ex5:const1}{{13.25}{216}{Classification: support-vector machines}{equation.13.2.25}{}}
+\newlabel{ex5:const2}{{13.26}{216}{Classification: support-vector machines}{equation.13.2.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13.5}{\ignorespaces Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue).}}{216}{figure.caption.159}\protected@file@percent }
+\newlabel{fig:observations_with_rob_classifier}{{13.5}{216}{Two hundred observations for $x_i$ classified to belong to $I^-$ (orange) or $I^+$ (blue)}{figure.caption.159}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {14}Convex sets}{217}{chapter.14}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {14.1}Convexity and optimisation}{217}{section.14.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14.2}Identifying convexity of sets}{217}{section.14.2}\protected@file@percent }
+\newlabel{def:convex_sets}{{14.1}{218}{Convex sets}{theorem.14.1}{}}
+\newlabel{prop:convex_sets}{{14.2}{218}{Convex sets and convex combinations}{theorem.14.2}{}}
+\newlabel{eq:convex_sets_induction_hypothesis}{{14.2}{218}{Identifying convexity of sets}{equation.14.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.1}{\ignorespaces Minkowski sum of two convex sets.}}{219}{figure.caption.160}\protected@file@percent }
+\newlabel{fig:mink_sum}{{14.1}{219}{Minkowski sum of two convex sets}{figure.caption.160}{}}
+\newlabel{eq:convex_sets_induction_step}{{14.3}{219}{Identifying convexity of sets}{equation.14.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.2.1}Convexity-preserving set operations}{219}{subsection.14.2.1}\protected@file@percent }
+\newlabel{lem:convex_operations}{{14.3}{219}{Convexity-preserving operations}{theorem.14.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.2}{\ignorespaces Intersection of two convex sets.}}{220}{figure.caption.161}\protected@file@percent }
+\newlabel{fig:intersection}{{14.2}{220}{Intersection of two convex sets}{figure.caption.161}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.2.2}Examples of convex sets}{220}{subsection.14.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Hyperplanes and halfspaces}{220}{section*.162}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14.3}{\ignorespaces A hyperplane $H = \left \{ x \in \mathbb  {R}^n: p^\top (x - \overline  {x}) = 0 \right \}$ with normal vector $p$ displaced to $\overline  {x}$.}}{221}{figure.caption.163}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14.4}{\ignorespaces A halfspace $S = \left \{ x \in \mathbb  {R}^n : p^\top (x - \overline  {x}) \le 0 \right \}$ defined by the same hyperplane $H$. Notice how the vectors $p$ and $x - \overline  {x}$ form angles greater or equal than $90^\circ $.}}{221}{figure.caption.164}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14.5}{\ignorespaces A polyhedron $P$ formed by the intersection of three halfspaces. Each hyperplane $H_i = \left \{ x \in \mathbb  {R}^n : a_i^\top x \leq b_i \right \}$, for $i = 1,2,3$, has a normal vector $a_i$, and has an offset from the origin $b_i$ (which cannot be seen since the picture is projected on a 2-dimensional plane).}}{221}{figure.caption.165}\protected@file@percent }
+\newlabel{fig:polyhedral_set}{{14.5}{221}{A polyhedron $P$ formed by the intersection of three halfspaces. Each hyperplane $H_i = \braces {x \in \reals ^n : a_i^\top x \leq b_i}$, for $i = 1,2,3$, has a normal vector $a_i$, and has an offset from the origin $b_i$ (which cannot be seen since the picture is projected on a 2-dimensional plane)}{figure.caption.165}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Norm balls and norm cones}{221}{section*.166}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14.3}Convex hulls}{222}{section.14.3}\protected@file@percent }
+\newlabel{def: convex_hull}{{14.4}{222}{Convex hull of a set}{theorem.14.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.6}{\ignorespaces Example of an arbitrary set $S$ (in solid blue) and its convex hull $\mathop {\bf  conv}(S)$ (combined blue and grey areas).}}{222}{figure.caption.167}\protected@file@percent }
+\newlabel{fig:convex_hull}{{14.6}{222}{Example of an arbitrary set $S$ (in solid blue) and its convex hull $\conv (S)$ (combined blue and grey areas)}{figure.caption.167}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {14.4}Closure and interior of sets}{223}{section.14.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.4.1}Closure, interior and boundary of a set}{223}{subsection.14.4.1}\protected@file@percent }
+\newlabel{thm:top_convex_comb}{{14.6}{224}{}{theorem.14.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.4.2}The Weierstrass theorem}{224}{subsection.14.4.2}\protected@file@percent }
+\newlabel{thm:weierstrass}{{14.8}{225}{Weierstrass theorem}{theorem.14.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.7}{\ignorespaces Examples of attainable minimum (left) and infimum (centre) and an example where neither are attainable (right).}}{225}{figure.caption.168}\protected@file@percent }
+\newlabel{fig:Weierstrass}{{14.7}{225}{Examples of attainable minimum (left) and infimum (centre) and an example where neither are attainable (right)}{figure.caption.168}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {14.5}Separation and support of sets}{225}{section.14.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.5.1}Hyperplanes and closest points}{225}{subsection.14.5.1}\protected@file@percent }
+\newlabel{thm:closest_point}{{14.9}{225}{Closest-point theorem}{theorem.14.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.8}{\ignorespaces Closest-point theorem for a closed convex set (on the left). On the right, an illustration on how the absence of convexity invalidates the result.}}{226}{figure.caption.169}\protected@file@percent }
+\newlabel{fig:closest_point}{{14.8}{226}{Closest-point theorem for a closed convex set (on the left). On the right, an illustration on how the absence of convexity invalidates the result}{figure.caption.169}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.9}{\ignorespaces Normal vectors, hyperplane and halfspaces}}{226}{figure.caption.170}\protected@file@percent }
+\newlabel{fig:hyperplane}{{14.9}{226}{Normal vectors, hyperplane and halfspaces}{figure.caption.170}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.5.2}Halfspaces and separation}{226}{subsection.14.5.2}\protected@file@percent }
+\newlabel{def:separation}{{14.10}{226}{}{theorem.14.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.10}{\ignorespaces Three types of separation between $S_1$ and $S_2$.}}{227}{figure.caption.171}\protected@file@percent }
+\newlabel{fig:separation}{{14.10}{227}{Three types of separation between $S_1$ and $S_2$}{figure.caption.171}{}}
+\newlabel{p2c2:thm:separation}{{14.11}{227}{Separation theorem}{theorem.14.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.5.3}Farkas' theorem}{228}{subsection.14.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14.11}{\ignorespaces Geometrical illustration of the Farkas' theorem. On the left, system $(2)$ has a solution, while on the right, system $(1)$ has a solution}}{229}{figure.caption.172}\protected@file@percent }
+\newlabel{fig:farkas}{{14.11}{229}{Geometrical illustration of the Farkas' theorem. On the left, system $(2)$ has a solution, while on the right, system $(1)$ has a solution}{figure.caption.172}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {14.5.4}Supporting hyperplanes}{229}{subsection.14.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14.12}{\ignorespaces Supporting hyperplanes for an arbitrary set. Notice how a single point might have multiple supporting planes (middle) or different points might have the same supporting hyperplane (right)}}{229}{figure.caption.173}\protected@file@percent }
+\newlabel{fig:support_hyperplane}{{14.12}{229}{Supporting hyperplanes for an arbitrary set. Notice how a single point might have multiple supporting planes (middle) or different points might have the same supporting hyperplane (right)}{figure.caption.173}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14.13}{\ignorespaces Supporting hyperplanes for convex sets. Notice how every boundary point has at least one supporting hyperplane}}{230}{figure.caption.174}\protected@file@percent }
+\newlabel{fig:support_convex}{{14.13}{230}{Supporting hyperplanes for convex sets. Notice how every boundary point has at least one supporting hyperplane}{figure.caption.174}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {15}Convex functions}{231}{chapter.15}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {15.1}Convexity in functions}{231}{section.15.1}\protected@file@percent }
+\newlabel{def:convex_function}{{15.1}{231}{Convexity of a function I}{theorem.15.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.1.1}Example of convex functions}{231}{subsection.15.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.1.2}Convex functions and their level sets}{232}{subsection.15.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15.1}{\ignorespaces The lower level sets $S_\alpha $ (in blue) of two functions, given a value of $\alpha $. Notice the nonconvexity of the level set of the nonconvex function (on the right)}}{232}{figure.caption.175}\protected@file@percent }
+\newlabel{fig:sublevels}{{15.1}{232}{The lower level sets $S_\alpha $ (in blue) of two functions, given a value of $\alpha $. Notice the nonconvexity of the level set of the nonconvex function (on the right)}{figure.caption.175}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15.2}{\ignorespaces The epigraph $\mathop {\bf  epi}()f$ of a convex function is a convex set (in grey on the left).}}{233}{figure.caption.176}\protected@file@percent }
+\newlabel{fig:epigraphs}{{15.2}{233}{The epigraph $\epi ()f$ of a convex function is a convex set (in grey on the left)}{figure.caption.176}{}}
+\newlabel{lem:level_sets}{{15.3}{233}{}{theorem.15.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.1.3}Convex functions and their epigraphs}{233}{subsection.15.1.3}\protected@file@percent }
+\newlabel{thm:convex_epi}{{15.5}{233}{Convex epigraphs}{theorem.15.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {15.2}Differentiability of functions}{234}{section.15.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.2.1}Subgradients and supporting hyperplanes}{234}{subsection.15.2.1}\protected@file@percent }
+\newlabel{eq:subgradient_inequality}{{15.1}{234}{Subgradients}{equation.15.2.1}{}}
+\newlabel{thm:exist_subgrad}{{15.7}{234}{}{theorem.15.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.2.2}Differentiability and gradients for convex functions}{234}{subsection.15.2.2}\protected@file@percent }
+\newlabel{lem:singleton_subgradient}{{15.9}{235}{}{theorem.15.9}{}}
+\newlabel{1}{{15.2}{235}{Differentiability and gradients for convex functions}{equation.15.2.2}{}}
+\newlabel{2}{{15.3}{235}{Differentiability and gradients for convex functions}{equation.15.2.3}{}}
+\newlabel{thm:convex_affine_bound}{{15.10}{235}{Convexity of a function II}{theorem.15.10}{}}
+\newlabel{eq:conv1}{{15.4}{235}{Differentiability and gradients for convex functions}{equation.15.2.4}{}}
+\newlabel{eq:conv2}{{15.5}{235}{Differentiability and gradients for convex functions}{equation.15.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15.3}{\ignorespaces A representation of the subdifferential (in grey) for nondifferentiable ($x_1$ and $x_3$) and differentiable ($x_2$) points}}{236}{figure.caption.177}\protected@file@percent }
+\newlabel{fig:subgradients}{{15.3}{236}{A representation of the subdifferential (in grey) for nondifferentiable ($x_1$ and $x_3$) and differentiable ($x_2$) points}{figure.caption.177}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {15.2.3}Second-order differentiability}{236}{subsection.15.2.3}\protected@file@percent }
+\newlabel{3}{{15.6}{237}{Second-order differentiability}{equation.15.2.6}{}}
+\newlabel{4}{{15.7}{237}{Second-order differentiability}{equation.15.2.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {15.3}Quasiconvexity}{237}{section.15.3}\protected@file@percent }
+\newlabel{eq:quasiconvexity}{{15.8}{237}{quasiconvex functions}{equation.15.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15.4}{\ignorespaces A quasiconvex function with its epigraph (in grey) and lower level set (in blue).}}{238}{figure.caption.178}\protected@file@percent }
+\newlabel{fig:quasiconvex}{{15.4}{238}{A quasiconvex function with its epigraph (in grey) and lower level set (in blue)}{figure.caption.178}{}}
+\newlabel{thm:first-order_quasiconvex}{{15.15}{238}{}{theorem.15.15}{}}
+\newlabel{fig:quasiconvex_surface}{{15.5a}{239}{surface plot}{figure.caption.179}{}}
+\newlabel{sub@fig:quasiconvex_surface}{{a}{239}{surface plot}{figure.caption.179}{}}
+\newlabel{fig:quasiconvex_contours}{{15.5b}{239}{level curves}{figure.caption.179}{}}
+\newlabel{sub@fig:quasiconvex_contours}{{b}{239}{level curves}{figure.caption.179}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15.5}{\ignorespaces Surface plot and level curves for $f(x) = \sqrt  {||x||_1}$}}{239}{figure.caption.179}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {16}Unconstrained optimality conditions}{241}{chapter.16}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {16.1}Recognising optimality}{241}{section.16.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {16.2}The role of convexity in optimality conditions}{241}{section.16.2}\protected@file@percent }
+\newlabel{thm:convex_global}{{16.1}{241}{global optimality of convex problems}{theorem.16.1}{}}
+\newlabel{fig:unconstrained}{{16.1a}{242}{Unconstrained optimisation problem}{figure.caption.180}{}}
+\newlabel{sub@fig:unconstrained}{{a}{242}{Unconstrained optimisation problem}{figure.caption.180}{}}
+\newlabel{fig:constrained}{{16.1b}{242}{Constrained optimisation problem}{figure.caption.180}{}}
+\newlabel{sub@fig:constrained}{{b}{242}{Constrained optimisation problem}{figure.caption.180}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16.1}{\ignorespaces Points of interest in optimisation. Points $x_1$, $x_2$ and $x_3$ are local optima in the unconstrained problem. Once a constraint set $S$ is imposed, $x_4$ and $x_5$ become points of interest and $x_1$ becomes infeasible.}}{242}{figure.caption.180}\protected@file@percent }
+\newlabel{fig:example_optima}{{16.1}{242}{Points of interest in optimisation. Points $x_1$, $x_2$ and $x_3$ are local optima in the unconstrained problem. Once a constraint set $S$ is imposed, $x_4$ and $x_5$ become points of interest and $x_1$ becomes infeasible}{figure.caption.180}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {16.3}Optimality condition of convex problems}{243}{section.16.3}\protected@file@percent }
+\newlabel{thm:opt_conditions}{{16.2}{243}{optimality condition for convex problems}{theorem.16.2}{}}
+\newlabel{h1}{{16.1}{243}{Optimality condition of convex problems}{equation.16.3.1}{}}
+\newlabel{h2}{{16.2}{243}{Optimality condition of convex problems}{equation.16.3.2}{}}
+\newlabel{h3}{{16.3}{244}{Optimality condition of convex problems}{equation.16.3.3}{}}
+\newlabel{h4}{{16.4}{244}{Optimality condition of convex problems}{equation.16.3.4}{}}
+\newlabel{cor:opt_conditions_open}{{16.3}{244}{optimality in open sets}{theorem.16.3}{}}
+\newlabel{cor:opt_conditions_diff}{{16.4}{244}{optimality for differentiable functions}{theorem.16.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16.2}{\ignorespaces Example 1}}{245}{figure.caption.181}\protected@file@percent }
+\newlabel{fig:ex_1}{{16.2}{245}{Example 1}{figure.caption.181}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16.3}{\ignorespaces Example 2}}{246}{figure.caption.182}\protected@file@percent }
+\newlabel{fig:ex_2}{{16.3}{246}{Example 2}{figure.caption.182}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {16.3.1}Optimality conditions for unconstrained problems}{246}{subsection.16.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{First-order optimality conditions}{246}{section*.183}\protected@file@percent }
+\newlabel{thm:descent_dir}{{16.5}{246}{descent direction}{theorem.16.5}{}}
+\newlabel{thm:suff_first_order_cond}{{16.6}{247}{first-order necessary condition}{theorem.16.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Second-order optimality conditions}{247}{section*.184}\protected@file@percent }
+\newlabel{thm:second_order}{{16.7}{247}{second-order necessary condition}{theorem.16.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {17}Unconstrained optimisation methods: part 1}{249}{chapter.17}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {17.1}A prototype of an optimisation method}{249}{section.17.1}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {10}{\ignorespaces Conceptual optimisation algorithm}}{249}{algorithm.caption.185}\protected@file@percent }
+\newlabel{Alg1}{{10}{249}{Conceptual optimisation algorithm}{algorithm.caption.185}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.2}Line search methods}{249}{section.17.2}\protected@file@percent }
+\newlabel{thm:line_search_red}{{17.1}{250}{Line search reduction}{theorem.17.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.1}{\ignorespaces Applying Theorem \ref {thm:line_search_red} allows to iteratively reduce the search space.}}{250}{figure.caption.186}\protected@file@percent }
+\newlabel{fig:line_search_reduction}{{17.1}{250}{Applying Theorem \ref {thm:line_search_red} allows to iteratively reduce the search space}{figure.caption.186}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.2.1}Exact line searches}{250}{subsection.17.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Uniform search}{251}{section*.187}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17.2}{\ignorespaces Grid search with 5 points; Note that $\theta (a_2) = \min _{i=0,\dots  ,n} \theta (a_i)$.}}{251}{figure.caption.188}\protected@file@percent }
+\newlabel{fig:uniform_search}{{17.2}{251}{Grid search with 5 points; Note that $\theta (a_2) = \min _{i=0,\dots ,n} \theta (a_i)$}{figure.caption.188}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dichotomous search}{251}{section*.189}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {11}{\ignorespaces Dichotomous search}}{252}{algorithm.caption.190}\protected@file@percent }
+\newlabel{Alg2}{{11}{252}{Dichotomous search}{algorithm.caption.190}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.3}{\ignorespaces Using the midpoint $(a+b)/2$ and Theorem \ref {thm:line_search_red} to reduce the search space.}}{252}{figure.caption.191}\protected@file@percent }
+\newlabel{fig:dichotomou_search}{{17.3}{252}{Using the midpoint $(a+b)/2$ and Theorem \ref {thm:line_search_red} to reduce the search space}{figure.caption.191}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Golden section search*}{252}{section*.192}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {12}{\ignorespaces Golden section search}}{253}{algorithm.caption.193}\protected@file@percent }
+\newlabel{Alg3}{{12}{253}{Golden section search}{algorithm.caption.193}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Bisection search}{254}{section*.194}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {13}{\ignorespaces Bisection method}}{254}{algorithm.caption.195}\protected@file@percent }
+\newlabel{Alg4}{{13}{254}{Bisection method}{algorithm.caption.195}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.2.2}Inexact line search}{254}{subsection.17.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Armijo rule}{255}{section*.196}\protected@file@percent }
+\newlabel{eq:armijo_test}{{17.1}{255}{Armijo rule}{equation.17.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.4}{\ignorespaces At first $\lambda _0 = \overline  {\lambda }$ is not acceptable; after reducing the step size to $\lambda _1 = \beta \overline  {\lambda }$, it enters the acceptable range where $\theta (\lambda _k) \le \theta _{\text  {app}}(\lambda _k)=\theta (0)+\alpha \lambda _k(\theta '(0))$.}}{255}{figure.caption.197}\protected@file@percent }
+\newlabel{fig:armijo_rule}{{17.4}{255}{At first $\lambda _0 = \overline {\lambda }$ is not acceptable; after reducing the step size to $\lambda _1 = \beta \overline {\lambda }$, it enters the acceptable range where $\theta (\lambda _k) \le \theta _{\text {app}}(\lambda _k)=\theta (0)+\alpha \lambda _k(\theta '(0))$}{figure.caption.197}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {17.3}Unconstrained optimisation methods}{255}{section.17.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.3.1}Coordinate descent}{256}{subsection.17.3.1}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {14}{\ignorespaces Coordinate descent method (cyclic)}}{256}{algorithm.caption.198}\protected@file@percent }
+\newlabel{Alg5}{{14}{256}{Coordinate descent method (cyclic)}{algorithm.caption.198}{}}
+\newlabel{alg5:line3}{{3}{256}{Coordinate descent method (cyclic)}{algorithm.caption.198}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.3.2}Gradient (descent) method}{256}{subsection.17.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17.5}{\ignorespaces Coordinate descent method applied to $f$. Convergence is observed in 4 steps for a tolerance $\epsilon = 10^{-5}$}}{257}{figure.caption.199}\protected@file@percent }
+\newlabel{fig:coordinate_descent}{{17.5}{257}{Coordinate descent method applied to $f$. Convergence is observed in 4 steps for a tolerance $\epsilon = 10^{-5}$}{figure.caption.199}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {15}{\ignorespaces Gradient method}}{258}{algorithm.caption.200}\protected@file@percent }
+\newlabel{Alg6}{{15}{258}{Gradient method}{algorithm.caption.200}{}}
+\newlabel{alg6:l2}{{2}{258}{Gradient method}{algorithm.caption.200}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.6}{\ignorespaces Gradient method applied to $f$. Convergence is observed in 10 steps using exact line search and 19 using Armijo's rule (for $\epsilon = 10^{-5}$)}}{258}{figure.caption.201}\protected@file@percent }
+\newlabel{fig:gradient}{{17.6}{258}{Gradient method applied to $f$. Convergence is observed in 10 steps using exact line search and 19 using Armijo's rule (for $\epsilon = 10^{-5}$)}{figure.caption.201}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {17.3.3}Newton's method}{258}{subsection.17.3.3}\protected@file@percent }
+\newlabel{eq:newton_cond}{{17.2}{259}{Newton's method}{equation.17.3.2}{}}
+\newlabel{eq:newton_method}{{17.3}{259}{Newton's method}{equation.17.3.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.7}{\ignorespaces The calculation of the direction $d = x^* - x_0$ in the first two iterations of the Newton's method with step size $\lambda $ fixed to 1 (the pure Newton's method, in left to right, top to bottom order). Notice in blue the level curves of the quadratic approximation of the function at the current point $x_k$ and how it improves from one iteration to the next.}}{259}{figure.caption.202}\protected@file@percent }
+\newlabel{fig:newton_method_exp}{{17.7}{259}{The calculation of the direction $d = x^* - x_0$ in the first two iterations of the Newton's method with step size $\lambda $ fixed to 1 (the pure Newton's method, in left to right, top to bottom order). Notice in blue the level curves of the quadratic approximation of the function at the current point $x_k$ and how it improves from one iteration to the next}{figure.caption.202}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.8}{\ignorespaces A comparison of the trajectory of both Newton's method variants. Notice that in the method using the exact line search, wile the direction $d = x^* - x_0$ is utilised, the step size is larger in the first iteration.}}{260}{figure.caption.203}\protected@file@percent }
+\newlabel{fig:newton_method_comp}{{17.8}{260}{A comparison of the trajectory of both Newton's method variants. Notice that in the method using the exact line search, wile the direction $d = x^* - x_0$ is utilised, the step size is larger in the first iteration}{figure.caption.203}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {16}{\ignorespaces Newton's method}}{260}{algorithm.caption.204}\protected@file@percent }
+\newlabel{Alg7}{{16}{260}{Newton's method}{algorithm.caption.204}{}}
+\newlabel{alg7:line3}{{3}{260}{Newton's method}{algorithm.caption.204}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17.9}{\ignorespaces Newton's method applied to $f$. Convergence is observed in 4 steps using exact line search and 27 using Armijo's rule ($\epsilon = 10^{-5}$)}}{261}{figure.caption.205}\protected@file@percent }
+\newlabel{fig:newton}{{17.9}{261}{Newton's method applied to $f$. Convergence is observed in 4 steps using exact line search and 27 using Armijo's rule ($\epsilon = 10^{-5}$)}{figure.caption.205}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {18}Unconstrained optimisation methods: part 2}{263}{chapter.18}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {18.1}Unconstrained optimisation methods}{263}{section.18.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {18.1.1}Conjugate gradient method}{263}{subsection.18.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The concept of conjugacy}{263}{section*.206}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18.1}{\ignorespaces $d_1$ and $d_2$ are $H$-conjugates; on the left, $H = I$.}}{264}{figure.caption.207}\protected@file@percent }
+\newlabel{fig:conjugates}{{18.1}{264}{$d_1$ and $d_2$ are $H$-conjugates; on the left, $H = I$}{figure.caption.207}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18.2}{\ignorespaces Optimising $f$ with the conjugate method and coordinate descent (left). For $H=I$, both methods coincide (right)}}{265}{figure.caption.208}\protected@file@percent }
+\newlabel{fig:coord_conjugate}{{18.2}{265}{Optimising $f$ with the conjugate method and coordinate descent (left). For $H=I$, both methods coincide (right)}{figure.caption.208}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Generating conjugate directions}{265}{section*.209}\protected@file@percent }
+\newlabel{eq:GS_weight}{{18.1}{266}{Generating conjugate directions}{equation.18.1.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Gradients and conjugate directions}{266}{section*.210}\protected@file@percent }
+\newlabel{thm:conj_prop}{{18.2}{266}{}{theorem.18.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Conjugate gradient method}{266}{section*.211}\protected@file@percent }
+\newlabel{eq:conj_grad}{{18.2}{266}{Conjugate gradient method}{equation.18.1.2}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {17}{\ignorespaces Conjugate gradient method}}{267}{algorithm.caption.212}\protected@file@percent }
+\newlabel{Alg2}{{17}{267}{Conjugate gradient method}{algorithm.caption.212}{}}
+\newlabel{alg:conj_restart}{{5}{267}{Conjugate gradient method}{algorithm.caption.212}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18.3}{\ignorespaces Conjugate gradient method applied to $f$. Convergence is observed in 24 steps using exact line search and 28 using Armijo's rule ($\epsilon = 10^{-6}$)}}{268}{figure.caption.213}\protected@file@percent }
+\newlabel{fig:conjugate_gradient}{{18.3}{268}{Conjugate gradient method applied to $f$. Convergence is observed in 24 steps using exact line search and 28 using Armijo's rule ($\epsilon = 10^{-6}$)}{figure.caption.213}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {18.1.2}Quasi Newton: BFGS method}{268}{subsection.18.1.2}\protected@file@percent }
+\newlabel{eq:BFGS_cond1}{{18.3}{268}{Quasi Newton: BFGS method}{equation.18.1.3}{}}
+\newlabel{eq:BFGS_cond2}{{18.4}{269}{Quasi Newton: BFGS method}{equation.18.1.4}{}}
+\newlabel{eq:bfgs_cond_explain}{{18.5}{269}{Quasi Newton: BFGS method}{equation.18.1.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {18.2}Complexity, convergence and conditioning}{270}{section.18.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18.4}{\ignorespaces BFGS method applied to $f$. Convergence is observed in 11 steps using exact line search and 36 using Armijo's rule ($\epsilon = 10^{-6}$)}}{271}{figure.caption.214}\protected@file@percent }
+\newlabel{fig:BFGS}{{18.4}{271}{BFGS method applied to $f$. Convergence is observed in 11 steps using exact line search and 36 using Armijo's rule ($\epsilon = 10^{-6}$)}{figure.caption.214}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {18.2.1}Complexity}{271}{subsection.18.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {18.2.2}Convergence}{272}{subsection.18.2.2}\protected@file@percent }
+\newlabel{thm:gradient_conv}{{18.4}{272}{Convergence of the gradient method}{theorem.18.4}{}}
+\newlabel{thm:newton_convergence}{{18.5}{272}{Convergence of Newton's method - general case}{theorem.18.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18.5}{\ignorespaces Convergence comparison for the four methods}}{273}{figure.caption.215}\protected@file@percent }
+\newlabel{fig:convergence}{{18.5}{273}{Convergence comparison for the four methods}{figure.caption.215}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {18.2.3}Conditioning}{273}{subsection.18.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18.6}{\ignorespaces The gradient method with exact line search for different $\kappa $.}}{274}{figure.caption.216}\protected@file@percent }
+\newlabel{fig:figure_5}{{18.6}{274}{The gradient method with exact line search for different $\kappa $}{figure.caption.216}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {19}Constrained optimality conditions}{277}{chapter.19}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {19.1}Optimality for constrained problems}{277}{section.19.1}\protected@file@percent }
+\newlabel{thm:geo_nec_cond}{{19.3}{277}{geometric necessary condition}{theorem.19.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19.1}{\ignorespaces Illustration of the cones $F_0$ and $D$ for the optimal point $\overline  {x}$. Notice that $D$ is an open set.}}{278}{figure.caption.217}\protected@file@percent }
+\newlabel{cones_F0_D}{{19.1}{278}{Illustration of the cones $F_0$ and $D$ for the optimal point $\overline {x}$. Notice that $D$ is an open set}{figure.caption.217}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {19.1.1}Inequality constrained problems}{278}{subsection.19.1.1}\protected@file@percent }
+\newlabel{thm:G0_in_D}{{19.4}{278}{}{theorem.19.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.2}Fritz-John conditions}{279}{section.19.2}\protected@file@percent }
+\newlabel{thm:FJ_conditions}{{19.5}{279}{Fritz-John necessary conditions}{theorem.19.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19.2}{\ignorespaces All points in the blue segment satisfy FJ conditions, including the minimum $\overline  {x}$.}}{280}{figure.caption.218}\protected@file@percent }
+\newlabel{FJ-linear}{{19.2}{280}{All points in the blue segment satisfy FJ conditions, including the minimum $\overline {x}$}{figure.caption.218}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.3}Karush-Kuhn-Tucker conditions}{280}{section.19.3}\protected@file@percent }
+\newlabel{p2c7:sec:KKT}{{19.3}{280}{Karush-Kuhn-Tucker conditions}{section.19.3}{}}
+\newlabel{thm:KKT_conditions}{{19.6}{280}{Karush-Kuhn-Tucker necessary conditions}{theorem.19.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {19.4}Constraint qualification}{281}{section.19.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {19.3}{\ignorespaces Graphical illustration of the KKT conditions at the optimal point $\overline  {x}$}}{282}{figure.caption.219}\protected@file@percent }
+\newlabel{ex1_cone}{{19.3}{282}{Graphical illustration of the KKT conditions at the optimal point $\overline {x}$}{figure.caption.219}{}}
+\newlabel{eq:cone_tangents}{{19.1}{282}{Constraint qualification}{equation.19.4.1}{}}
+\newlabel{fig:CG_ex1}{{19.4a}{283}{}{figure.caption.220}{}}
+\newlabel{sub@fig:CG_ex1}{{a}{283}{}{figure.caption.220}{}}
+\newlabel{fig:CG_ex2}{{19.4b}{283}{}{figure.caption.220}{}}
+\newlabel{sub@fig:CG_ex2}{{b}{283}{}{figure.caption.220}{}}
+\newlabel{fig:CG_ex3}{{19.4c}{283}{}{figure.caption.220}{}}
+\newlabel{sub@fig:CG_ex3}{{c}{283}{}{figure.caption.220}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19.4}{\ignorespaces CQ holds for \ref {fig:CG_ex1} and \ref {fig:CG_ex2}, since the tangent cone $T$ and the cone of feasible directions $G_0'$ (denoted by the dashed black lines and grey area) match; for \ref {fig:CG_ex3}, they do not match, as $T = \emptyset $}}{283}{figure.caption.220}\protected@file@percent }
+\newlabel{fig:CQ-Tangent}{{19.4}{283}{CQ holds for \ref {fig:CG_ex1} and \ref {fig:CG_ex2}, since the tangent cone $T$ and the cone of feasible directions $G_0'$ (denoted by the dashed black lines and grey area) match; for \ref {fig:CG_ex3}, they do not match, as $T = \emptyset $}{figure.caption.220}{}}
+\newlabel{fig:CQ-Tangent}{{19.4}{283}{CQ holds for \ref {fig:CG_ex1} and \ref {fig:CG_ex2}, since the tangent cone $T$ and the cone of feasible directions $G_0'$ (denoted by the dashed black lines and grey area) match; for \ref {fig:CG_ex3}, they do not match, as $T = \emptyset $}{figure.caption.220}{}}
+\newlabel{thm:KKT_necII}{{19.7}{283}{Karush-Kuhn-Tucker necessary conditions II}{theorem.19.7}{}}
+\newlabel{thm:KKT_nec_suf}{{19.8}{284}{Necessary and sufficient KKT conditions}{theorem.19.8}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {20}Lagrangian duality}{285}{chapter.20}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {20.1}The concept of relaxation}{285}{section.20.1}\protected@file@percent }
+\newlabel{def:relaxation}{{20.1}{285}{Relaxation}{theorem.20.1}{}}
+\newlabel{thm:relaxation}{{20.2}{285}{Relaxation theorem}{theorem.20.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {20.2}Lagrangian dual problems}{286}{section.20.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {20.2.1}Weak and strong duality}{286}{subsection.20.2.1}\protected@file@percent }
+\newlabel{thm:weak_duality}{{20.3}{286}{Weak Lagrangian duality}{theorem.20.3}{}}
+\newlabel{cor:weak_duals}{{20.4}{287}{Weak Lagrangian duality II}{theorem.20.4}{}}
+\newlabel{cor:strong_duals_1}{{20.5}{287}{Strong Lagrangian duality}{theorem.20.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Geometric interpretation of Lagrangian duality}{287}{section*.221}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20.1}{\ignorespaces Illustration of the mapping $G$, in which one can see that solving $P$ amounts to finding the lowermost point on the vertical axis (the ordinate) that is still contained within $G$.}}{288}{figure.caption.222}\protected@file@percent }
+\newlabel{fig:generic_G}{{20.1}{288}{Illustration of the mapping $G$, in which one can see that solving $P$ amounts to finding the lowermost point on the vertical axis (the ordinate) that is still contained within $G$}{figure.caption.222}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20.2}{\ignorespaces Solving the Lagrangian dual problem is the same as finding the coefficient $u$ such that $z = \alpha - uy$ is a supporting hyperplane of $G$ with the uppermost intercept $\alpha $. Notice that, for $\overline  {u}$, the hyperplane supports $G$ at the same point that solves $P$.}}{288}{figure.caption.223}\protected@file@percent }
+\newlabel{fig:convex_G}{{20.2}{288}{Solving the Lagrangian dual problem is the same as finding the coefficient $u$ such that $z = \alpha - uy$ is a supporting hyperplane of $G$ with the uppermost intercept $\alpha $. Notice that, for $\overline {u}$, the hyperplane supports $G$ at the same point that solves $P$}{figure.caption.223}{}}
+\newlabel{fig:nonconvex_G}{{\caption@xref {fig:nonconvex_G}{ on input line 195}}{289}{Geometric interpretation of Lagrangian duality}{figure.caption.224}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20.3}{\ignorespaces An example in which the perturbation function $v(y)$ is not convex. Notice the consequent mismatch between the intercept of the supporting hyperplane and the lowermost point on the ordinate still contained in $G$.}}{289}{figure.caption.224}\protected@file@percent }
+\newlabel{fig:nonconvex_G}{{20.3}{289}{An example in which the perturbation function $v(y)$ is not convex. Notice the consequent mismatch between the intercept of the supporting hyperplane and the lowermost point on the ordinate still contained in $G$}{figure.caption.224}{}}
+\newlabel{fig:ex1_P}{{20.4a}{290}{$P$}{figure.caption.225}{}}
+\newlabel{sub@fig:ex1_P}{{a}{290}{$P$}{figure.caption.225}{}}
+\newlabel{fig:ex1_D}{{20.4b}{290}{$D$}{figure.caption.225}{}}
+\newlabel{sub@fig:ex1_D}{{b}{290}{$D$}{figure.caption.225}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20.4}{\ignorespaces The primal problem $P$ as a constrained optimisation problem, and the dual problem $D$, as an unconstrained optimisation problem. Notice how the Lagrangian dual function is discontinuous, due to the implicit minimisation in $x$ of $\theta (u) = \inf _{x \in X} \phi (x,u)$.}}{290}{figure.caption.225}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20.5}{\ignorespaces The $G$ mapping for the first example.}}{291}{figure.caption.226}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Strong duality}{291}{section*.229}\protected@file@percent }
+\newlabel{thm:strong_duality}{{20.6}{291}{}{theorem.20.6}{}}
+\newlabel{fig:ex2_P}{{20.6a}{292}{$P$}{figure.caption.227}{}}
+\newlabel{sub@fig:ex2_P}{{a}{292}{$P$}{figure.caption.227}{}}
+\newlabel{fig:ex2_D}{{20.6b}{292}{$(D): \maxi \theta (v)$}{figure.caption.227}{}}
+\newlabel{sub@fig:ex2_D}{{b}{292}{$(D): \maxi \theta (v)$}{figure.caption.227}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20.6}{\ignorespaces The primal problem $P$ as a constrained optimisation problem and the dual problem $D$. Notice how the Lagrangian dual function is concave and piecewise linear, despite the nonconvex nature of $P$.}}{292}{figure.caption.227}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {20.2.2}Employing Lagrangian duality for solving optimisation problems}{292}{subsection.20.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20.7}{\ignorespaces The $G$ mapping for the second example. The blue dots represent the perturbtion function $v(y)$, which is not convex and thus cannot be supported everywhere. Notice the duality gap represented by the difference between the intercept of $z = -6 -2y$ and the optimal value of $P$ at (0,-3).}}{293}{figure.caption.228}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {20.2.3}Saddle point optimality and KKT conditions*}{293}{subsection.20.2.3}\protected@file@percent }
+\newlabel{thm:saddle_point}{{20.7}{294}{Saddle point optimality and zero duality gap}{theorem.20.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20.8}{\ignorespaces Illustration of a saddle point for the Lagrangian dual problem}}{295}{figure.caption.230}\protected@file@percent }
+\newlabel{KKT_saddle}{{20.8}{295}{Illustration of a saddle point for the Lagrangian dual problem}{figure.caption.230}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {20.3}Properties of Lagrangian functions}{295}{section.20.3}\protected@file@percent }
+\newlabel{thm:Lagrangian_dual_concave}{{20.8}{295}{Concavity of Lagrangian dual functions}{theorem.20.8}{}}
+\newlabel{thm:Lagrangian_dual_subgradient}{{20.9}{296}{}{theorem.20.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {20.3.1}The subgradient method}{296}{subsection.20.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20.9}{\ignorespaces One possible subgradient $\beta (x_k)$ that is a descent direction for suitable step size. Notice that within the subdifferential $\partial \theta (w_k)$ other subgradients that are not descent direction are available.}}{297}{figure.caption.233}\protected@file@percent }
+\newlabel{fig:subgradients}{{20.9}{297}{One possible subgradient $\beta (x_k)$ that is a descent direction for suitable step size. Notice that within the subdifferential $\partial \theta (w_k)$ other subgradients that are not descent direction are available}{figure.caption.233}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {18}{\ignorespaces Subgradient method}}{297}{algorithm.caption.234}\protected@file@percent }
+\newlabel{Alg1}{{18}{297}{Subgradient method}{algorithm.caption.234}{}}
+\newlabel{alg1:step_update}{{5}{297}{Subgradient method}{algorithm.caption.234}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {21}Penalty methods}{299}{chapter.21}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {21.1}Penalty functions}{299}{section.21.1}\protected@file@percent }
+\newlabel{eq:penalty_function}{{21.1}{299}{Penalty functions}{equation.21.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21.1}{\ignorespaces Solving the constrained problem $P$ (top left) by gradually increasing the penalty term $\mu $ (0.5, 1, and 5, in clockwise order)}}{300}{figure.caption.235}\protected@file@percent }
+\newlabel{ex1}{{21.1}{300}{Solving the constrained problem $P$ (top left) by gradually increasing the penalty term $\mu $ (0.5, 1, and 5, in clockwise order)}{figure.caption.235}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.1.1}Geometric interpretation}{300}{subsection.21.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21.2}{\ignorespaces Geometric representation of penalised problems in the mapping $G = [h(x), f(x)]$}}{301}{figure.caption.236}\protected@file@percent }
+\newlabel{fig:Fig1}{{21.2}{301}{Geometric representation of penalised problems in the mapping $G = [h(x), f(x)]$}{figure.caption.236}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.1.2}Penalty function methods}{301}{subsection.21.1.2}\protected@file@percent }
+\newlabel{thm:conv_pen_method}{{21.1}{302}{Convergence of penalty-based methods}{theorem.21.1}{}}
+\newlabel{eq:part1}{{21.2}{302}{Penalty function methods}{equation.21.1.2}{}}
+\newlabel{eq:ge_side}{{21.3}{302}{Penalty function methods}{equation.21.1.3}{}}
+\newlabel{eq:ge_side2}{{21.4}{302}{Penalty function methods}{equation.21.1.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {21.2}Augmented Lagrangian method of multipliers}{303}{section.21.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21.3}{\ignorespaces Geometric representation of augmented Lagrangians in the mapping $G = [h(x), f(x)]$}}{304}{figure.caption.238}\protected@file@percent }
+\newlabel{fig:Fig2}{{21.3}{304}{Geometric representation of augmented Lagrangians in the mapping $G = [h(x), f(x)]$}{figure.caption.238}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.2.1}Augmented Lagrangian method of multipliers}{305}{subsection.21.2.1}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {19}{\ignorespaces Augmented Lagrangian method of multipliers (ALMM)}}{305}{algorithm.caption.239}\protected@file@percent }
+\newlabel{Alg1}{{19}{305}{Augmented Lagrangian method of multipliers (ALMM)}{algorithm.caption.239}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {21.2.2}Alternating direction method of multipliers - ADMM}{306}{subsection.21.2.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {20}{\ignorespaces ADMM}}{306}{algorithm.caption.240}\protected@file@percent }
+\newlabel{Alg2}{{20}{306}{ADMM}{algorithm.caption.240}{}}
+\newlabel{stop_criteria}{{2}{306}{ADMM}{algorithm.caption.240}{}}
+\newlabel{x-step}{{3}{306}{ADMM}{algorithm.caption.240}{}}
+\newlabel{y-step}{{4}{306}{ADMM}{algorithm.caption.240}{}}
+\newlabel{dual-step}{{5}{306}{ADMM}{algorithm.caption.240}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {22}Barrier methods}{307}{chapter.22}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {22.1}Barrier functions}{307}{section.22.1}\protected@file@percent }
+\newlabel{eq:barrier_prop}{{22.1}{307}{Barrier functions}{equation.22.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22.1}{\ignorespaces The barrier function for different values of $\mu $}}{308}{figure.caption.241}\protected@file@percent }
+\newlabel{fig:different_mu}{{22.1}{308}{The barrier function for different values of $\mu $}{figure.caption.241}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {22.2}The barrier method}{308}{section.22.2}\protected@file@percent }
+\newlabel{thm:convergence}{{22.1}{308}{Convergence of barrier methods}{theorem.22.1}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {21}{\ignorespaces Barrier method}}{309}{algorithm.caption.242}\protected@file@percent }
+\newlabel{Alg1}{{21}{309}{Barrier method}{algorithm.caption.242}{}}
+\newlabel{x-step}{{3}{309}{Barrier method}{algorithm.caption.242}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22.2}{\ignorespaces Example 1: solving a one-dimensional problem with the barrier method}}{310}{figure.caption.243}\protected@file@percent }
+\newlabel{fig:figure_2}{{22.2}{310}{Example 1: solving a one-dimensional problem with the barrier method}{figure.caption.243}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {22.3}Interior point method for LP/QP problems}{310}{section.22.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {22.3}{\ignorespaces The trajectory of the barrier method for problem $P$. Notice how the parameters influence the trajectory and number of iterations. The parameters on the left require 27 iterations while those on the right require 40 iterations for convergence.}}{311}{figure.caption.244}\protected@file@percent }
+\newlabel{fig:barrier_2}{{22.3}{311}{The trajectory of the barrier method for problem $P$. Notice how the parameters influence the trajectory and number of iterations. The parameters on the left require 27 iterations while those on the right require 40 iterations for convergence}{figure.caption.244}{}}
+\newlabel{eq:pKKT1}{{22.3}{312}{Interior point method for LP/QP problems}{equation.22.3.3}{}}
+\newlabel{eq:pKKT2}{{22.4}{312}{Interior point method for LP/QP problems}{equation.22.3.4}{}}
+\newlabel{eq:pKKT3}{{22.5}{312}{Interior point method for LP/QP problems}{equation.22.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {22.3.1}Primal/dual path-following interior point method}{313}{subsection.22.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {22.4}{\ignorespaces an illustrative representation of the central path and how the IPM follows it approximately. }}{313}{figure.caption.245}\protected@file@percent }
+\newlabel{fig:approx_central}{{22.4}{313}{an illustrative representation of the central path and how the IPM follows it approximately}{figure.caption.245}{}}
+\newlabel{eq:NewtonSystem}{{22.6}{314}{Primal/dual path-following interior point method}{equation.22.3.6}{}}
+\newlabel{eq:NewtonSystem_matrix}{{22.7}{314}{Primal/dual path-following interior point method}{equation.22.3.7}{}}
+\newlabel{eq:update_step}{{22.8}{314}{Primal/dual path-following interior point method}{equation.22.3.8}{}}
+\newlabel{eq:Newton_step_residual}{{22.9}{314}{Primal/dual path-following interior point method}{equation.22.3.9}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {22}{\ignorespaces Interior point method (IPM) for LP}}{314}{algorithm.caption.246}\protected@file@percent }
+\newlabel{Alg2}{{22}{314}{Interior point method (IPM) for LP}{algorithm.caption.246}{}}
+\newlabel{alg:step_direction}{{3}{314}{Interior point method (IPM) for LP}{algorithm.caption.246}{}}
+\newlabel{alg:w_update}{{4}{314}{Interior point method (IPM) for LP}{algorithm.caption.246}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22.5}{\ignorespaces IPM applied to a LP problem with two different barrier terms}}{315}{figure.caption.247}\protected@file@percent }
+\newlabel{fig:lp_example1}{{22.5}{315}{IPM applied to a LP problem with two different barrier terms}{figure.caption.247}{}}
+\newlabel{eq:final}{{22.11}{316}{Primal/dual path-following interior point method}{equation.22.3.11}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {23}Primal methods}{317}{chapter.23}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {23.1}The concept of feasible directions}{317}{section.23.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {23.2}Conditional gradient - the Frank-Wolfe method}{317}{section.23.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {23}{\ignorespaces Franke-Wolfe method}}{318}{algorithm.caption.248}\protected@file@percent }
+\newlabel{Alg1}{{23}{318}{Franke-Wolfe method}{algorithm.caption.248}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23.1}{\ignorespaces The Frank-Wolfe method applied to a problem with linear constraints. The algorithm takes 2 steps using an exact line search (left) and 15 with Armijo line search (right).}}{319}{figure.caption.249}\protected@file@percent }
+\newlabel{fig:frank_wolfe}{{23.1}{319}{The Frank-Wolfe method applied to a problem with linear constraints. The algorithm takes 2 steps using an exact line search (left) and 15 with Armijo line search (right)}{figure.caption.249}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {23.3}Sequential quadratic programming}{319}{section.23.3}\protected@file@percent }
+\newlabel{eq:NewtonSystem}{{23.1}{319}{Sequential quadratic programming}{equation.23.3.1}{}}
+\newlabel{QP_opt_cond1}{{23.2}{320}{Sequential quadratic programming}{equation.23.3.2}{}}
+\newlabel{QP_opt_cond2}{{23.3}{320}{Sequential quadratic programming}{equation.23.3.3}{}}
+\newlabel{eq:QP_objfun}{{23.4}{320}{Sequential quadratic programming}{equation.23.3.4}{}}
+\newlabel{eq:QP_const}{{23.5}{320}{Sequential quadratic programming}{equation.23.3.5}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {24}{\ignorespaces SQP method}}{321}{algorithm.caption.250}\protected@file@percent }
+\newlabel{Alg2}{{24}{321}{SQP method}{algorithm.caption.250}{}}
+\newlabel{alg2:dual_var}{{4}{321}{SQP method}{algorithm.caption.250}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23.2}{\ignorespaces The SQP method converges in 6 iterations with $\epsilon = 10^{-6}$}}{322}{figure.caption.251}\protected@file@percent }
+\newlabel{fig:sqp_example}{{23.2}{322}{The SQP method converges in 6 iterations with $\epsilon = 10^{-6}$}{figure.caption.251}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {23.4}Generalised reduced gradient*}{323}{section.23.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {23.4.1}Wolfe's reduced gradient}{323}{subsection.23.4.1}\protected@file@percent }
+\newlabel{eq:red_grad}{{23.6}{324}{Wolfe's reduced gradient}{equation.23.4.6}{}}
+\newlabel{eq:firstKKT}{{23.7}{325}{Wolfe's reduced gradient}{equation.23.4.7}{}}
+\newlabel{eq:secondKKT}{{23.8}{325}{Wolfe's reduced gradient}{equation.23.4.8}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {25}{\ignorespaces Wolfe's reduced gradient method}}{325}{algorithm.caption.252}\protected@file@percent }
+\newlabel{Alg3}{{25}{325}{Wolfe's reduced gradient method}{algorithm.caption.252}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {23.4.2}Generalised reduced gradient method}{325}{subsection.23.4.2}\protected@file@percent }
+\bibstyle{plain}
+\bibdata{optimization-notes-bib}
+\bibcite{bertsimas1997introduction}{1}
+\bibcite{birge2011introduction}{2}
+\bibcite{gondzio2012interior}{3}
+\bibcite{kwon2019julia}{4}
+\bibcite{taha2003operations}{5}
+\bibcite{williams2013model}{6}
+\gdef \@abspage@last{327}

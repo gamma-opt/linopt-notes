@@ -1,0 +1,272 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdftex 2023.3.31)  21 FEB 2024 18:18
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**chapter_1-7.tex
+(./chapter_1-7.tex
+./chapter_1-7.tex:1: Undefined control sequence.
+l.1 \section
+            {Barrier methods} \label{section_71}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:1: Undefined control sequence.
+l.1 \section{Barrier methods} \label
+                                    {section_71}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:1: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.1 \section{Barrier methods} \label{section_
+                                             71}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter_1-7.tex:1: Extra }, or forgotten $.
+l.1 \section{Barrier methods} \label{section_71}
+                                                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./chapter_1-7.tex:2: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.2 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter_1-7.tex:3: Undefined control sequence.
+l.3 ... which had as main characteristic the \emph
+                                                  {strict} satisfaction of t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:5: Undefined control sequence.
+l.5 A subclass of barrier methods called \emph
+                                              {primal-dual methods} distingu...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:7: Undefined control sequence.
+l.7 ...he method of choice of many nonlinear \emph
+                                                  {local solver}, which are ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:12: Undefined control sequence.
+l.12 \section
+             {Newton's method with equality constraints}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:17: Undefined control sequence.
+l.17 ... roots of vector functions. Let $f: \reals
+                                                  ^n \to \reals^n$, with $f_...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:17: Undefined control sequence.
+l.17 ...tor functions. Let $f: \reals^n \to \reals
+                                                  ^n$, with $f_i : \reals^n ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:17: Undefined control sequence.
+l.17 ...\reals^n \to \reals^n$, with $f_i : \reals
+                                                  ^n \to \reals$ differentia...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:17: Undefined control sequence.
+l.17 ...\reals^n$, with $f_i : \reals^n \to \reals
+                                                  $ differentiable for $i = ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:21: Undefined control sequence.
+l.21 	f(x) = \begin
+                   {bmatrix} f_1(x) \\ \vdots \\ f_n(x) \end{bmatrix} = \beg...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+ \vdots \\ f_n(x) \end {bmatrix} = \begin {bmatrix} 0 \\ \vdots \\ 0 \ETC.
+./chapter_1-7.tex:23: Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+l.23 	
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./chapter_1-7.tex:23: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.23 	
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter_1-7.tex:23: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.23 	
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./chapter_1-7.tex:24: Undefined control sequence.
+l.24 ...d iterates by finding the root for a \emph
+                                                  {linear} (i.e., first-orde...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:24: Undefined control sequence.
+<recently read> \braces 
+                        
+l.24 ... of the root of $f$, the sequence $\braces
+                                                  {x^k}_{k\to\infty}$ conver...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:30: Undefined control sequence.
+l.30 	where $\nabla f(x^k)$ is the \emph
+                                        {Jacobian} of $f(x)$, which is defin...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:32: Undefined control sequence.
+l.32 	\nabla f(x^k) = \begin
+                            {bmatrix} \nabla f_1(x^k)^\top \\ \vdots \\ \nab...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+ \vdots \\ \nabla f_n(x^k)^\top \end {bmatrix}. $$ 
+./chapter_1-7.tex:34: Paragraph ended before \\ was complete.
+<to be read again> 
+                   \par 
+l.34 	
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+./chapter_1-7.tex:34: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+l.34 	
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter_1-7.tex:34: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.34 	
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./chapter_1-7.tex:37: Undefined control sequence.
+l.37 	\begin
+            {equation*}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./chapter_1-7.tex:38: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   ^
+l.38 		f(x^
+           k) + \nabla f(x^k)^\top d = 0 \Rightarrow
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./chapter_1-7.tex:40: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \end 
+l.40 	\end
+          {equation*}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[1{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1 ({)
+### bottom level</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "/Users/pinheif2/Dropbox (Aalto)/Aalto/Courses/optimisation-notes/src/part_1/chapter_7/.texpadtmp/chapter_1-7.pdf" (1 page, 64979 bytes).
+PDF statistics:
+ 32 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
