@@ -1,0 +1,5 @@
+# Ignore all hidden files
+.*
+
+# Ignore local pdf
+*.pdf
