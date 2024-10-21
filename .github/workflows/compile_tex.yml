@@ -1,0 +1,38 @@
+name: Build LaTeX document
+
+on: 
+  push:
+    branches: 
+      - main    
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+     
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: src
+          root_file: linopt-notes.tex
+          
+      - name: Upload linopt-notes.pdf
+        run: |
+          # Move file to root folder
+          mv $GITHUB_WORKSPACE/src/linopt-notes.pdf $GITHUB_WORKSPACE/pdfs/linopt-notes.pdf
+          
+          # configure git
+          git config --global user.name "FabsOliveira"
+          git config --global user.email "fabricio.oliveira@aalto.fi"
+          
+          # add file and push
+          git checkout main
+          git add -f pdfs/linopt-notes.pdf
+          git commit -m "[GA] update linopt-notes.pdf"
+          git push
+          
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+       
