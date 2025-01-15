@@ -1,6 +1,6 @@
-Consider the following network, where the supplies from the Austin and Buffalo nodes need to meet the demands in Chicago, Denver, and Erie. The data for the problem is presented in table below.
+Consider the following network, where the supplies from the Austin and Buffalo nodes need to meet the demands in Chicago, Denver, and Erie. The data for the problem is presented in Table \ref{c1:tab:ex2-data}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\begin{tikzpicture}[scale=1,
 		node/.style={circle, fill=blue!40, draw, minimum size=3em, inner sep=1pt},
 		node2/.style={circle, fill=orange, draw, minimum size=3em, inner sep=1pt}] 
@@ -18,7 +18,7 @@ Consider the following network, where the supplies from the Austin and Buffalo n
 	\end{tikzpicture}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[H]
 	\begin{tabular}{r|ccc|c}
     	& & {\it Clients} &\\\hline
     	{\it Factory} & Chicago & Denver & Eire \\\hline
@@ -26,7 +26,7 @@ Consider the following network, where the supplies from the Austin and Buffalo n
     	Austin        & 10      & 7      & 9    & 600 \\\hline
     	Demands       & 15      & 12     & 13   & - \\\hline
 	\end{tabular}
-	\caption{Problem data: unit transportation costs, demands and capacities}
+	\caption{Problem data: unit transportation costs, demands and capacities} \label{c1:tab:ex2-data}
 \end{table}
 
 Solve the transportation problem, finding the minimum cost transportation plan.
