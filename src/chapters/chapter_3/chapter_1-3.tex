@@ -7,10 +7,10 @@ A key point in this chapter will be devising how we relate this process of selec
 
 \subsection{The standard form of linear programming problems}
 
-First, let us formally define the notion of a standard-form polyhedral set. Let $A$ is a $m \times n$ matrix and $b \in \reals^m$. The \emph{standard form} polyhedral set $P$ is given by 
+First, let us formally define the notion of a standard-form polyhedral set. Let $A$ be a $m \times n$ matrix and $b \in \reals^m$. The \emph{standard form} polyhedral set $P$ is given by 
 %
 \begin{equation*}
-	P = \braces{x \in \reals^n : Ax = b, x \geq 0}.		
+	P = \braces{x \in \reals^n : Ax = b, ~x \geq 0}.		
 \end{equation*}
 %
 We assume that the $m$ equality constraints are linearly independent, i.e., $A$ is full (row) rank ($m \leq n$). We know that a basic solution can be obtained from a collection of $n$ active constraints since the problem is defined in $\reals^n$. 
@@ -68,12 +68,13 @@ The standard-form polyhedral set $P$ always has, by definition, $m$ active const
 		\end{equation*}
 %
 	has a unique solution, and so does $\sum_{i=1}^k A_{B(i)}\overline{x}_{B(i)} = b$, implying that the columns $A_{B(1)}, \dots, A_{B(k)}$ are LI. Otherwise, there would be scalars $\lambda_1,\dots, \lambda_k$, not all zeros, for which $\sum_{i=1}^k A_{B(i)}\lambda_i = 0$; this would imply that $\sum_{i=1}^k A_{B(i)}(\overline{x}_{B(i)} + \lambda_i) =b$, contradicting the uniqueness of $\overline{x}$.
+	
 	Since $A_{B(1)}, \dots, A_{B(k)}$ are LI, $k \leq m$. Also, since $A$ has $m$ LI rows, it must have $m$ LI columns spanning $\reals^m$. Using Theorem \ref{p1c2:thm:LI_and_bases}, we can obtain $m-k$ additional columns $A_{B(k+1)}, \dots, A_{B(m)}$ so that $A_{B(1)}, \dots, A_{B(m)}$ are LI. 
 	
 	Finally, since $k \leq m $, $\braces{\overline{x}_j = 0}_{i \notin \braces{B(1), \dots, B(m)}} \subset  \braces{\overline{x}_j = 0}_{i \notin \braces{B(1), \dots, B(k)}}$, satisfying (1) and (2). \qedhere 		
 \end{proof}	
 
-This proof highlights an important aspect in the process of generating basic solutions. Notice that once we set $n-m$ variables to be zero, the system of equations forming $P$ becomes uniquely determined, i.e., 
+The proof of Theorem \ref{p1c3:thm:LI_and_bases} highlights an important aspect in the process of generating basic solutions. Notice that once we set $n-m$ variables to be zero, the system of equations forming $P$ becomes uniquely determined, i.e., 
 %
 \begin{equation*}
 	\sum_{i=1}^m A_{B(i)}\overline{x}_{B(i)} = \sum_{j=1}^n A_j\overline{x}_j = A\overline{x} = b.
@@ -83,7 +84,7 @@ This proof highlights an important aspect in the process of generating basic sol
 
 \subsection{Forming bases for standard-form linear programming problems}
 
-Theorem \ref{p1c3:thm:LI_and_bases} provides us with a way to develop a simple procedure to generate all basic solutions of a linear programming problem in standard form.
+Theorem \ref{p1c3:thm:LI_and_bases} provides us with a way to develop a simple procedure to generate all basic solutions of a linear programming problem in standard form:
 
 \begin{enumerate}
 	\item Choose $m$ LI columns $A_{B(1)}, \dots, A_{B(m)}$;
@@ -99,9 +100,9 @@ You will notice that from here onwards, we will implicitly refer to the columns 
 
 As we will see, this procedure will be at the core of the simplex method. Since we will often refer to elements associated with this procedure, it will be useful to define some nomenclature.
 
-We say that $B = \braces{A_{B(i)}}_{i \in I_B}$ is a \emph{basis} (or, perhaps more precisely, a basic matrix) with basic indices $I_B = \braces{B(1), \dots, B(m)}$. Consequently, we say that the variables $x_j$, for $x_j$, for $j \in I_B$, are \emph{basic variables}. Somewhat analogously, we say that the variables chosen to be set to zero are the \emph{nonbasic variables} $x_j$, for $j \in I_N$, where $I_N = J \setminus I_B$, with $J = \braces{1, \dots, n}$ being the indices of all variables (and all columns of $A$).
+We say that $B = \braces{A_{B(i)}}_{i \in I_B}$ is a \emph{basis} (or, perhaps more precisely, a basic matrix) with basic indices $I_B = \braces{B(1), \dots, B(m)}$. Consequently, we say that the variables $x_j$, with $j \in I_B$, are \emph{basic variables}. Somewhat analogously, we say that the variables chosen to be set to zero are the \emph{nonbasic variables} $x_j$, with $j \in I_N$, where $I_N = J \setminus I_B$, with $J = \braces{1, \dots, n}$ being the indices of all variables (and all columns of $A$).
  
- Notice that the basic matrix $B$ is invertible, since its columns are LI (c.f. Theorem \ref{p1c2:thm:LI_and_bases}). For $x_B = (x_{B(1)}, \dots, x_{B(m)})$, the \emph{unique solution} for $Bx_B = b$ is 
+ Notice that the basic matrix $B$ is invertible since its columns are LI (c.f. Theorem \ref{p1c2:thm:LI_and_bases}). For $x_B = (x_{B(1)}, \dots, x_{B(m)})$, the \emph{unique solution} for $Bx_B = b$ is 
 %
 \begin{equation*}
 	x_B = B^{-1}b, \text{ where } 
@@ -116,7 +117,7 @@ We say that $B = \braces{A_{B(i)}}_{i \in I_B}$ is a \emph{basis} (or, perhaps m
 \end{equation*}
 %
 
-Let us consider the following numerical example. Let us consider the following set $P$
+Let us consider the following numerical example. Consider the following set $P$
 %
 \begin{equation}  \label{p1c3:eq:example_P}
 	P = \left\{x \in \reals^3 :  
@@ -180,7 +181,7 @@ Let us start formally defining the notion of an adjacent basic solution.
 %
 For example, consider the set polyhedral set $P$ defined in \eqref{p1c3:eq:example_P}. Our first BFS was defined by making $x_1 = x_2 = x_3 = 0$ (nonbasic index set $I_N = \braces{1,2,3}$). Thus, our basis was $I_B = \braces{4,5,6,7}$. An adjacent basis was then formed, by replacing the basic variable $x_4$ with the nonbasic variable $x_3$, rendering the new (not feasible) basis $I_B = \braces{3,5,6,7}$.
 
-Notice that the process of moving between adjacent basis has a simple geometrical interpretation. Since adjacent bases share all but one basic element, this means that the two must be connected by a line segment (in the case of the example, it would be the segment between $(0,8)$ and $(4,0)$, projected onto $(x_3,x_4) \in \reals^2$, or equivalently, the line between $(0,0,0,8,12,4,6)$ and $(0,0,4,0,-12,4,6)$ (Notice how the coordinate $x_6$ also changed values; this is necessary, so the movement is made along the edge of the polyhedral set. This will become clearer when we analyse the simplex method in further detail in Chapter \ref{chapter_4}. 
+Notice that the process of moving between adjacent bases has a simple geometrical interpretation. Since adjacent bases share all but one basic element, this means that the two must be connected by a line segment (in the case of the example, it would be the segment between $(0,8)$ and $(4,0)$, projected onto $(x_3,x_4) \in \reals^2$, or equivalently, the line between $(0,0,0,8,12,4,6)$ and $(0,0,4,0,-12,4,6)$ (Notice how the coordinate $x_6$ also changed values; this is necessary, so the movement is made along the edge of the polyhedral set. This will become clearer when we analyse the simplex method in further detail in Chapter \ref{chapter_4}. 
 
 
 
@@ -202,7 +203,7 @@ An important underlying assumption in Theorem \ref{p1c3:thm:LI_and_bases} is tha
 
 Theorem \ref{p1c3:thm:red_const} implies that any linear programming problem in standard form can be reduced to an equivalent problem with linearly independent constraints. It turns out that, in practice, most professional-grade solvers (i.e., software that implements solution methods and can be used to find optimal solutions to mathematical programming models) have \emph{preprocessing} routines to remove redundant constraints. This means that the problem is automatically treated to become smaller by not incorporating unnecessary constraints. 
 
-Degeneracy is somewhat related to the notion of redundant constraints. We say that a given vertex is a \emph{degenerate} basic solution if it is formed by the intersection of more than $n$ active constraints (in $\reals^n$). Effectively, this means that more than $n-m$ variables (i.e, some of the basic variables) are set to zero, which is the main way to identify a degenerate BFS. Figure \ref{p1c3:fig:figure1} illustrates a case in which degeneracy is present.
+Degeneracy is somewhat related to the notion of redundant constraints. We say that a given vertex is a \emph{degenerate} basic solution if it is formed by the intersection of more than $n$ active constraints (in $\reals^n$). Effectively, this means that more than $n-m$ variables (i.e., some of the basic variables) are set to zero, which is the main way to identify a degenerate BFS. Figure \ref{p1c3:fig:figure1} illustrates a case in which degeneracy is present.
 
 \begin{figure}[h]
 	\begin{tikzpicture}
@@ -215,9 +216,26 @@ Degeneracy is somewhat related to the notion of redundant constraints. We say th
 	\caption{$A$ is a degenerate basic solution, $B$ and $C$ are degenerate BFS, and $D$ is a BFS.} \label{p1c3:fig:figure1}
 \end{figure} 
 
-Notice that, while in the figure on the left, the constraint causing degeneracy is redundant, that is not the case on the figure on the righthand side. That is, redundant constraints may cause degeneracy, but not all constraints causing degeneracy are redundant.
+Notice that, while in the figure on the left, the constraint causing degeneracy is redundant, that is not the case in the figure on the righthand side. That is, redundant constraints may cause degeneracy, but not all constraints causing degeneracy are redundant.
 
-In practice, degeneracy might cause issues related to the way we identify vertices. Because more than $n$ active constraints form the vertex, and yet, we identify vertices by groups of $n$ constraints to be active, it means that we might be have a collection of adjacent bases that, in fact, are representing the same vertex in space, meaning that we might be ``stuck'' for a while in the same position while scanning through adjacent bases. The numerical example below illustrates this phenomenon. 
+As another example, in some cases, we may see that degeneracy is caused by the chosen representation of the problem. For example, consider the two equivalent sets:
+%
+\begin{equation*}
+	P_1 = \braces{(x_1, x_2,x_3) : x_1 - x_2 = 0, x_1 + x_2 + 2x_3 = 2, x_1, x_3 \geq 0} \text { and } P_2 = P_1 \cap \braces{x_2 \geq 0}. 
+\end{equation*}	
+%
+The polyhedral set $P_2$ is equivalent to $P_1$ since $x_2 \ge 0$ is a redundant constraint. In that case, one can see that, while the point $(0,0,1)$ is not degenerate in $P_1$, it is in $P_2$, which illustrates the weak but existent relationship between redundancy and degeneracy. This is illustrated in Figure \ref{p1c3:fig:redundancy_and_degeneration}.
+%
+\begin{figure}[h]
+	\begin{tikzpicture}
+		\node (pic) at (0,0) {\includegraphics{chapters/chapter_3/figures/Figure2.pdf}};
+		\node[right] (1) at (-0.4, 0.4) {$(0,0,1)$};
+		\node[right] (2) at (0.4, -0.8) {$(1,1,0)$};	
+	\end{tikzpicture}
+    \caption{$(0,0,1)$ is degenerate if you add the constraint $x_2 \ge 0$.} \label{p1c3:fig:redundancy_and_degeneration}
+\end{figure}
+
+In practice, degeneracy might cause issues related to the way we identify vertices. Because more than $n$ active constraints form the vertex, and yet, we identify vertices by groups of $n$ constraints to be active, it means that we might have a collection of adjacent bases that, in fact, are representing the same (vertex) point in space, meaning that we might be ``stuck'' for a while in the same position while scanning through adjacent bases. The numerical example below illustrates this phenomenon. 
 
 Let us consider again the example in \eqref{p1c3:eq:example_P}. 
 %
@@ -244,22 +262,8 @@ Observe the following,
 	\item Now, let = $I_B = \braces{1,3,4,7}$. This also implies that $x = (4,0,2,0,0,0,6)$. The two bases are adjacent yet represent the same point in $\reals^7$.	
 \end{itemize}
 %
-As we will see, there are mechanisms that prevent the simplex method from becoming stuck on such vertices forever, an issue that is referred to as \emph{cycling}. One final point to observe about degeneracy is that it can be caused by the chosen representation of the problem. For example, consider the two equivalent sets:
-%
-\begin{equation*}
-	P_1 = \braces{(x_1, x_2,x_3) : x_1 - x_2 = 0, x_1 + x_2 + 2x_3 = 2, x_1, x_3 \geq 0} \text { and } P_2 = P_1 \cap \braces{x_2 \geq 0}. 
-\end{equation*}	
-%
-The polyhedral set $P_2$ is equivalent to $P_1$ since $x_2 \ge 0$ is a redundant constraint. In that case, one can see that, while the point $(0,0,1)$ is not degenerate in $P_1$, it is in $P_2$, which illustrates the weak but existent relationship between redundancy and degeneracy. This is illustrated in Figure \ref{p1c3:fig:redundancy_and_degeneration}.
-%
-\begin{figure}[h]
-	\begin{tikzpicture}
-		\node (pic) at (0,0) {\includegraphics{chapters/chapter_3/figures/Figure2.pdf}};
-		\node[right] (1) at (-0.4, 0.4) {$(0,0,1)$};
-		\node[right] (2) at (0.4, -0.8) {$(1,1,0)$};	
-	\end{tikzpicture}
-    \caption{$(0,0,1)$ is degenerate if you add the constraint $x_2 \ge 0$.} \label{p1c3:fig:redundancy_and_degeneration}
-\end{figure}
+As we will see, there are mechanisms that prevent the simplex method from becoming stuck on such vertices forever, an issue that is referred to as \emph{cycling}. 
+
 
 
 \section{Optimality of extreme points}
@@ -300,7 +304,7 @@ We are now ready to pose the result that utilises Definition \ref{p1c3:def:line_
 \begin{proof}
 We start with $(2) \Rightarrow (1)$, i.e., if $P$ does not contain a line, then it must have a basic feasible solution and thus, cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}, an extreme point. Let $x \in \reals^n$ be an element of $P$ and let $I = \braces{i : a_i^\top x = b_is}$. If $n$ of the vectors $a_i$, $i \in I$, are linearly independent, then $x$ is a basic feasible solution, cf. Definition \ref{p1c2:def:basic_feasible_solution}. 
 
-If less than $n$ vectors are linearly independent, then all vectors $a_i$, $i \in I$, lie in a proper subspace of $\reals^n$ and, consequently, there exists a nonzero vector $d \in \reals^n$ such that $a_i^\top d = 0$ for every $i \in I$. Consider the line consisting of all points of the form $y = x + \lambda d$, with $\lambda \in reals$. For $i \in I$, we have that 
+If less than $n$ vectors are linearly independent, then all vectors $a_i$, $i \in I$, lie in a proper subspace of $\reals^n$ and, consequently, there exists a nonzero vector $d \in \reals^n$ such that $a_i^\top d = 0$ for every $i \in I$. Consider the line consisting of all points of the form $y = x + \lambda d$, with $\lambda \in \reals$. For $i \in I$, we have that 
 	$$
 	a_i^\top y = a_i^\top x + \lambda a_i^\top d = a_i^\top x = b.
 	$$
@@ -310,7 +314,7 @@ If less than $n$ vectors are linearly independent, then all vectors $a_i$, $i \i
 	
 	To conclude, we can see that by moving from $x$ to $x + \overline{\lambda}d$, the number of linearly independent active constraints is increased by one. Repeating the see procedure as many times as needed, we will eventually reach a point having $n$ linearly independent constraints, being thus a basic feasible solution, as we retain feasibility in the process.
 	
-	To show that $(1) \rightarrow (3)$, we simply need to notice that if $P$ has an extreme point $x$, then it is also a basic feasible solution (cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}) and there are $n$ active constraints corresponding to $\braces{a_i}_{i \in I}$ linearly independent vectors.
+	To show that $(1) \Rightarrow (3)$, we simply need to notice that if $P$ has an extreme point $x$, then it is also a basic feasible solution (cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}) and there are $n$ active constraints corresponding to $\braces{a_i}_{i \in I}$ linearly independent vectors.
 
 	Finally, let us show that $(3) \Rightarrow (2)$ by contradiction. Assume, without loss of generality, that $a_1, \dots, a_n$ are the $n$ linearly independent vectors. Suppose that $P$ contains a line $x + \lambda d$ where $d \neq 0$. Therefore, we have that $a_i^\top x \ge b_i$, for all $i = 1, \dots, m$ and for any $\lambda$. The only way this is possible is if $a_i^\top d =0$ for all $i = 1, \dots, m$, which implies that $d=0$, reaching a contradiction that establishes that $P$ does not contain a line.
 \end{proof}
@@ -333,7 +337,7 @@ We are now to state the result that proves the intuition we had when analysing t
 
 	Let $\overline{x}$ be an extreme point of $Q$. By contradiction, assume that $\overline{x}$ is not an extreme point of $P$. Then, there exist $y \neq \overline{x}$, $w \neq \overline{x}$, and $\lambda \in [0,1]$ such that $\overline{x} = \lambda y + (1-\lambda)w$. Then, $c^\top \overline{x} = \lambda (c^\top y) + (1-\lambda)c^\top w$. As $c^\top \overline{x} = z$ is optimal, we have that $z \leq c^\top y$ and $z \leq c^\top w$,  and thus $z = c^\top y = c^\top w$. 
 	
-	Thus, $w \in Q$ and $y \in Q$, contradicting that $\overline{x}$ is an extreme point. Thus, $\overline{x}$ must be an extreme point and, since we established that $\overline{x} \in Q$, it is also optimal. 
+	Thus, $w \in Q$ and $y \in Q$, which contradicts that $\overline{x}$ is an extreme point. Thus, $\overline{x}$ must be an extreme point and, since we established that $\overline{x} \in Q$, it is also optimal. 
 \end{proof}
 
 Theorem \ref{p1c3:thm:opt_extreme} is posed in a somewhat general way, which might be a source for confusion. First, recall that in the example in Chapter \ref{chapter_1}, we considered the possibility of the objective function level curve associated with the optimal value to be parallel to one of the edges of the feasible region, meaning that instead of a single optimal solution (a vertex), we would observe a line segment containing an infinite number of optimal solutions, of which exactly two would be extreme points. 
@@ -373,7 +377,7 @@ Figure \ref{p1c3:fig:feasible_directions} illustrates the concept. Notice that a
 	\caption{Feasible directions at different points of $P$} \label{p1c3:fig:feasible_directions}
 \end{figure}
 
-Let us now devise a way of identifying feasible directions algebraically. For that, let $A$ be a $m \times n$ matrix, $I = \braces{1,\dots,m}$ and $J = \braces{1,\dots,n}$. Consider the problem 
+Let us now devise a way of identifying feasible directions algebraically. For that, let $A$ be a $m \times n$ matrix, $I = [m]$ and $J = [n]$. Consider the problem 
 %
 \begin{equation*}
 	\mini \braces{c^\top x : Ax = b, x \geq 0}.	
@@ -387,7 +391,7 @@ Let $x$ be a basic feasible solution (BFS) with basis $B = [A_{B(1)}, \dots, A_{
 %
 and that the remaining nonbasic variables $x_N$ are such that $x_N = (x_j)_{j \in I_N} = 0$, with $I_N = J \setminus I_B$.
 
-Moving to a neighbouring solution can be achieved by simply moving between adjacent bases, which can be accomplished without a significant computational burden. This entails selecting a nonbasic variable $x_j$, $j \in I_N$, and increasing it to a positive value $\theta$. 
+Moving to a neighbouring solution can be achieved by simply moving between adjacent bases, which can be accomplished without a significant computational burden. This entails selecting a nonbasic variable $x_j$, with $j \in I_N$, and increasing it to a positive value $\theta$. 
 
 Equivalently, we can define a \emph{feasible direction} $d = [d_N, d_B]$, where $d_N$ represent the components associated with nonbasic variables and $d_B$ those associated with basic variables and move from the point $x$ to the point $x + \theta d$. The components $d_N$ associated with the nonbasic variables are thus defined as 
 %
@@ -399,7 +403,7 @@ d = \begin{cases} d_j = 1 \\
 %
 with $j, j' \in I_N$. Notice that, geometrically, we are moving along a line in the dimension represented by the nonbasic variable $x_j$.
 
-Now, feasibility might become an issue if we are not careful to retain feasibility conditions. To retain feasibility, we must observe that $A(x + \theta d) = b$, implying that $Ad = 0$. This allows us to define the components $d_B$ of the direction vector $d$ that is associated with the basic variables $x_j$, $j \in I_B$, since
+Now, feasibility might become an issue if we are not careful to retain feasibility conditions. To retain feasibility, we must observe that $A(x + \theta d) = b$, implying that $Ad = 0$. This allows us to define the components $d_B$ of the direction vector $d$ that is associated with the basic variables $x_j$, with $j \in I_B$, since
 %
 \begin{equation*}
 	0 = Ad = \sum_{j = 1}^n	A_j d_j = \sum_{i = 1}^m A_{B(i)}d_{B(i)} + A_j = Bd_B + A_j
@@ -426,7 +430,7 @@ Figure \ref{p1c3:fig:adjacent_vertices} provides a schematic representation of t
 	\caption{Example: $n = 5$ and $n-m = 2$. At $A$, $x_1 = x_3 = 0$ and $x_2, x_4, x_5 \geq 0$. Increasing $x_1$ while keeping $x_3$ zero leads to $B$. At $B$, suppose $I_N = \braces{3,5}$; by increasing $x_3$ while keeping $x_5$ zero would leads to $C$.} \label{p1c3:fig:adjacent_vertices}
 \end{figure}
 
-Clearly, overall feasibility, i.e., ensuring that $x \ge 0$ can only be retained if $\theta > 0$ is chosen appropriately small. This can be achieved if the following is observed:
+Overall feasibility, i.e., ensuring that $x \ge 0$, can only be retained if $\theta > 0$ is chosen appropriately small. This can be achieved if the following is observed:
 %
 \begin{enumerate}
 	\item All the other nonbasic variables remain valued at zero, that is, $x_{j'} = 0$ for $j' \in I_N \setminus \braces{j}$.	
@@ -459,7 +463,7 @@ First, let us formally define this quantity, which is known as the \emph{reduced
 	\end{equation*}
 \end{definition}
 
-The name reduced cost is motivated by the fact that it quantifies a cost change onto the reduced space of the basic variables. In fact, the reduced cost is calculating the change in the objective function caused by the increase in one unit of the nonbasic variable $x_j$ elected to become basic (represented by the $c_j$ component) and the associated change caused by the accommodation in the basic variable values to retain feasibility ($-c_B^\top B^{-1}A_j$). Therefore, the reduced cost can be understood as a \emph{marginal value} of change in the objective function value associated with each nonbasic variable.
+The name reduced cost refers to the fact that it quantifies a cost change onto the reduced space of the basic variables. In fact, the reduced cost is calculating the change in the objective function caused by the increase in one unit of the nonbasic variable $x_j$ elected to become basic (represented by the $c_j$ component) and the associated change caused by the accommodation in the basic variable values to retain feasibility ($-c_B^\top B^{-1}A_j$). Therefore, the reduced cost can be understood as a \emph{marginal value} of change in the objective function value associated with each nonbasic variable.
 
 Let us demonstrate this with a numerical example. Consider the following linear programming problem
 %
@@ -518,9 +522,9 @@ while moving along $d^4$ has a cost of
 %
 Thus, between $d^3$ and $d^4$, $d^4$ is a better direction since its reduced cost indicates a reduction of $1$ unit of the objective function per unit of $x_4$. In contrast, the reduced cost associated with $d^3$ indicates an increase of 0.5 units of the objective function per unit of $x_3$, indicating that this is a direction to be avoided as we are minimising the problem.
 %
-Clearly, the willingness to choose $x_{j'}$, $j' \in I_N$ as the variable to become basic will depend on whether the scalar $c_{j'} - (c_j)_{j \in I_B}^\top d_B$ is negative (recall that we want to minimise the problem, so the smaller the total cost, the better). Another point is how large in module the reduced cost is. Recall that the reduced cost is, in fact, a measure of the marginal value associated with the increase in value of the nonbasic variable. Thus the more negative it is, the quicker the objective function value will decrease per unit of increase of the nonbasic variable value.
+Clearly, the willingness to choose $x_{j'}$, with $j' \in I_N$, as the variable to become basic will depend on whether the scalar $c_{j'} - (c_j)_{j \in I_B}^\top d_B$ is negative (recall that we want to minimise the problem, so the smaller the total cost, the better). Another point is how large in module the reduced cost is. Recall that the reduced cost is, in fact, a measure of the marginal value associated with the increase in value of the nonbasic variable. Thus, the more negative it is, the quicker the objective function value will decrease per unit of increase of the nonbasic variable value.
 %
-One interesting thing to notice is what is the reduced cost associated with basic variables. Recall that $B = [A_{B(1)}, \dots, A_{B(m)}]$ and thus $B^{-1}[A_{B(1)}, \dots, A_{B(m)}] = I$. Therefore $B^{-1}A_{B(i)}$ is the $i^\text{th}$ column of $I$, denoted $e_i$, implying that
+One interesting thing to notice is the reduced cost associated with basic variables. Recall that $B = [A_{B(1)}, \dots, A_{B(m)}]$ and thus $B^{-1}[A_{B(1)}, \dots, A_{B(m)}] = I$. Therefore $B^{-1}A_{B(i)}$ is the $i^\text{th}$ column of $I$, denoted $e_i$, implying that
 %
 \begin{equation*}
 	\overline{c}_{B(i)} = c_{B(i)} - c^\top_B B^{-1} A_{B(i)} = c_{B(i)} - c_B^\top e_i = c_{B(i)} - c_{B(i)} = 0.	
