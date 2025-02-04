@@ -4,10 +4,10 @@ In Chapter \ref{chapter_3}, we discussed all the necessary technical aspects req
 
 \subsection{Calculating step sizes}
 
-One discussion that we purposely delayed was that of how to define the value of the step size $\theta$ to be taken in the feasible direction $d$. Let $c \in \reals^n$, $A$ be a $m \times n$ full-rank matrix, $b$ a nonnegative $m$-sized vector\footnote{Notice that this can be assumed without loss of generality, by multiplying both sides by a constant, which does not change the constraint.} and $J = \braces{1,\dots,n}$. Consider the linear programming problem $P$ in the standard form 
+One discussion that we purposely delayed was that of how to define the value of the step size $\theta$ to be taken in the feasible direction $d$. Let $c \in \reals^n$, $A$ be a $m \times n$ full-rank matrix, $b$ a nonnegative $m$-sized vector\footnote{Notice that this can be assumed without loss of generality, by multiplying both sides by a constant, which does not change the constraint.} and $J = [n]$. Consider the linear programming problem $P$ in the standard form 
 %
 	\begin{equation*}
-		(P) : \mini\braces{c^\top x : Ax = b, x \geq 0}.
+		(P) : \mini\braces{c^\top x : Ax = b, ~x \geq 0}.
 	\end{equation*}
 %
 Building upon the elements we defined in Chapter \ref{chapter_3}, employing the simplex method to solve $P$ consists of the following set of steps:
@@ -18,7 +18,7 @@ Building upon the elements we defined in Chapter \ref{chapter_3}, employing the 
 	\item Move along the feasible direction $d = (d_B, d_N)$, where $d_j = 1$, $d_{N \setminus \braces{j}} = 0$ and $d_B = -B^{-1}A_j$.
 \end{enumerate}
 %
-Moving along the feasible direction $d$ towards $x + \theta d$ (with scalar $\theta > 0$) makes $x_j >0$ (i.e., $j \in I_N$ enter the basis) while reducing the objective value at a rate of $\overline{c}_j$. Thus, one should move as far as possible (say, take a step of length $\overline{\theta}$) along the direction $d$, which incurs on an objective value change of $\overline{\theta} (c^\top d) = \overline{\theta} \overline{c}_j$.
+Moving along the feasible direction $d$ towards $x + \theta d$ (with scalar $\theta > 0$) makes $x_j >0$ (i.e., $j \in I_N$ enters the basis) while reducing the objective value at a rate of $\overline{c}_j$. Thus, one should move as far as possible (say, take a step of length $\overline{\theta}$) along the direction $d$, which incurs on an objective value change of $\overline{\theta} (c^\top d) = \overline{\theta} \overline{c}_j$.
 
 Moving as far along the feasible direction $d$ as possible while observing that feasibility is retained is equivalent to setting $\overline{\theta}$ as 	
 %
@@ -121,9 +121,9 @@ Theorem \ref{p1c4:thm:adjacent_basis} provides the technical result that formali
 	Now we focus on proving (2). We have that $\overline{x} \geq 0$, $A\overline{x} = b$ and $\overline{x}_j = 0$ for $j \in I_{\overline{N}} = J \setminus I_{\overline{B}}$. This, combined with $\braces{\overline{B}(i)}_{i \in I_{\overline{B}}}$ being linearly independent (cf. (1)), completes the proof.	
 \end{proof}
 
-We have finally compiled all the elements we need to state the simplex method pseudocode, which is presented in Algorithm \ref{p1c4:alg:simplex}. One minor detail in the presentation of the algorithm is the use of the auxiliary vector $u$. This allows for the precalculation of the components of $d_B = -B^{-1}A_j$ (notice the changed sign) to test for unboundedness, that is, the lack of a constraint (and associated basic variable) that can limit the increase of the chosen nonbasic variable. 
+We have finally compiled all the elements we need to state the simplex method pseudocode, which is presented in Algorithm \ref{p1c4:alg:simplex}. One technical detail in the presentation of the algorithm is the use of the auxiliary vector $u$. This allows for the precalculation of the components of $d_B = -B^{-1}A_j$ (notice the changed sign) to test for unboundedness, that is, the lack of a constraint (and associated basic variable) that can limit the increase of the chosen nonbasic variable. 
 
-The last missing element is proving that Algorithm \ref{p1c4:alg:simplex} eventually converges to an optimal solution, should one exists. This is formally stated in Theorem \ref{p1c4:thm:convergece_simplex}.
+The last missing element is proving that Algorithm \ref{p1c4:alg:simplex} eventually converges to an optimal solution, should one exist. This is formally stated in Theorem \ref{p1c4:thm:convergece_simplex}.
 
 \begin{theorem}[Convergence of the simplex method]\label{p1c4:thm:convergece_simplex}
 	Assume that $P$ has at least one feasible solution and that all BFS are nondegenerate. Then, the simplex method terminates after a finite number of iterations, in one of the following states:
@@ -202,7 +202,7 @@ The rules utilised for making choices regarding entering and leaving variables a
 	\item \emph{Greedy selection} (or Dantzig's rule): choose $x_j$, $j \in I_N$, with largest $|\overline{c}_j|$. Prone to cycling.
 	\item \emph{Index-based order} (or Bland's rule): choose $x_j$,  $j \in I_N$, with smallest $j$. It prevents cycling but is computationally inefficient. 
 %		\item The \alert{lexicographic} rule combines the two ideas above.
-	\item \emph{Reduced cost pricing}: calculate $\overline{\theta}$ for all (or some) $j \in N$ and pick smallest $\overline{\theta}\overline{c}_j$. Calculating the actual observed change for all nonbasic variables is too computationally expensive. Partial pricing refers to the idea of only considering a subset of the nonbasic variables to calculate $\overline{\theta}\overline{c}_j$.
+	\item \emph{Reduced cost pricing}: calculate $\overline{\theta}$ for all (or some) $j \in N$ and pick smallest (i.e., largest in module with negative sign) $\overline{\theta}\overline{c}_j$. Calculating the actual observed change for all nonbasic variables is too computationally expensive. Partial pricing refers to only considering a subset of the nonbasic variables to calculate $\overline{\theta}\overline{c}_j$.
 	\item \emph{Devex}\footnote{P. M. J. Harris (1973), Pivot Selection Methods in the Devex LP Code, Math. Prog., 57, 341--374.} and \emph{steepest-edge}\footnote{J. Forrest \& D. Goldfarb (1992), Steepest-Edge Simplex Algorithms for LP, Math. Prog., 5, 1--28.}: most commonly used by modern implementations of the simplex method, available in professional-grade solvers. 
 \end{itemize}
 
@@ -333,7 +333,7 @@ Three main issues arise when considering the efficiency of implementations of th
 %
 \begin{itemize}
 	\item \emph{Reinversion:} localised updates such as EROs have the side effect of accumulating truncation and round-off error. To correct this, solvers typically rely on periodically recalculating $B^{-1}$, which, although costly, can avoid numerical issues.
-	\item \emph{Representation:} A sparse representation of $Q_n = Q_1Q_2 \dots Q_{k-1}$ can be kept instead of updating $B^{-1}$. Recall that $u = \overline{B}^{-1}A_j = QB^{-1}A_j$. For larger problems, this means a trade-off between memory allocation and the number of matrix-matrix multiplications.
+	\item \emph{Representation:} A sparse representation of $Q_n = Q_1Q_2 \dots Q_{k-1}$ can be kept instead of updating $B^{-1}$. Recall that $u = \overline{B}^{-1}A_j = QB^{-1}A_j$. For larger problems, this means a trade-off between memory allocation and the number of (sparse) matrix-matrix multiplications.
 	\item \emph{Decomposition:} Decomposed (e.g., LU decomposition) forms of $B$ are used to improve efficiency in storage and the solution of the linear systems to exploit the typical sparsity of linear programming problems.  	
 \end{itemize}
 
@@ -432,7 +432,7 @@ We now consider the issue of converting general linear programming problems into
 		Ax \leq b \Rightarrow Ax + s = b.
 \end{equation*}
 %
-Notice that this is equivalent to assuming all original problem variables (i.e., those that are not slack variables) to be initialised as zero (i.e., nonbasic) since this is a trivially available initial feasible solution. However, this method does not work for constraints of the form $Ax \ge b$, as in this case, the transformation would take the form 
+Notice that this is equivalent to assuming all original problem variables (i.e., those that are not slack variables) to be initialised as zero (i.e., nonbasic) since this is a trivially available initial feasible solution. However, this approach does not work for constraints of the form $Ax \ge b$, as in this case, the transformation would take the form 
 %
 \begin{equation*}
 	Ax \geq b \Rightarrow Ax - s = b \Rightarrow Ax - s = b.	
@@ -557,7 +557,7 @@ We now can add a third dimension to the analysis representing the value of $z$. 
 	\caption{A solution $x$ is a convex combinations of $(A_i,c_i)$ such that $Ax= b$.} \label{p1c4:fig:column_geometry_3d}
 \end{figure}	
 
-Notice that in Figure \ref{p1c4:fig:column_geometry_3d}, although each facet is a basic simplex, only three are feasible ($BCD$, $CDF$, and $DEF$). We can also see what one iteration of the simplex method does under this geometrical interpretation. Moving between adjacent basis means that we are replacing one vertex (say, $C$) with another (say, $E$) considering the potential for decrease in value in the $z$ axis (represented by the difference between points $H$ and $G$ onto the $z$ axis). You can also see the notion of pivoting: since we are moving between adjacent bases, two successive simplexes share an edge in common, consequently, they pivot around that edge (think about the movement of the edge $C$ moving to the point $E$ while the edge $\overline{DF}$ remains fixed).
+Notice that in Figure \ref{p1c4:fig:column_geometry_3d}, although each facet is a basic simplex, only three are feasible ($BCD$, $CDF$, and $DEF$). We can also see what one iteration of the simplex method does under this geometrical interpretation. Moving between adjacent basis means that we are replacing one vertex (say, $C$) with another (say, $E$) considering the potential for a decrease in value in the $z$ axis (represented by the difference between points $H$ and $G$ onto the $z$ axis). You can also see the notion of pivoting: since we are moving between adjacent bases, two successive simplexes share an edge in common. Consequently, they pivot around that edge (think about the movement of the edge $C$ moving to the point $E$ while the edge $\overline{DF}$ remains fixed).
 
 \begin{figure}[h]
 	\begin{tikzpicture}
@@ -576,7 +576,7 @@ Notice that in Figure \ref{p1c4:fig:column_geometry_3d}, although each facet is 
 	\caption{Pivots from initial basis $[A_3, A_6]$ to $[A_3, A_5]$ and to the optimal basis $[A_8, A_5]$} \label{p1c4:fig:column_geometry_projection}
 \end{figure}		
  
-Now we are ready to provide an insight into why the simplex method is often so efficient. The main reason is associated with the ability that the method possesses of skipping bases in favour of those with most promising improvement. To see that, consider Figure \ref{p1c4:fig:column_geometry_projection}, which is a 2-dimensional schematic projection of Figure \ref{p1c4:fig:column_geometry_3d}. By using the reduced costs to guide the choice of the next basis, we tend to choose the steepest of the simplexes that can provide reductions in the objective function value, which has the side effect of allowing for skipping several basis that would have to be otherwise considered. This creates a ``sweeping effect'', in which allows the method to find optimal solutions in fewer pivots than vertices. Clearly, this can be engineered to be prevented, as there are examples purposely constructed to force the method to consider every single vertex, but the situation illustrated in Figure \ref{p1c4:fig:column_geometry_projection} is by far the most common in practice.  
+Now we are ready to provide an insight into why the simplex method is often so efficient. The main reason is associated with the ability that the method possesses of skipping bases in favour of those with most promising improvement. To see that, consider Figure \ref{p1c4:fig:column_geometry_projection}, which is a 2-dimensional schematic projection of Figure \ref{p1c4:fig:column_geometry_3d}. By using the reduced costs to guide the choice of the next basis, we tend to choose the steepest of the simplexes that can provide reductions in the objective function value, which has the side effect of allowing for skipping several bases that would have to be otherwise considered. This creates a ``sweeping effect'', which allows the method to find optimal solutions in fewer pivots than vertices. Clearly, this can be engineered to be prevented, as there are examples purposely constructed to force the method to consider every single vertex, but the situation illustrated in Figure \ref{p1c4:fig:column_geometry_projection} is by far the most common in practice.  
 
 % TODO: Chp4: include a discussion on dual plane, to make more concrete the relationship between the z axis and reduced costs.
 
