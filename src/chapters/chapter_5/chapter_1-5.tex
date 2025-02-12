@@ -1,6 +1,6 @@
 \section{Linear programming duals}
 
-In this chapter, we will discuss the notion of duality in the context of linear programming problems. Duality can be understood as a toolbox of technical results that makes available a collection of techniques and features that can be exploited to both further understand characteristics of the optimal solution and to devise specialised methods for solving linear programming problems.
+In this chapter, we will discuss the notion of duality in the context of linear programming problems. Duality can be understood as a toolbox of results that makes available a collection of techniques and features that can be exploited to both further understand characteristics of the optimal solution and to devise specialised methods for solving linear programming problems.
 
 
 \subsection{Motivation}
@@ -8,23 +8,23 @@ In this chapter, we will discuss the notion of duality in the context of linear 
 Let us return to the paint factory example. Recall its formulation, given by
 %
 \begin{align}
-    \maxi z &= 5x_1 + 4x_2 \tag{1} \\
-    \st 6x_1 + 4x_2 &\leq 24 \tag{2} \\
-    x_1 + 2x_2 &\leq 6 \tag{3} \\
-    x_2 - x_1 &\leq 1 \tag{4} \\
-    x_2 &\leq 2 \tag{5} \\
-    x_1, x_2 &\geq 0. \tag{6}
+    \maxi z = &5x_1 + 4x_2 \label{p1l5:eq:ex1-1} \\
+    \st &6x_1 + 4x_2 \leq 24 \label{p1l5:eq:ex1-2} \\
+    &x_1 + 2x_2 \leq 6 \label{p1l5:eq:ex1-3} \\
+    &x_2 - x_1 \leq 1 \label{p1l5:eq:ex1-4} \\
+    &x_2 \leq 2 \label{p1l5:eq:ex1-5} \\
+    &x_1, x_2 \geq 0. \label{p1l5:eq:ex1-6}
 \end{align}
 %
-To motivate our developments, suppose we do not have an LP solver at our disposal but have found (perhaps by trial and error) a feasible solution $(3, 1)$ with objective value $19$ and want to know how good of a solution this is. If we know nothing else about the problem, $19$ might be a very bad solution compared to the optimal solution. On the other hand, if we can somehow determine an upper bound for the solution, showing that this problem simply cannot have a solution with an objective value better than, say, $25$, we might consider the solution “good enough” even if we cannot show that it is optimal.
+To motivate our developments, suppose we do not have an LP solver at our disposal but have found (perhaps by trial and error) a feasible solution $(3, 1)$ with an objective value of $19$ and want to know how good of a solution this is. If we know nothing else about the problem, $19$ might be a very bad solution compared to the optimal solution. On the other hand, if we can somehow determine an upper bound for the solution, showing that this problem simply cannot have a solution with an objective value better than, say, $25$, we might consider the solution to be ``good enough'' even if we cannot show that it is optimal.
 
-Notice that the objective function (1) and the first resource constraint (2) imply
+Notice that analysing the objective function \eqref{p1l5:eq:ex1-1} and the first resource constraint together \eqref{p1l5:eq:ex1-2} imply
 %
 $$
 z = 5x_1 + 4x_2 \leq 6x_1 + 4x_2 \leq 24.
 $$
 %
-The first inequality comes from the fact that the coefficients of the nonnegative decision variables $x$ are greater or equal on the left-hand side. The first constraint (2) thus tells us that the optimal solution value cannot be more than $24$, because of the availability of resources. This upper bound might be higher than the optimal value, but it allows us to conclude that our solution with value $19$ cannot be improved by more than $26\%$, even if this theoretical upper bound could be reached. The second constraint (3) does not fulfil the requirement of coefficients being at least equal to those in the objective function, but multiplying the constraint by $5$ on both sides achieves just that. This gives us
+The first inequality comes from the fact that the coefficients of the nonnegative decision variables $x$ are greater or equal on the left-hand side. The first constraint \eqref{p1l5:eq:ex1-2} thus tells us that the optimal solution value cannot be more than $24$, because of the availability of resources. This upper bound might be higher than the optimal value, but it allows us to conclude that our solution with a value of $19$ cannot be improved by more than $26\%$, even if this theoretical upper bound could be reached. The second constraint \eqref{p1l5:eq:ex1-3} does not fulfil the requirement of coefficients being at least equal to those in the objective function, but multiplying the constraint by $5$ on both sides achieves just that. This gives us
 %
 $$
 z = 5x_1 + 4x_2 \leq 5x_1 + 10x_2 \leq 30,
@@ -40,9 +40,9 @@ or
 $$
 5x_1 + 4x_2 \leq 21.
 $$
-Turns out, this upper bound $21$ is also the optimal solution.
+Turns out, this upper bound $21$ is also the optimal solution, though we cannot know it from this analysis only.
 
-Let us next formalise these ideas. What we want to obtain is a constraint giving us an upper bound for the original problem, hereinafter referred to as the primal problem $P$. This constraint is obtained as a weighted combination of the primal constraints. Denote the weights as $p_i$ for each constraint $i \in \{1, \dots, m\}$. In the case of a primal problem of the form
+Let us formalise these ideas. What we want to obtain is a constraint giving us an upper bound for the original problem, hereinafter referred to as the primal problem $P$. This constraint is obtained as a weighted combination of the primal constraints. Denote the weights as $p_i$ for each constraint $i \in [m]$. In the case of a primal problem of the form
 %
 \begin{align*}
 	(P) : \mini \ & c^\top x \\
@@ -62,7 +62,7 @@ $$
 \sum_{i=1}^m p_i A_{ij} \geq c_j
 $$
 %
-must be satisfied for each $j \in \{1, \dots, n\}$. In matrix form, this becomes:
+must be satisfied for each $j \in [n]$. In matrix form, this becomes:
 %
 $$
 A^\top p \geq c.
@@ -72,14 +72,15 @@ Note that in order for us to be able to combine the constraints into one, the we
 %
 \begin{align*}
 	(D) : \mini \ & b^\top p \\
-	\st 	  & A^\top p \geq c 
+	\st 	  & A^\top p \geq c \\
 			  & p \geq 0.
 \end{align*}
 
 
+Next, we formally devise the technical framework behind these ``bounding'' problems and derive the results regarding the equivalence between problems $P$ and $D$.
+
 
 \subsection{Formulating duals}
-
 
 Let us define the notation we will be using throughout the next chapters. As before, let $c \in \reals^n$, $b \in \reals^m$, $A \in \reals^{m \times n}$, and $P$ be the standard form linear programming problem
 %
@@ -275,14 +276,14 @@ Weak duality is the property associated with the bounding nature of dual feasibl
 \end{theorem}
 
 \begin{proof}
-	Let $I = \braces{i}_{i=1}^m$ and $J = \braces{j}_{j=1}^n$. For any $x$ and $p$, define
+	Let $I = [m]$ and $J = [n]$. For any $x$ and $p$, define
 %
 	  	\begin{equation*}
 			u_i = p_i (a_i^\top x - b_i) \text{ and }
 			v_j = (c_j - p^\top A_j)x_j.	
 		\end{equation*}
 %
-	Notice that $u_i \geq 0$ for $i \in I$ and $v_j \geq 0$ for $j \in J$, since each pair of terms will have the same sign (you can see that from Table \ref{p1c5:tab:primal-dual_conversion} and assuming $x_j$ to be the dual variable associated with $p^\top A \leq c^\top$).  Thus, we have that
+	where $a_i$ is the $i^\text{th}$ row and $A_j$ is the $j^\text{th}$ column of $A$. Notice that $u_i \geq 0$ for $i \in I$ and $v_j \geq 0$ for $j \in J$, since each pair of terms will have the same sign (you can see that from Table \ref{p1c5:tab:primal-dual_conversion} and assuming $x_j$ to be the dual variable associated with $p^\top A \leq c^\top$).  Thus, we have that
 %
 	\begin{equation*}
 		0 \leq \sum_{i \in I} u_i + \sum_{j \in J} v_j = [p^\top Ax - p^\top b] + [c^\top x - p^\top Ax] = c^\top x - p^\top b. \qedhere
@@ -343,7 +344,7 @@ This means that we can interchangeably solve either a primal or a dual form of a
 
 \section{Geometric interpretation of duality}
 
-Linear programming duality has an interesting geometric interpretation that stems from the much more general framework of Lagrangian duality (of which linear programming duality is a special case) and its connection to optimality conditions, topics that will be further explored in Part \ref{part_2}. For now, let us focus on how linear programming duality can be interpreted in the context of ``balancing forces''. 
+Linear programming duality has an interesting geometric interpretation that stems from the much more general framework of Lagrangian duality (of which linear programming duality is a special case) and its connection to optimality conditions. For now, let us focus on how linear programming duality can be interpreted in the context of ``balancing forces''. 
 
 First, let $\overline{x}$ be the optimal solution of primal problem $P$ in the form
 %
@@ -421,7 +422,7 @@ which again implies the optimality of $p$ (cf. Corollary \ref{p1c5:cor:weak_dual
 	In turn, if these hold, then $x$ and $p$ are optimal (cf. Corollary \ref{p1c5:cor:weak_duality} (3)). 
 \end{proof}
 
-Theorem \ref{p1c2:thm:complemetarity_slackness} exposes an important feature related to optimal solutions. Notice that $a_i^\top x - b_i$ represents the slack value of constraint $i \in I$. Thus, under the assumption of nondegeneracy, $p_i(a_i^\top x - b_i) = 0, \forall i \in I$ implies that for each constraint $i \in I$, either the dual variable $p_i$ associated with constraint is zero, or the associated slack value $a_i^\top x - b_i$ is zero. 
+Theorem \ref{p1c2:thm:complemetarity_slackness} exposes an important feature related to optimal solutions. Notice that $a_i^\top x - b_i$ represents the slack value of constraint $i \in I$. Thus, under the assumption of nondegeneracy, $p_i(a_i^\top x - b_i) = 0, \forall i \in I$, implies that for each constraint $i \in I$, either the dual variable $p_i$ associated with constraint is zero, or the associated slack value $a_i^\top x - b_i$ is zero. 
 
 For nondegenerate basic feasible solutions (BFS) (i.e., $x_j > 0$, $\forall j \in I_B$, where $I_B$ is the set of basic variable indices), complementary slackness determines a \emph{unique} dual solution. That is
 %
