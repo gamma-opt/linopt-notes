@@ -256,7 +256,7 @@ Then, the dual formulation for $P''$ would be
 \begin{align*}
 	(D'') : \maxi \ & p^\top b \\
 	\st &p \geq 0 \\
-	&p^\top A \leq c \\
+	&p^\top A \leq c^\top \\
 	-&p^\top A \leq -c^\top,
 \end{align*}
 %
@@ -328,7 +328,7 @@ This bounding property can also be used as a certificate of optimality, in case 
 \end{theorem}
 
 \begin{proof}
-	Assume $P$ is solved to optimality, with optimal solution $x$ and basis $B$. Let $x_B = B^{-1}b$. At the optimal, the reduced costs are $c^\top - c_B^\top B^{-1}A \geq 0$. Let $p = c_B^\top B^{-1}$. We then have $p^\top A \leq c^\top$, which shows that $p$ is feasible to $D$. Moreover,
+	Assume $P$ is solved to optimality, with optimal solution $x$ and basis $B$. Let $x_B = B^{-1}b$. At the optimal, the reduced costs are $c^\top - c_B^\top B^{-1}A \geq 0$. Let $p^\top = c_B^\top B^{-1}$. We then have $p^\top A \leq c^\top$, which shows that $p$ is feasible to $D$. Moreover,
 %
 	\begin{equation} \label{p1c5:eq:primal-dual}
 		p^\top b = c_B^\top B^{-1}b = c_B^\top x_B = c^\top x,			
@@ -498,7 +498,7 @@ As we have seen in Chapter \ref{chapter_4}, the original (or primal) simplex met
 	\overline{c} = c^\top - c_BB^{-1}A \geq 0
 \end{equation*}
 %
-was observed. Notice that this is precisely the dual feasibility condition $p^\top A \leq c$. 
+was observed. Notice that this is precisely the dual feasibility condition $p^\top A \leq c^\top$. 
 
 Being a dual method, the dual version of the simplex method, or the \emph{dual simplex method}, considers conditions in reverse order. That is, it starts from an initial dual feasible solution and iterates in a manner that the primal feasibility condition $B^{-1}b \geq 0$ is \emph{sought} for, while $\overline{c} \geq 0$, or equivalently, $p^\top A \leq c$, is maintained.
 
@@ -527,11 +527,11 @@ Assuming that the dual is not unbounded, the termination of the dual simplex met
 	\begin{algorithmic}[1] %line numbering frequency. 
 		\State {\bf initialise.} Initial basis $B$ and associated basic solution $x$.
 		\While {$x_B = B^{-1}b < 0$ for some component $i \in I_B$} \label{alg:opt_condition} 
-			\State Choose some $l$ for which $x_{B(l)} < 0$. Calculate $u = B^{-1}A_j$. 
+			\State Choose some $l$ for which $x_{B(l)} < 0$. Make $v$ the the $l^\text{th}$ row of $B^{-1}A$. 
 			\If {$u \geq 0$} \label{alg:unb_condition}
 				\State {\bf return} $z = +\infty$.		
 			\Else
-				\State Form new basis $B = B \setminus \braces{l} \cup \braces{j'}$ where $j' = \arg\min_{j \in I_N : u_j < 0} \frac{\overline{c}_j}{|u_j|}$ 
+				\State Form new basis $B = B \setminus \braces{l} \cup \braces{j'}$ where $j' = \arg\min_{j \in I_N : v_j < 0} \frac{\overline{c}_j}{|v_j|}$ 
 				\State Calculate $x_B = B^{-1}b$.
 			\EndIf
 		\EndWhile
