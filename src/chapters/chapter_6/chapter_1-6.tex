@@ -135,7 +135,7 @@ To build an initial solution in terms of the tableau representation of the simpl
 	\overline{B}^{-1}A = \begin{bmatrix} B^{-1}A & 0 \\ a^\top B^{-1}A - a_{m+1}^\top & 1 \end{bmatrix}.
 \end{equation*}
 %		
-Let us consider a numerical example again. Consider the same problem as the previous example, but that we instead include the additional constraint $x_1 + x_2 \geq 5$, which is violated by the optimal solution $(2,2,0,0)$. In this case, we have that $a_{m+1} = (1,1,0,0)$ and $a^\top B^{-1} A - a^\top_{m+1} = [0, 0, 2, -1]$. This modified problem then looks like
+Let us consider a numerical example again. Consider the same problem as the previous example, but we instead include the additional constraint $x_1 + x_2 \geq 5$, which is violated by the optimal solution $(2,2,0,0)$. In this case, we have that $a_{m+1} = (1,1,0,0)$ and $a^\top B^{-1} A - a^\top_{m+1} = [0, 0, 2, -1]$. This modified problem then looks like
 %
 %TODO: Chp6: Change this to the paint example
 \begin{align*}
@@ -179,11 +179,11 @@ We now consider how changes in the input data can influence the optimality of a 
 
 \subsubsection{Optimal dual variables as marginal costs}
 
-As before, assume that we have solved $P$ to optimality. As we have seen in Chapter \ref{chapter_4}, the optimal solution $\overline{x}$ with associated basis $B$ satisfies the following optimality conditions: it is a BFS and, therefore (i) $B^{-1}b \geq 0$; and (ii) all reduced costs are nonnegative, that is $c^\top - c_B^\top B^{-1}b \geq 0$.
+As before, assume that we have solved $P$ to optimality. As we have seen in Chapter \ref{chapter_4}, the optimal solution $\overline{x}$ with associated basis $B$ satisfies the following optimality conditions: it is a BFS and, therefore (i) $B^{-1}b \geq 0$; and (ii) all reduced costs are nonnegative, i.e., $c^\top - c_B^\top B^{-1}b \geq 0$.
 
 Now, assume that we cause a marginal perturbation on the vector $b$, represented by a vector $d$. That is, assume that we have $B^{-1}(b + d) > 0$, assuming that nondegeneracy is retained.
 
-Recall that the optimality condition $\overline{c} = c^\top - c_B ^\top B^{-1}A \geq 0$ is not influenced by such a marginal perturbation. That is, for a small change $d$, the optimal basis (i.e., the selection of basic variables) is not disturbed. On the other hand, the optimal value of the basic variables, and consequently, the optimal value, becomes
+Recall that the optimality condition $\overline{c} = c^\top - c_B ^\top B^{-1}A \geq 0$ is not influenced by such a marginal perturbation. In other words, for a small change $d$, the optimal basis (i.e., the selection of basic variables) is not disturbed. On the other hand, the optimal value of the basic variables, and consequently, the optimal value, becomes
 %
 \begin{equation*}
 	c_B^\top B^{-1}(b + d) = p^\top(b + d). 
@@ -191,7 +191,7 @@ Recall that the optimality condition $\overline{c} = c^\top - c_B ^\top B^{-1}A 
 %
 Notice that $p^\top = c_B^\top B^{-1}$ is optimal for the (respective) dual problem. Thus, a change $d$ causes a change of $p^\top d$ in the optimal value, meaning that the components $p_i$ represent a \emph{marginal value/cost} associated with the independent term $b_i$, for $i \in I$. 
 
-This has important implications in practice, as it allows for pricing the values of the resources associated with constraints. For example, suppose the dual value (or price) $p_i$ is associated with a resource whose requirement is given by $b_i$. In that case, any opportunity to remove units of $b_i$ for less than $p_i$ should be seized since it costs $p_i$ to satisfy any additional unit in the requirement $b_i$. A similar interpretation can be made in the context of less-or-equal-than constraints, in which $p_i$ would indicate benefits (or losses, if $p_i > 0$) in increasing the availability of $b_i$. 
+This has important implications in practice, as it allows for \textit{pricing} the values of the resources associated with constraints. For example, suppose the dual value (or price) $p_i$ is associated with a resource whose requirement is given by $b_i$. In that case, any opportunity to remove units of $b_i$ for less than $p_i$ should be seized since it costs $p_i$ to satisfy any additional unit in the requirement $b_i$. A similar interpretation can be made in the context of less-or-equal-than constraints, in which $p_i$ would indicate benefits (or losses, if $p_i > 0$) in increasing the availability of $b_i$. 
 
 For a numerical example, let us consider our paint factory problem once again. 
 
@@ -233,7 +233,7 @@ B^{-1} = \begin{bmatrix}
  		 	-3/4 \\ -1/2 \\ 0 \\ 0
  		 \end{bmatrix}
 $$
-Notice that these are values of the entries in the $z$-row below the slack variables $x_3, \dots, x_6$, except the minus sign. This is because the $z$-rows contain the entries for $c - p^\top B^{-1}$ and for all slack variables we have that $c_j = 0$, for $j = 3,\dots,6$. Also, recall that the paint factory problem is a maximisation problem, so $p$ represents the decrease in the objective function value. In this, we see that removing one unit of M1 would decrease the objective function by 3/4 and removing one unit of M2 would similarly decrease the objective value by 1/2. Analogous, increasing M1 or M2 availability by one unit would increase the objective function value by 3/4 and 1/2, respectively. 
+Notice that these are values of the entries in the $z$-row below the slack variables $x_3, \dots, x_6$, except the minus sign. This is because the $z$-rows contain the entries for $c - p^\top B^{-1}$ and we have an objective function coefficient of zero for all slack variables, i.e., $c_j = 0$, for $j = 3,\dots,6$. Also, recall that the paint factory problem is a maximisation problem, so $p$ represents the decrease in the objective function value. In this, we see that removing one unit of M1 would decrease the objective function by 3/4 and removing one unit of M2 would similarly decrease the objective value by 1/2. Analogous, increasing M1 or M2 availability by one unit would increase the objective function value by 3/4 and 1/2, respectively. 
 
 
 \subsubsection{Changes in the vector $b$}
@@ -302,7 +302,7 @@ Let $c_j$ is the coefficient of the $l^{\text{th}}$ basic variable, that is $j =
 %
 holds. Notice that we do not need to consider $j$ since $x_j$ is a basic variable, and thus, its reduced costs are assumed to remain zero.
 
-Considering the tableau representation, we can use the $l^{\text{th}}$ row and examine the conditions for which $\delta q_{li} \leq \overline{c}_i, \forall i \neq j$, where $q_{li}$ is the $l^{\text{th}}$ entry of $B^{-1}A_i$.
+Considering the tableau representation, we can use the $l^{\text{th}}$ row and examine the conditions for which $\delta q_{li} \leq \overline{c}_i, \forall i \neq j$, where $q_{li}$ is the $i^{\text{th}}$ entry in the $l^{\text{th}}$ row of $B^{-1}A_i$.
 
 Let us once again consider the previous example, with optimal tableau 
 
@@ -324,7 +324,7 @@ First, let us consider variations in the objective function coefficients of vari
 %
 Two points to notice. First, notice that both intervals are one-sided. This means that one should only be concerned with variations that decrease the reduced cost value since increases in their value can never cause any changes in the optimality conditions. Second, notice that the allowed variation is trivially the negative value of the reduced cost. For variations that turn the reduced costs negative, the current basis can be utilised as a starting point for the primal simplex.
 
-Now, let us consider a variation in the basic variable $x_1$. Notice that in this case we have to analyse the impact in all reduced costs, with exception of $x_1$ itself. Using the tableau, we have that $q_l = [1, 0, -3, 2]$ and thus
+Now, let us consider a variation in the basic variable $x_1$. Notice that in this case, we have to analyse the impact in all reduced costs, except for $x_1$ itself. Using the tableau, we have that $q_l = [1, 0, -3, 2]$ and thus
 %
 \begin{align*}
 	& \delta_1 q_{12} \leq \overline{c}_2 \Rightarrow 0 \leq 0 \\
@@ -360,7 +360,7 @@ Figure \ref{p1c6:fig:poly_cone} illustrates a polyhedral cone in $\reals^3$ form
 		\node (a1) at (-0.3,0.8) {$a_1$};
 		\node (a2) at (1.1,-0.4) {$a_2$};
 	\end{tikzpicture}
-	\caption{A polyhedral cone in $\reals^3$ formed by 3 half-space} \label{p1c6:fig:poly_cone}
+	\caption{A polyhedral cone in $\reals^3$ formed by 3 half-spaces. The third (with normal vector $a_3$ perpendicular to the page plan) cannot be seen} \label{p1c6:fig:poly_cone}
 \end{figure}
 %
 
@@ -444,7 +444,7 @@ Notice that, just like extreme points, the number of extreme rays is finite by d
 The existence of extreme rays can be used to verify unboundedness in linear programming problems. The mere existence of extreme rays does not suffice since unboundedness is a consequence of the extreme ray being a direction of improvement for the objective function. To demonstrate this, let us first describe unboundedness in polyhedral cones, which we can then use to show the unboundedness in polyhedral sets.
 
 \begin{theorem}[Unboundedness in polyhedral cones]\label{p1c6:thm:unb_cones}
-	Let $P : \mini\braces{c^\top x : x \in C}$, with $C = \braces{a_i^\top x \geq 0, i = 1,\dots,m}$. The optimal value is equal to $-\infty$ if and only if some extreme ray $d \in C$ satisfies $c^\top d < 0$.
+	Let $P : \mini\braces{c^\top x : x \in C}$, with \linebreak $C = \braces{a_i^\top x \geq 0, i \in [m]}$. The optimal value is equal to $-\infty$ if and only if some extreme ray $d \in C$ satisfies $c^\top d < 0$.
 \end{theorem}
 
 \begin{proof}
@@ -491,7 +491,7 @@ We now focus on the idea of generating certificates of infeasibility for linear 
 	&Y = \braces{p \in \reals^m : p^\top A x \geq 0, p^\top b < 0}.
 \end{align*}
 %
-If there exists any $p \in Y$, then there is no $x \in X$ for which $p^\top Ax = p^\top b$, (and in turn $Ax = b$), holds. Thus, $X$ must be empty. Notice that this can be used to infer that a problem $P$ with a feasibility set represented by $X$ prior to solving $P$ itself, by means of solving the \emph{feasibility problem} of finding a vector $p \in Y$. 
+If there exists any $p \in Y$, then there is no $x \in X$ for which $p^\top Ax = p^\top b$ (and in turn $Ax = b$) holds. Thus, $X$ must be empty. Notice that this can be used to infer that a problem $P$ with a feasibility set represented by $X$ prior to solving $P$ itself, by means of solving the \emph{feasibility problem} of finding a vector $p \in Y$. 
 
 We now pose this relationship more formally via a result generally known as the Farkas' lemma.
 
