@@ -97,8 +97,19 @@ Recall that the optimality conditions for problem $P$ can be expressed as
 	
 One initial idea could be simply, from a purely methodological standpoint, to employ NR to solve the above system of equations. The caveat, however, is that one must observe and retain the nonnegativity conditions $x > 0$ and $u >0$, which are an important complicating factor in this setting. Indeed, departing from a feasible solution $(x,p,u)$, one could employ NR to find a solution for \eqref{p1c7:eq:optimality_conditions_primal}-\eqref{p1c7:eq:optimality_conditions_cc} while controlling the steps taken in each Newton direction such that the nonnegativity conditions $x > 0$ and $u >0$ are retained, in a similar fashion to how it is done in the simplex method. However, it turns out that Newton directions obtained from successive iterations of \eqref{p1c7:eq:optimality_conditions_primal}- \eqref{p1c7:eq:optimality_conditions_cc} typically require the steps to be considerably small so that the nonnegativity conditions are retained, which renders the algorithm less useful from a practical standpoint.
 	   
-	
-This is precisely when the notion of an interior solution plays a role. An \emph{interior point} is defined as a point that satisfies primal and dual feasibility conditions strictly, that is $Ax = b$ with $x > 0$, and $A^\top p + u = c$ with $u >0$, implying that the complementarity conditions \eqref{p1c7:eq:optimality_conditions_cc} are \emph{violated}. This notion of interior points is useful in that it allows for the definition of less ``aggressive'' Newton directions, which aim towards directions that reduce the amount of violation in the complementarity conditions. Thus, we can alternatively consider the system with \emph{relaxed} complementarity conditions in which we define the scalar $\mu > 0$ and restate the optimality conditions as 	
+This is precisely when the notion of an interior solution plays a role. An \emph{interior point} is defined as a point that satisfies primal and dual feasibility conditions strictly, that is $Ax = b$ with $x > 0$, and $A^\top p + u = c$ with $u >0$, implying that the complementarity conditions \eqref{p1c7:eq:optimality_conditions_cc} are \emph{violated}. This notion of interior points is useful in that it allows for the definition of less ``aggressive'' Newton directions, which aim towards directions that reduce the amount of violation in the complementarity conditions. 
+
+An alternative way to think about the interior point method is to consider that it iterates through primal and dual feasible solutions that do not form a primal-dual pair satisfying strong duality at first, gradually progressing in the direction of satisfying it (cf. Theorem \ref{p1c5:thm:strong_duality}). This can be noticed in the primal and dual feasibility conditions  
+%
+\begin{align}
+	& A^\top p + u = c \Leftrightarrow \nonumber\\	
+	& p^\top (A x) + u^\top x = c^\top x  \Leftrightarrow  \nonumber\\
+	& u^\top x = c^\top x - p^\top b, \label{p1c7:primal_dual_gap}
+\end{align}
+
+that is, for $u^\top x > 0$, we have that $c^\top x > p^\top b$ implying that weak duality (cf. Theorem \ref{p1c5:thm:weak_duality}) holds, but not strong duality. 
+
+The algorithm alternatively considers the system with \emph{relaxed} complementarity conditions in which we define the scalar $\mu > 0$ and restate the optimality conditions as 	
 	%
 	\begin{align*}
 		& Ax = b, \ \ x \geq 0,\\ 
@@ -106,7 +117,7 @@ This is precisely when the notion of an interior solution plays a role. An \emph
 		& u_j x_j = \mu, \ \forall j \in J. 
 	\end{align*}
 	%
-	Then, we use these relaxed optimality conditions to obtain Newton directions, while, simultaneously, gradually making $\mu \to 0$. By doing so, one can obtain not only directions that can be explored with larger step sizes, thus making more progress per iteration, but also yield methods with better numerical properties.
+	Then, we use these relaxed optimality conditions to obtain Newton directions, while, simultaneously, gradually making $\mu \to 0$. By doing so, one can obtain not only directions that can be explored with larger step sizes, thus making more progress per iteration but also yield methods with better numerical properties.
 	
 To see how that can be made operational, let us first define some helpful notation. Let $X\in \reals^{n\times n}$ and $U \in \reals^{n \times n}$ be defined as
 	%
@@ -176,7 +187,7 @@ Once the direction $d^k = (d_x^k, d_p^k, d_u^k)$ is obtained, we must calculate 
 Before discussing in more detail the practicalities of the method, let us take an alternative perspective on showing how the notion of interior plays a role in the design of the algorithm, which requires us to consider the notion of barrier functions. This will also serve as a justification for the name ``barrier methods''. 
 	
 	
-\section{Barrier methods for linear programming problems}
+\section{Barrier methods}
 
 
 Barrier methods are a class of optimisation methods designed to handle inequality-constrained problems of the form
@@ -309,15 +320,15 @@ There are many important consequences for the analysis of the method once this l
 
 Indeed, the trajectory formed by successive solutions $\braces{(x(\mu_k), p(\mu_k), u(\mu_k))}_{k=1,2,\dots}$ is called the \emph{central path}, which is a consequence of the interiority forced by the barrier function. This property is the reason why barrier methods are sometimes called ``path-following'' methods.
 
-It is interesting to also notice the information encoded in \eqref{p1c7:eq:optimality_conditions_matrix_relaxed_cc}. First, notice from \eqref{p1c7:eq:optimality_conditions_matrix_dual} that 
+%It is interesting to also notice the information encoded in \eqref{p1c7:eq:optimality_conditions_matrix_relaxed_cc}. First, notice from \eqref{p1c7:eq:optimality_conditions_matrix_dual} that 
 	%
-	\begin{align*}
-		& A^\top p + u = c \Leftrightarrow \\	
-		& p^\top (A x) + u^\top x = c^\top x  \Leftrightarrow  \\
-		& u^\top x = c^\top x - p^\top b.
-	\end{align*}
+	%\begin{align*}
+	%	& A^\top p + u = c \Leftrightarrow \\	
+	%	& p^\top (A x) + u^\top x = c^\top x  \Leftrightarrow  \\
+	%	& u^\top x = c^\top x - p^\top b.
+	%\end{align*}
 	%
-	That is, $u^\top x$ provides us with an estimate of the current \emph{duality gap}, which can be used to estimate how far we are from the optimal solution. Moreover, notice that
+	Recall from \eqref{p1c7:primal_dual_gap} that $u^\top x$ provides us with an estimate of the current \emph{duality gap}, which can be used to estimate how far we are from the optimal solution. Moreover, notice that
 	$$
 	u^\top x = \sum_{i =1}^n u(\mu)_i x(\mu)_i = n\mu 
 	$$
@@ -420,7 +431,7 @@ We are finally ready to pose the pseudocode of a working version of the barrier 
 	\begin{algorithm}[H]
 	\caption{Barrier method for LP} \label{p1c7:alg:barrier_method}
 	\begin{algorithmic}[1] 
-	\State {\bf initialise.} \text{(primal-dual feasible)} $(x^0, p^0, u^0)$, $\epsilon > 0$, $\mu_0 = \mu_1>0$, $\beta \in (0,1)$, $k = 0$. 
+	\State {\bf initialise} $(x^0, p^0, u^0)$, $\epsilon > 0$, $\mu_0 = \mu_1>0$, $\beta \in (0,1)$, $k = 0$. 
 	\While {$n \mu_k > \epsilon$}
 	    \State compute $d^{k+1} = (d_x^{k+1}, d_p^{k+1}, d_u^{k+1})$ using \eqref{p1c7:eq:infeasible_perturbed_system} 
 	    \State compute appropriate step size $\theta^{k+1} = (\theta_p^{k+1}, \theta_d^{k+1}$)
