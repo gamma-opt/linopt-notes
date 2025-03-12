@@ -14,7 +14,7 @@ Let us first specify what we mean by an integer programming problem. Our startin
   %
   where $A$ is an $m \times n$ matrix, $c$ an $n$-dimensional vector, $b$ an $m$-dimensional vector, and $x$ a vector of $n$ decision variables. 
   
-  We say that $P$ is an integer programming problem if the variables $x$ must take integer values, i.e., $x \in \integers^n$. If the variables are further constrained to be binary, i.e., $x \in \braces{0,1}^n$, we say that it is a binary programming problem. Perhaps the most common setting is when only a subset of the variables are constrained to be integer or binary (say $p$ of them), i.e., $x \in \reals^{n-p} \times \integers^p$. This is what is referred to as \emph{mixed-integer programming}, or MIP. The most common setting for integer programming problems is to have binary variables only, or a combination of binary and continuous variables. 
+  We say that $P$ is an \emph{integer programming} problem if the variables $x$ must take integer values, i.e., $x \in \integers^n$. If the variables are further constrained to be binary, i.e., $x \in \braces{0,1}^n$, we say that it is a \emph{binary programming} problem. Perhaps the most common setting is when only a subset of the variables are constrained to be integer or binary (say $p$ of them), i.e., $x \in \reals^{n-p} \times \integers^p$. This is what is referred to as \emph{mixed-integer programming}, or MIP. The most common setting for integer programming problems is to have binary variables only or a combination of binary and continuous variables. 
    
 One important distinction must be made. A closely related concept is that of \emph{combinatorial optimisation problems}, which refer to problems of the form
 %
@@ -22,7 +22,7 @@ One important distinction must be made. A closely related concept is that of \em
  	\mini_{S \subseteq N} \braces{\sum_{j \in S} c_j : S \in \mathcal{F} \subseteq N},
 \end{align*}
 %
-where $c_j$, $j \in N$, is a weight, and $\mathcal{F}$ is a family of feasible subsets. As the name suggests, in these problems we are trying to form combinations of elements such that a measure (i.e., an objective function) is optimised. Integer programming happens to be an important framework for expressing combinatorial optimisation problems, though both integer programming and combinatorial optimisation expand further to other settings as well. To see this connection, let us define an \emph{incidence vector} $x^S$ of $S$ such that
+where $c_j$, $\forall j \in N$, is a weight, and $\mathcal{F}$ is a family of feasible subsets. As the name suggests, in these problems, we are trying to form combinations of elements such that a measure (i.e., an objective function) is optimised. Integer programming happens to be an important framework for expressing combinatorial optimisation problems, though both integer programming and combinatorial optimisation expand further to other settings as well. To see this connection, let us define an \emph{incidence vector} $x^S$ of $S$ such that
 %
   \begin{align*}
 	  x^S_j = \begin{cases}
@@ -31,17 +31,17 @@ where $c_j$, $j \in N$, is a weight, and $\mathcal{F}$ is a family of feasible s
 	     \end{cases}
   \end{align*}
 %
-Incidence vectors will permeate many of the (mixed-)integer programming formulations we will see. Notice that, once $x^S$ is defined, the objective function simply becomes $\sum_{j \in N} c_j x_j$. Integer programming formulations are particularly suited for combinatorial optimisation problems when $\mathcal{F}$ can be represented by a collection of linear constraints. 
+Incidence vectors will permeate many of the (mixed-)integer programming formulations we will discuss. Notice that once $x^S$ is defined, the objective function simply becomes $\sum_{j \in N} c_j x_j$. Integer programming formulations are particularly suited for combinatorial optimisation problems when $\mathcal{F}$ can be represented by a collection of linear constraints. 
 
 
 \section{(Mixed-)integer programming applications}
 
-We will consider now a few examples of integer and mixed-integer programming models with somewhat general structure. As we will see, many of these examples have features that can be combined into more general models.
+We will consider now a few examples of integer and mixed-integer programming models with somewhat general structures. As we will see, many of these examples have features that can be combined into more general models.
 
 
 \subsection{The assignment problem}
 
-Consider the following setting. Assume that we must execute $n$ jobs, which must be assigned to $n$ distinct workers. Each job can be assigned to a worker only, and, analogously, each worker can only be assigned to one job. Assigning a worker $i$ to a job $j$ costs $C_{ij}$, which could measure, e.g., the time taken by worker $i$ to execute job $j$. Our objective is to find a minimum cost assignment between workers and jobs. Figure \ref{p1c8:fig:assignment_a} illustrates all possible worker-job assignments as arcs between nodes representing workers on the left and jobs on the right. Figure \ref{p1c8:fig:assignment_b} represents one possible assignment.
+Consider the following setting. Assume that we must execute $n$ jobs, which must be assigned to the same number $n$ of distinct workers. Each job can be assigned to a worker only, and analogously, each worker can only be assigned to one job. Assigning a worker $i$ to a job $j$ costs $C_{ij}$, which could measure, e.g., the time taken by worker $i$ to execute job $j$. Our objective is to find a minimum-cost assignment between workers and jobs. Figure \ref{p1c8:fig:assignment_a} illustrates all possible worker-job assignments as arcs between nodes representing workers on the left and jobs on the right. Figure \ref{p1c8:fig:assignment_b} represents one possible assignment.
 %
 \begin{figure}[h]
 	\begin{subfigure}[b]{0.49\textwidth}
@@ -93,7 +93,7 @@ Consider the following setting. Assume that we must execute $n$ jobs, which must
 	\caption{An illustration of all potential assignments as a graph and an example of one possible assignment, with total cost $C_{12}$ + $C_{31}$ + $C_{24}$ + $C_{43}$}			
 \end{figure}
 
-To represent the problem, let $x_{ij} =$ 1 if worker $i$ is assigned to job $j$ and 0, otherwise. Let $N = \braces{1,\dots,n}$ be a set of indices of workers and jobs (we can use the same set since they are of same number). The integer programming model that represent the assignment problem is given by
+To represent the problem, let $x_{ij} =$ 1 if worker $i$ is assigned to job $j$ and 0, otherwise. Let $N$ be a set of indices of workers and jobs (we can use the same set since they are of the same number). The integer programming model that represents the assignment problem is given by
 %  
 \begin{align*} 
   (AP) : \mini \ & \sum_{i \in N}\sum_{j \in N} C_{ij}x_{ij} \\
@@ -103,14 +103,14 @@ To represent the problem, let $x_{ij} =$ 1 if worker $i$ is assigned to job $j$ 
 \end{align*}
 %
 
-Before we proceed, let us make a parallel to combinatorial problems. The assignment problem is an example of a combinatorial problem, which can be posed by making (i) $N$ the set of all job-worker pairs $(i,j)$; (ii) $S \in \mathcal{F}$ the $(i,j)$ pairs in which $i$ and $j$ appear in exactly one pair, and, (iii) $x^S$ such that $x_{ij}$, where $i,j = 1,\dots,n$. Thus, the assignment problem is an example of a combinatorial optimisation problem that can be represented as an integer programming formulation.
+Before we proceed, let us make a parallel to combinatorial problems. The assignment problem is an example of a combinatorial problem, which can be posed by making (i) $N$ the set of all job-worker pairs $(i,j)$; (ii) $S \in \mathcal{F}$ the $(i,j)$ pairs in which $i$ and $j$ appear in exactly one pair, and, (iii) $x^S$ as $x_{ij}$, where $i,j \in N$. Thus, the assignment problem is an example of a combinatorial optimisation problem that can be represented as an integer programming formulation.
 
 
 \subsection{The knapsack problem}
 
 The knapsack problem is another combinatorial optimisation problem that arises in several applications. Consider that we have a collection of $n$ items from which we must make a selection. Each item has associated a cost $A_i$ (e.g., weight) and our selection must be such that the total cost associated with the selection does not exceed a budget $B$ (e.g., weight limit). Each item has also a value $C_i$ associated, and our objective is to find a maximum-valued selection of items such that it does not exceed the budget. 
 
-To model that, let us define $x_{i} =$ 1 if item $i$ is selected and 0, otherwise. Let $N = \braces{1,\dots,n}$ be the set of items. Then, the knapsack problem can be represented as the following integer programming problem     
+To model that, let us define $x_{i} =$ 1 if item $i$ is selected and 0 otherwise. Let $N = [n]$ be the set of items. Then, the knapsack problem can be represented as the following integer programming problem     
 %  
 \begin{align*}
 	(KP) : \maxi_x \ & \sum_{i=1}^nC_{i}x_{i} \\
@@ -120,14 +120,14 @@ To model that, let us define $x_{i} =$ 1 if item $i$ is selected and 0, otherwis
 
 Notice that the knapsack problem has variants in which an item can be selected a certain number of times, or that multiple knapsacks must be considered simultaneously, both being generalisations of $KP$. 
 
-Also, the knapsack problem is also a combinatorial optimisation problem, which can be stated by defining (i) $N$ the set of all items $\braces{1,\dots, n}$, (ii) $S \in \mathcal{F}$ the subset of items with total cost not greater than $B$, and (iii) $x^S$ such that $x_{i}, \forall i \in N$.   
+Naturally, the knapsack problem is also a combinatorial optimisation problem, which can be stated by defining (i) $N$ the set of all items $\braces{1,\dots, n}$, (ii) $S \in \mathcal{F}$ the subset of items with total cost not greater than $B$, and (iii) $x^S$ as $x_{i}, \forall i \in N$.   
 
 
 \subsection{The generalised assignment problem}
 
 The generalised assignment problem (or GAP) is a generalisation of the assignment problem including a structure that resembles that of a knapsack problem. In this case, we consider the notion of bins, to each the items have to be assigned. In this case, multiple items can be assigned to a bin, or a bin might have no item assigned. In some contexts, this problem is also known as the \emph{bin packing problem}. 
 
-In this case, we would like to assign all of the $m$ items to $n$ bins, observing that the capacity $B$ of each bin cannot be exceeded by the weights $A_i$ of the items assigned to that bin. We know that assigning the item $i=1,\dots,m$ to the bin $j=1,\dots,n$ costs $C_{ij}$. Our objective is to obtain a minimum-cost bin assignment (or packing) that does not exceed any of the bin capacities. Figure \ref{p1c8:fig:bin_packing} illustrates a possible assignment of items to bins. Notice that the number of total bins does not necessarily need to be the same the number of items. 
+In this case, we would like to assign all of the $m$ items to $n$ bins, observing that the capacity $B$ of each bin cannot be exceeded by the weights $A_i$ of the items assigned to that bin. We know that assigning the item $i \in [m]$ to the bin $j \in [n]$ costs $C_{ij}$. Our objective is to obtain a minimum-cost bin assignment (or packing) that does not exceed any of the bin capacities. Figure \ref{p1c8:fig:bin_packing} illustrates a possible assignment of items to bins. Notice that the number of total bins does not necessarily need to be the same as the number of items. 
 
 \begin{figure}
 	\centering
@@ -152,7 +152,7 @@ In this case, we would like to assign all of the $m$ items to $n$ bins, observin
 	\caption	{An example of a bin packing with total cost $C_{11}$ + $C_{12}$ + $C_{23}$ + $C_{44}$} \label{p1c8:fig:bin_packing}
 \end{figure}
 
-To formulate the generalised assignment problem as an integer programming problem, let us define $x_{ij} =$ 1, if item $i$ is packed into bin $j$, and $x_{ij} = 0$ otherwise. Moreover, let $M = \braces{1,\dots,m}$ be the set of items and $N = \braces{1,\dots,n}$ be the set of bins. Then, the problem can be formulated as follows.
+To formulate the generalised assignment problem as an integer programming problem, let us define $x_{ij} =$ 1 if item $i$ is packed into bin $j$, and $x_{ij} = 0$ otherwise. Moreover, let $M$ be the set of items and $N$ be the set of bins. Then, the problem can be formulated as follows.
 
 \begin{align*}
 	(GAP) : \mini_x \ & \sum_{i \in M}\sum_{j \in N} C_{ij}x_{ij} \\
@@ -161,16 +161,16 @@ To formulate the generalised assignment problem as an integer programming proble
 	  & x_{ij} \in \braces{0,1}, \ \forall i \in M, \forall j \in N. 
 \end{align*} 
 
-Hopefully, the parallel to the combinatorial optimisation problem version is clear at this point and is let for the reader as a thought exercise. 
+Hopefully, the parallel to the combinatorial optimisation problem version is clear at this point and is left for the reader as a thought exercise. 
 
 
 \subsection{The set covering problem}
 
 Set covering problems are related to the location of infrastructure (or facilities) with the objective of covering demand points and, thus, frequently recurring in settings where service centres such as fire brigades, hospitals, or police stations must be located to efficiently serve locations.
 
-Let $M = \{1,\dots,m\}$ be a set of regions that must be served by opening \emph{service centres}. A centre can be opened at any of the $N = \{1,\dots,n\}$ possible locations. If a centre is opened at location $J \in N$, then it serves (or covers) a subset of regions $S_j \subseteq M$ and has associated opening cost $C_j$. Our objective is to decide where to open the centres so that all regions are served and the total opening cost is minimised. 
+Let $M$ be a set of regions that must be served by opening \emph{service centres}. A centre can be opened at any of the $N$ possible locations. If a centre is opened at location $j \in N$, then it serves (or covers) a subset of regions $S_j \subseteq M$ and has associated opening cost $C_j$. Our objective is to decide where to open the centres so that all regions are served and the total opening cost is minimised. 
 
-Figure \ref{p1c8:fig:set_covering} illustrates an example of a set covering problem based on a fictitious map broken into cells representing, e.g., regions. Each of the cells represents a region that must be covered, i.e., $M = \braces{1,\dots, 20}$. The blue cells represent regions that can have a centre opened, that is, $N = \braces{3,4,7,11,12,14,19}$. Notice that $N \subset M$. In this case, we assume that if a centre is opened at a blue cell, then it can serve the respective cell and all adjacent cells. For example, $S_3 = \braces{1,2,3,8}$, $S_4=\braces{2,4,5,6,7}$, and so forth.
+Figure \ref{p1c8:fig:set_covering} illustrates an example of a set covering problem based on a fictitious map broken into cells. Each of the cells represents a region that must be covered, i.e., $M = \braces{1,\dots, 20}$. The blue cells represent regions that can have a centre opened, that is, $N = \braces{3,4,7,11,12,14,19}$. Notice that $N \subset M$. In this case, we assume that if a centre is opened at a blue cell, then it can serve the respective cell and all adjacent cells. For example, $S_3 = \braces{1,2,3,8}$, $S_4=\braces{2,4,5,6,7}$, and so forth.
 
 \begin{figure}[h]
 	\centering
@@ -178,7 +178,7 @@ Figure \ref{p1c8:fig:set_covering} illustrates an example of a set covering prob
 	\caption{The hive map illustrating the set covering problem. Our objective is to cover all of the regions while minimising the total cost incurred by opening the centres at the blue cells} \label{p1c8:fig:set_covering}
 \end{figure}
 
-To model the set covering problem, and pretty much any other problem involving indexed subsets such as $S_j$, $\forall j \in N$, we need an auxiliary parameter matrix $A$, often referred to as \emph{0-1 incidence matrix} such that
+To model the set covering problem, and pretty much any other problem involving indexed subsets such as $S_j$, $\forall j \in N$, we need an auxiliary parameter matrix $A$, often referred to as \emph{0-1 incidence matrix}. The matrix $A$ is such that
 %
 \begin{equation*}
 	A = \begin{cases}
@@ -189,7 +189,7 @@ To model the set covering problem, and pretty much any other problem involving i
 %
 For example, referring to Figure \ref{p1c8:fig:set_covering}, the first column of $A$ would refer to $j = 3$ and would have nonzero values at rows 1, 2, 3, and 8.
 
-We are now ready to pose the set covering problem as an integer programming problem. For that, let $x_{j} = 1$ if a facility is opened (or a service centre is located) at location $j$ and $x_j = 0$, otherwise. In addition, let $M = \braces{1,\dots,m}$ be the set of regions to be served and $N = \braces{1,\dots,n}$ be the set of candidate places to have a facility opened. Then, the set covering problem can be formulated as follows.
+We are now ready to pose the set covering problem as an integer programming problem. For that, let $x_{j} = 1$ if a facility is opened (or a service centre is located) at location $j$ and $x_j = 0$, otherwise. In addition, let $M$ be the set of regions to be served and $N$ be the set of candidate places to have a facility opened. Then, the set covering problem can be formulated as follows.
 %
 \begin{align*}
   (SCP) : \mini_x \ & \sum_{j \in N} C_{j}x_{j} \\
@@ -238,7 +238,7 @@ To pose the problem as an integer programming model, let us define $x_{ij} =$ 1 
 	& x_{ij} \in \braces{0,1}, \ \forall i,\forall j \in N : i \neq j
 \end{flalign*}
 %
-First, notice that the formulation of $TSP$ is exactly the same as that of the assignment problem. However, this formulation has an issue. Although it can guarantee that all cities are only visited once, it cannot enforce an important feature of the problem which is that the tour cannot present disconnections, i.e., contain \emph{sub-tours}. In other words, the salesperson must physically visit from city to city in the tour, and cannot ``teleport'' from one city to another. Figure \ref{p1c8:fig:TSP_subtours} illustrates the concept of sub-tours.
+First, notice that the proposed formulation of $TSP$ is exactly the same as that of the assignment problem. However, this formulation has an issue. Although it can guarantee that all cities are only visited once, it cannot enforce an important feature of the problem, which is that the tour cannot present disconnections, i.e., contain \emph{sub-tours}. In other words, the salesperson must physically visit from city to city when executing the tour and cannot ``teleport'' from one city to another. Figure \ref{p1c8:fig:TSP_subtours} illustrates the concept of sub-tours.
 
 \begin{figure}[h]
 	\centering	
@@ -286,14 +286,14 @@ while the sub-tour elimination would be of the form
 	x_{12} + x_{13} + x_{21} + x_{23} + x_{31} + x_{32} \leq 2
 \end{equation*}
 %
-There are some differences between these two constraints and, typically cutset, constraints are preferred for being stronger (we will discuss the notion of stronger constraints in the next chapters). In any case, either of them suffers from the same problem: the number of such constraints quickly becomes computationally prohibitive as the number of nodes increases. This is because one would have to generate a constraint to each possible node subset combination from sizes 2 to $n-1$. 
+There are some differences between these two constraints. Typically, cutset constraints are preferred for being stronger (we will discuss the notion of stronger constraints in the next chapters). In any case, either of them suffers from the same problem: the number of such constraints quickly becomes computationally prohibitive as the number of nodes increases. This is because one would have to generate a constraint to each possible node subset combination from sizes 2 to $n-1$. 
 
-A possible remedy to this consists of relying on delayed constraint generation. In this case, one can start from the naive formulation $TSP$ and from the solution, observe whether there are any sub-tours formed. That being the case, only the constraints eliminating the observed sub-tours need to be generated, and the problem can be warm-started. This procedure typically terminates far earlier than having all of the possible cutset or sub-tour elimination constraints generated. 
+A possible remedy to this consists of relying on \emph{delayed constraint generation}. In this case, one can start from the naive formulation $TSP$ and, from the obtained solution, check whether there are any sub-tours formed. That being the case, only the constraints eliminating the observed sub-tours need to be generated, and the problem can be warm-started. This procedure typically terminates far earlier than having all of the possible cutset or sub-tour elimination constraints generated. 
 
 
 \subsection{Uncapacitated facility location}
 
-This is the first mixed-integer programming we consider. In this, we would like to design a network that can supply clients $i \in M$ by opening (or locating, as it is referred to in this context) facilities among candidate locations $j \in N$. Opening a facility incurs in the fixed cost $F_j$, and serving a client $i \in M$ from a facility that has been located at $j \in N$ costs $C_{ij}$. Our objective is to design the most cost-effective production and distribution network. That is, we must decide where to locate facilities and how to serve clients (from these facilities) with minimum total (locating plus service) cost. Figure \ref{p1c8:fig:facility_location_a} illustrates an example of the problem with $M = \braces{1,\dots,8}$ and $N = \braces{1,\dots,6}$ and Figure \ref{p1c8:fig:facility_location_b} presents one possible configuration with two facilities. The optimal number of facilities located and the client-facility association depends on the trade-offs between locating and service costs.	
+This is the first mixed-integer programming model we consider. In this, we would like to design a network that can supply clients $i \in M$ by opening (or locating, as it is referred to in this context) facilities among candidate locations $j \in N$. Opening a facility incurs in the fixed cost $F_j$, and serving a client $i \in M$ from a facility that has been located at $j \in N$ costs $C_{ij}$. Our objective is to design the most cost-effective production and distribution network. That is, we must decide where to locate facilities and how to serve clients (from these facilities) with minimum total (locating plus service) cost. Figure \ref{p1c8:fig:facility_location_a} illustrates an example of the problem with $M = \braces{1,\dots,8}$ and $N = \braces{1,\dots,6}$ and Figure \ref{p1c8:fig:facility_location_b} presents one possible configuration with two facilities. The optimal number of facilities located and the client-facility association depends on the trade-offs between locating and service costs.	
 
 \begin{figure}[h]
 	\begin{subfigure}[b]{0.49\textwidth}
@@ -374,9 +374,9 @@ Facility location problems are frequent in applications associated with supply c
  
 \subsection{Uncapacitated lot-sizing}
 
-Another example of an important mixed-integer programming formulation is the uncapacitated lot-sizing. In this, we would like to plan the production of a single product over a collection of time periods $T = \braces{1, \dots, n}$. We have encountered this problem before in Chapter \ref{chapter_1}, but now we consider the variation in which the production activity implies in a fixed cost $F_t$, representing, for example, a setup cost or the need for renting equipment. Once again, we incur a cost $C_t$ to produce one unit in period $t$ and $H_t$ is paid to store one unit of product from period $t$ to period $t+1$.
+Another example of an important mixed-integer programming formulation is the uncapacitated lot-sizing. In this, we would like to plan the production of a single product over a collection of time periods $T$. We have encountered this problem before in Chapter \ref{chapter_1}, but now we consider the variation in which the production activity implies in a fixed cost $F_t$, representing, for example, a setup cost or the need for renting equipment. Once again, for each period $t \in T$, we incur a cost $C_t$ to produce one unit in period $t$ and $H_t$ is paid to store one unit of product from period $t$ to period $t+1$.
 
-Let us define $p_t \geq 0$ be the amount produced in period $t\in T$, and $s_t \geq 0$ as the amount stored at the end of period $t \in T$. In addition, let $y_t \in \braces{0,1}$ indicate whether production occurs in period $t\in T$. Also, assume that $M$ is a sufficiently large constraint. Then, the uncapacitated lot-sizing (ULS) can be formulated as
+Let us define $p_t \geq 0$ be the amount produced in period $t \in T$, and $s_t \geq 0$ as the amount stored at the end of period $t \in T$. In addition, let $y_t \in \braces{0,1}$ indicate whether production occurs in period $t \in T$. Also, assume that $M$ is a sufficiently large constraint. Then, the uncapacitated lot-sizing (ULS) can be formulated as
 %
 \begin{align}
 	(ULS) : \mini_{x,s,y} \ & \sum_{t \in N} (F_ty_t + P_tp_t + H_ts_t) \nonumber \\
@@ -393,7 +393,7 @@ Notice that the formulation of $ULS$ is very similar to that seen in Chapter \re
 
 In this section, we discuss what makes a formulation a better formulation for a (mixed-)integer programming (MIP) problem. Just like it is the case with any mathematical programming application, there are potentially infinite possible ways to formulate the same problem. While in the case of linear programming (i.e., only continuous variables), alternative formulations typically do not lead to significant differences in terms of computational performance, the same is definitely not true in the context of MIP. In fact, whether a MIP problem can be solved in a reasonable computational time often depend on having a good, or \emph{strong}, formulation.
 
-Therefore, it is fundamental that we can recognise which of alternative formulations might yield better computational performance. But first, we must be able to understand the source of these differences. For that, the first thing to realise is that solution methods for MIP models rely on \emph{successively solving linear programming models} called \emph{linear programming (LP) relaxations}. How exactly this happens will be the subject of our next chapters. But for now, one can infer that the best formulation will be the one that requires the solution of the least of such LP relaxations. And precisely, it so turns out that the number of LP relaxations that need to be solved (and, hence, performance) is strongly dependent on how closely it resembles the \emph{convex hull} of the feasible solutions.
+Therefore, we must be able to recognise, from a set of equivalent formulations for the same problem, that which yields better computational performance. But first, we must be able to understand the source of these differences in computational performance. For that, the first thing to realise is that solution methods for MIP models rely on \emph{successively solving linear programming models} called \emph{linear programming (LP) relaxations}. How exactly this happens will be the subject of our next chapters. But for now, one can infer that the best formulation will be the one that requires the solution of the least of such LP relaxations. And precisely, it so turns out that the number of LP relaxations that need to be solved (and, hence, performance) is strongly dependent on how closely the formulation resembles the \emph{convex hull} of the feasible solutions.
 
 An LP relaxation simply consists of a version of the original MIP problem in which the integrality requirements are dropped. Most of the methods used to solve MIP models are based on LP relaxation. There are several reasons why the employment of LP relaxations is a good strategy. First, we can solve (and resolve) LP problems efficiently. Secondly, the solution of the LP relaxation can be used to \emph{reduce} the search space of the original MIP. However, simply rounding the solution of the LP relaxation will typically not lead to relevant solutions.
 
@@ -406,7 +406,9 @@ Let us illustrate the geometry of an integer programming model, such that the po
 	&x_1, x_2 \in \integers_+.
 \end{align*}
  
-The feasible region of problem $P$ is represented in Figure \ref{p1c8:fig:IP_feasible_region}. First, notice how in this case the feasible region is not a polyhedral set anymore, but yet a collection of discrete points (represented in blue) that happen to be within the polyhedral set formed the linear constraints. This is one of the main complicating features of MIPs because the premise of convexity does not hold anymore. Another point can be noticed in Figure \ref{p1c8:fig:IP_feasible_region}. Notice that rounding the solution obtained from the LP relaxation would in most cases lead to infeasible solutions, except when $x_1$ is rounded up and $x_2$ rounded down, which leads to the suboptimal solution $(2,5)$. However, one can still graphically find the optimal solution using exactly the same procedure as that employed for linear programming problems, which would lead to the optimal integer solution $(5,0)$.
+The feasible region of problem $P$ is represented in Figure \ref{p1c8:fig:IP_feasible_region}. First, notice how in this case the feasible region is not a polyhedral set anymore, but yet a collection of discrete points (represented in blue) that happen to be within the polyhedral set formed the linear constraints. This is one of the main complicating features of MIPs because the premise of convexity does not hold anymore. 
+
+Figure \ref{p1c8:fig:IP_feasible_region} also illustrates how rounding the solution obtained from the LP relaxation would, as it is often the case with MIPs, lead to infeasible solutions, except when $x_1$ is rounded up and $x_2$ rounded down, which leads to the suboptimal solution $(2,5)$. However, one can still graphically find the optimal solution using the same procedure as that employed for linear programming problems, which would lead to the optimal integer solution $(5,0)$.
 
 \begin{figure}[h]
 	\begin{tikzpicture}[scale = 0.65,
@@ -460,7 +462,7 @@ In order to be able to compare formulations, we require some specific definition
 	A polyhedral set $P = \braces{x \in \reals^{n+p} : Ax \leq b}$ is a formulation for a set $X \subseteq \integers^n \times \reals^p $ if and only if $X = P \cap (\integers^n \times \reals^p)$.
 \end{definition}
 
-One aspect that can be noticed from Definition \ref{p1c8:def:formulation} is that the feasible region of an integer programming problem is a collection of points, represented by $X$. This is illustrated in Figure \ref{p1c8:fig:alternative_formulations}, where one can see three alternative formulations, $P_1$, $P_2$, and $P_3$ for the same set $X$.
+From Definition \ref{p1c8:def:formulation}, we can conclude that two formulations $P_1$ and $P_2$ are \emph{equivalent} if $P_1 \cap (\integers^n \times \reals^p) = P_2 \cap (\integers^n \times \reals^p)$. Moreover, from Definition \ref{p1c8:def:formulation}, it becomes clear that the feasible region of an integer programming problem is a collection of points represented by $X$. This is illustrated in Figure \ref{p1c8:fig:alternative_formulations}, where one can see three alternative equivalent formulations, $P_1$, $P_2$, and $P_3$ for the same set $X$.
 
 \begin{figure}[h]
 	\begin{tikzpicture}[scale = 0.8,
@@ -494,9 +496,9 @@ One aspect that can be noticed from Definition \ref{p1c8:def:formulation} is tha
 	\caption{An illustration of three alternative formulations for $X$. Notice that $P_3$ is an ideal formulation, representing the convex hull of $X$.} \label{p1c8:fig:alternative_formulations}
 \end{figure}
 
-The formulation $P_3$ has a special feature associated with it. Notice how all extreme points of $P_3$ belong to $X$. This has an important consequence. That implies that the solution of the original integer programming problem can be obtained by solving a single LP relaxation, since the solution of both problems is the same. This is precisely what characterises an \emph{ideal} formulation, which is that leading to a minimal (i.e., only one) number of required LP relaxation solutions as solving an LP relaxation over an ideal $P$ yields a solution $x \in X$ for any cost vector $c$. This will only be the case if the formulation $P$ is the \emph{convex hull} of $X$.
+Formulation $P_3$ has a special feature associated with it. Notice how all extreme points of $P_3$ belong to $X$. This has an important consequence. That implies that the solution of the original integer programming problem can be obtained by solving a single LP relaxation since the solution of both problems is the same. This is precisely what characterises an \emph{ideal} formulation, which is that leading to a minimal (i.e., only one) number of required LP relaxation solutions as solving an LP relaxation over an ideal $P$ yields a solution $x \in X$ for any cost vector $c$. This will only be the case if the formulation $P$ is the \emph{convex hull} of $X$.
 
-This is the case because of two important properties relating the set $X$ and its convex hull $\conv(X)$. The first is that $\conv(X)$ is a polyhedral set and the second is that the extreme points of $\conv(X)$ belong to $X$. We summarise those two facts in Proposition \ref{p1c8:prop:polyhedra_convex_hull}, to which we will refer shortly. Notice that the proof for the proposition can be derived from Definition \ref{p1c2:def:convex_combination_hull} and Theorem \ref{p1c2:thm:convexity}.
+This is the case because of two important properties relating to the set $X$ and its convex hull $\conv(X)$. The first is that $\conv(X)$ is a polyhedral set, and the second is that the extreme points of $\conv(X)$ belong to $X$. We summarise those two facts in Proposition \ref{p1c8:prop:polyhedra_convex_hull}, to which we will refer shortly. Notice that the proof for the proposition can be derived from Definition \ref{p1c2:def:convex_combination_hull} and Theorem \ref{p1c2:thm:convexity}, and is left as an exercise.
   
 \begin{proposition}\label{p1c8:prop:polyhedra_convex_hull}
 	$\conv(X)$ is a polyhedral set and all its extreme points belong to $X$. 
