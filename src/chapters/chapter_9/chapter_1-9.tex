@@ -2,9 +2,9 @@
 
 \section{Optimality for integer programming problems}
 
-We will now discuss a method to solve mixed-integer programming problems that rely on the successive solution of linear programming relaxations. Although there are several methods that can be employed to solve combinatorial optimisation problems, most of them are not capable of providing optimality guarantees for the solution obtained (e.g., are heuristics or metaheuristics) or do not exploit the availability of a (linear) mathematical programming formulation. To date, the most widespread method that is capable of both is something that is generally known as a \emph{branch-and-cut} method.
+We will now discuss a method to solve mixed-integer programming problems that rely on the successive solution of linear programming relaxations. Although there are several methods that can be employed to solve combinatorial optimisation problems, often they are not capable of providing optimality guarantees for the solution obtained (e.g., are heuristics or metaheuristics) or do not exploit the availability of a (linear) mathematical programming formulation. To date, the most widespread method capable of both is generally known as a \emph{branch-and-cut} method.
 
-Branch-and-cut methods are composed of a combination of multiple parts, including, among other techniques, a branch-and-bound coordination scheme, cutting planes, and heuristics as well. In the next chapters, we will focus on each of these parts individually, starting with the branch-and-bound method.
+Branch-and-cut methods are composed of a combination of multiple parts, including, among other techniques, a branch-and-bound coordination scheme, cutting planes, and heuristics as well. In the next chapters, we will focus on each of these parts individually, starting with the \emph{branch-and-bound} method.
 
 
 \section{Relaxations}
@@ -33,14 +33,14 @@ and a decreasing sequence of upper bounds
 %
 to obtain as tight as possible lower ($\underline{z} \leq z$) and upper ($\overline{z} \geq z$) bounds. Notice that the process can be arbitrarily stopped when $\overline{z}_t - \underline{z}_s \leq \epsilon$, where $s$ and $t$ are some positive integers and $\epsilon > 0$ is a predefined (suitably small) tolerance. The term $\epsilon$ represents an \emph{absolute optimality gap}, meaning that one can guarantee that the optimal value is at most greater than $\underline{z}$ by $\epsilon$ units and at most smaller than $\overline{z}$ by $\epsilon$ units. In other words, the optimal value must be either $\underline{z}$, $\overline{z}$, or a value in between.
 
-This framework immediately poses the key challenge of deriving such bounds efficiently. It turns out that this is a challenge that goes beyond the context of mixed-integer programming problems. In fact, we will see this idea of bounding in Chapter \ref{chapter_12}, when we discuss decomposition methods, which also generate lower and upper bounds during their execution.
+This framework immediately poses the challenge of deriving such bounds efficiently. It turns out that this is a challenge that goes beyond the context of mixed-integer programming problems. In fact, we will see this idea of bounding in Chapter \ref{chapter_12} when we discuss decomposition methods, which also generate lower and upper bounds during their execution.
 
-Regardless of the context, bounds are typically of two types: \emph{primal} bounds, which are bounds obtained by evaluating a \emph{feasible} solution (i..e, that satisfy primal feasibility conditions); and \emph{dual} bounds, which are typically attained when primal feasibility is allowed to be violated so that a dual feasible solution is obtained. In the context of minimisation, primal bounds are upper bounds (to be minimised), while dual bounds are lower bounds (to be maximised). Clearly, in the case of maximisation, the reverse holds. 
+Regardless of the context, bounds are typically of two types: \emph{primal} bounds, which are bounds obtained by evaluating a \emph{feasible} solution (i.e., that satisfy primal feasibility conditions); and \emph{dual} bounds, which are typically attained when primal feasibility is allowed to be violated so that a dual feasible solution is obtained. In the context of minimisation, primal bounds are upper bounds (to be minimised), while dual bounds are lower bounds (to be maximised). Clearly, in the case of maximisation, the reverse holds. 
 
 Primal bounds can be obtained by means of a feasible solution. For example, one can heuristically assemble a solution that is feasible by construction. On the other hand, dual bounds are typically obtained by means of solving a \emph{relaxation} of the original problem. We are ready now to provide Definition \ref{p1c9:def:relaxation}, which formally states the notion of relaxation.
 
 \begin{definition}[Relaxation] \label{p1c9:def:relaxation}
-	A problem 
+	Problem 
 	%
 	\begin{equation*}
 	  (RP): z_{RP} = \mini \braces{\overline{c}^\top x : x \in \overline{X} \subseteq \reals^n} 
@@ -55,7 +55,7 @@ Primal bounds can be obtained by means of a feasible solution. For example, one 
 	if $X \subseteq \overline{X}$, and $\overline{c}^\top x \leq c^\top x$, $\forall x \in X$.
 \end{definition}
 
-Definition \ref{p1c9:def:relaxation} provides an interesting insight related to relaxations: they typically comprise an expansion of the feasible region, possibly combined with an objective function bounding. Thus, two main strategies to obtain relaxations are to enlarge the feasible set by dropping constraints and replacing the objective function with another of same or smaller value. One might notice at this point that we have used a very similar argumentation to define linear programming duals in Chapter \ref{chapter_5}. We will return to the relationship between relaxations and Lagrangian duality in a more general setting in Part \ref{part_2}, when we discuss the notion of Lagrangian relaxation.
+Definition \ref{p1c9:def:relaxation} provides an interesting insight related to relaxations: they typically comprise an expansion of the feasible region, possibly combined with an objective function bounding. Thus, two main strategies to obtain relaxations are to enlarge the feasible set by dropping constraints and replacing the objective function with another of the same or smaller value. One might notice at this point that we have used a very similar argumentation to define linear programming duals in Chapter \ref{chapter_5}. %We will return to the relationship between relaxations and Lagrangian duality in a more general setting in Part \ref{part_2}, when we discuss the notion of Lagrangian relaxation.
 
 Clearly, for relaxations to be useful in the context of solving mixed-integer programming problems, they have to be easier to solve than the original problem. That being the case, we can then rely on two important properties that relaxations have, which are crucial for using them as a means to generate dual bounds. These are summarised in Proposition \ref{p1c9:prop:relaxation_bounding} and \ref{p1c9:prop:relaxation_optimality}.
 
@@ -228,7 +228,7 @@ Specifically, let
 	(P): z = \maxi_x \braces{c^\top x : x\ \in S}. 
 \end{equation*}
 %
-The working principle behind this strategy is based on the principle formalised in Proposition \ref{p1c9:prop:divide-and-conquer}.
+The working principle behind this strategy is based on the notion of decomposition, which is formalised in Proposition \ref{p1c9:prop:divide-and-conquer}.
 
 \begin{proposition} \label{p1c9:prop:divide-and-conquer}
     Let $K = \braces{1,\dots,|K|}$ and  $\bigcup_{k \in K} S_k = S$ be a decomposition of $S$. Let $z^k = \maxi_x\braces{c^\top x : x \in  S_k}, \forall k \in K$. Then 
@@ -239,7 +239,7 @@ The working principle behind this strategy is based on the principle formalised 
 \end{proposition}
 
 %TODO: Not sure if this is true any more once we moved decomposition methods earlier. Double check
-Notice the use of the word \emph{decomposition} in Proposition \ref{p1c9:prop:divide-and-conquer}. Indeed, the principle is philosophically the same, and this connection will be exploited in later chapters when we discuss in more detail the available technology for solving mixed-integer programming problems.
+%Notice the use of the word \emph{decomposition} in Proposition \ref{p1c9:prop:divide-and-conquer}. Indeed, the principle is exactly what governs decomposition methods (described in Chapter \ref{p1c12}). This connection will be exploited in later chapters when we discuss in more detail the available technology for solving mixed-integer programming problems.
 
 Now, one challenging aspect related to divide-and-conquer approaches is that, in order to be able to find a solution, one might need to repeat several times the strategy based on Proposition \ref{p1c9:prop:divide-and-conquer}, which suggests breaking any given problem in multiple subproblems. This leads to a multi-layered collection of subproblems that must have their relationships managed. To address this issue, such methods typically rely on tree structures called \emph{enumerative trees}, which are simply a representation that allows for keeping track of the relationship (represented by branches) between subproblems (represented by nodes).
 
@@ -306,7 +306,7 @@ The main principle behind the pruning of branches in enumerative search trees is
 	Consider the problem $P$ and let $S = \bigcup_{k \in K} S_k$ be a decomposition of $S$ into smaller sets. Let $z^k = \maxi_x\braces{c^\top x : x \in S_k}$ for $k \in K$, and let $\overline{z}^k$ ($\underline{z}^k$) be an upper (lower) bound on $z^k$. Then $\overline{z} = \max_{k \in K} \braces{\overline{z}^k}$ and $\underline{z} = \max_{k \in K} \braces{\underline{z}^k}$.
 \end{proposition}
 
-First, notice tat $P$ is a maximisation problem, for which an upper bound is a dual bound, obtained from a relaxation, and a lower bound is a primal bound, obtained from a feasible solution. Proposition \ref{p1c9:prop:bounding} states that the best known primal (lower) bound can be applied \emph{globally} to all of the subproblems $S_k$, $k \in K$. On the other hand, dual (upper) bounds can only be considered valid locally, since only the worst of the upper bounds can be guaranteed to hold globally.
+First, notice that $P$ is a maximisation problem, for which an upper bound is a dual bound obtained from a relaxation, and a lower bound is a primal bound obtained from a feasible solution. Proposition \ref{p1c9:prop:bounding} states that the best known primal (lower) bound can be applied \emph{globally} to all of the subproblems $S_k$, $\forall k \in K$. On the other hand, dual (upper) bounds can only be considered valid locally, since only the worst of the upper bounds can be guaranteed to hold globally.
 
 Pruning branches is made possible by combining relaxations and global primal bounds. If, at any moment of the search, the solution of a relaxation of $S_k$ is observed to be \emph{worse} than a known global primal bound, then any further branching from that point onwards would be fruitless, since no solution found from that subproblem could be better than the relaxation for $S_k$. Specifically, we have that
 %
@@ -329,7 +329,7 @@ In regards to branching, we employ the following strategy utilising the informat
         S_{k2} = S_k \cap \braces{x : x_j \geq \ceil{\overline{x}_j}}.
     \end{equation*}
 	
-Notice that this implies that each of the subproblems will be disjunct (i.e., with no intersection) and have one additional constraint that eliminates the fractional part of the component around the solution of the LP relaxation. 
+Notice that this implies that each of the subproblems will be disjunct (i.e., with no intersection in their feasible region) and have one additional constraint that eliminates the fractional part of the component around the solution of the LP relaxation. 
 
 Bounding can occur in three distinct ways. The first case is when the solution of the LP relaxation happens to be integer and, therefore, optimal for the subproblem itself. In this case, no further exploration along that subproblem is necessary and we say that the node has been \emph{pruned by optimality}.
 
@@ -401,7 +401,7 @@ Finally, although we developed the method in the context of integer programming 
 		    \State solve LP relaxation of $S_i$ over $P_i$, obtaining $z_{LP}^i$ and $x_{LP}^i$. $\overline{z}^i \gets z_{LP}^i$. 
 		    \If {$S_i = \emptyset$} return to step \ref{p1c9:alg:BB_loop}.
 		    \ElsIf {$\overline{z}^i \leq \underline{z}$} return to step \ref{p1c9:alg:BB_loop}.    
-		    \ElsIf {$x_{LP}^i \in \integers^n$} $\underline{z} \gets \max\braces{\underline{z}, \overline{z}^i}$, $\overline{x} \gets x_{LP}^i$; and return to step \ref{p1c9:alg:BB_loop}
+		    \ElsIf {$x_{LP}^i \in \integers^n$} $\underline{z} \gets \overline{z}^i$, $\overline{x} \gets x_{LP}^i$; and return to step \ref{p1c9:alg:BB_loop}
 		    \EndIf
 		    \State select a fractional component $x_j$ and create subproblems $S_{i1}$ and $S_{i2}$ with formulations $P_{i1}$ and $P_{i2}$, respectively, such that 
 		    %
