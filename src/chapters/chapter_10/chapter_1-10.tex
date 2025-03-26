@@ -185,7 +185,7 @@ Perhaps the most striking result in the theory of integer programming is that \e
 
 Let us now consider how one could use valid inequalities to devise a solution method. The working paradigm behind a cutting-plane method is the \emph{separation principle}. 
 
-The separation principle states that, given an integer set $X = P \cap \integers^n$, if a solution $x \notin X$, then there exists a hyperplane $\pi^\top x \leq \pi_0$ separating $x$ and $X$\footnote{the separation principle is a consequence of the separation theorem (Theorem \ref{p2c2:thm:separation}) in Part \ref{part_2}.}. As one might infer, the challenge is how one can generate such pairs $(\pi, \pi_0)$. This is precisely what is called the \emph{separation problem}, in the context of integer programming.
+The separation principle states that, given an integer set $X = P \cap \integers^n$, if a solution $x \notin X$, then there exists a hyperplane $\pi^\top x \leq \pi_0$ separating $x$ and $X$. As one might infer, the challenge is how one can generate such pairs $(\pi, \pi_0)$. This is precisely what is called the \emph{separation problem} in the context of integer programming.
 
 In general, these valid inequalities are generated from a family of inequalities $\mathcal{F}$, which are related to each other by properties related to, e.g., problem structure or the nature of the inequality itself. One way of thinking about it is to see the family of inequalities $\mathcal{F}$ as a means to dictate, to some extent, how the selection of weights $u$ in the Chv\'atal-Gomory procedure is defined.
 
@@ -251,7 +251,7 @@ which is equivalent to $B^{-1}Ax = B^{-1}b$. Now, let $\overline{a}_{ij}$ be the
 %
 where $I = \braces{1, \dots, m}$, $J = \braces{1, \dots, n}$, $I_B \subset J$ are the indices of basic variables and $I_N = J \setminus I_B$ the indices of nonbasic variables. Notice that, at this point, we are simply recasting the problem $IP$ by performing permutations of columns, since basic feasible solutions for the LP relaxation do not necessarily translate into a feasible solution for $X$.
 
-However, assuming that we solve the LP relaxation of the integer programming problem $P$ and obtain an optimal solution $x = (x_B, x_N)$ with associated optimal basis $B$. If $x$ is fractional, then it means that $\overline{a}_{i0}$ is fractional for some $i$.
+However, assuming that we solve the LP relaxation of the integer programming problem $IP$ and obtain an optimal solution $x = (x_B, x_N)$ with associated optimal basis $B$. If $x$ is fractional, then it means that $\overline{a}_{i0}$ is fractional for some $i$.
 
 From any of the rows $i$ with fractional $\overline{a}_{i0}$, we can derive a valid inequality using the Chav\'atal-Gomory procedure. These inequalities, commonly referred to as \emph{CG cuts}, take the form
 %
@@ -472,7 +472,7 @@ We can also interpret the progress of the algorithm in graphical terms. First of
       \caption{}		
 	\end{subfigure}
 
-      \caption{Feasible region of the LP relaxation (polyhedral set) and of the integer programming problem (blue dots) at each of three iterations taken to solve the integer programming problem. The inequalities in orange represent the Gomory cut added at each iteration} \label{p1c10:fig:LP_1}	
+      \caption{Feasible region of the LP relaxation (polyhedral set) and of the integer programming problem (blue dots) at each of three iterations taken to solve the integer programming problem. The inequalities in orange represent the Gomory cut added at each iteration expressed as a function of $x_1$ and $x_2$} \label{p1c10:fig:LP_1}	
 \end{figure}
 
 
@@ -579,7 +579,7 @@ Let us consider the family of constraints known as knapsack constraints and see 
 	X = \braces{x \in \braces{0,1}^n : \sum_{j=1}^n a_jx_j \leq b}.	
 \end{equation*}
 %
-We assume that $a_j \geq 0$, $j \in N = \braces{1, \dots, n}$, and $b > 0$. Let us start by defining the notion of a \emph{minimal cover}.
+We assume that $a_j \geq 0$, $j \in N = [n]$, and $b > 0$. Let us start by defining the notion of a \emph{minimal cover}.
 
 \begin{definition} [minimal cover] \label{p1c10:def:minimal_cover}
 	A set $C \subseteq N$ is a cover if $\sum_{j \in C} a_j > b$. A cover $C$ is minimal if $C \setminus \braces{j}$ for all $j \in C$ is not a cover.  
