@@ -208,30 +208,30 @@ Another important proxy is \emph{orthogonality}. Cuts that are pairwise orthogon
 
 As we discussed in Chapter \ref{chapter_9}, some decisions in terms of selecting variables to branch and subproblems to solve can have a great impact in the total number of subproblems solved in a branch-and-bound method. Variable selection is still a topic under intensive research, with newer ideas only recently being made available in the main solvers. 
 
-Variable selection, commonly referred to as \emph{branching strategies} in most MIP solver implementations, refers to the decision of which of the currently fractional variables should be chosen to generate subproblems. There are basically three main methods most commonly used, which we discuss next. Furthermore, most MIP solvers allow the user to set priority weights for the variables, which defines priority orders for variable selection. These can be useful for example when the user knows that the problem possesses a dependence structure between variables (e.g., location and allocation variables, where allocation can only happen if the location decision is made) that the solver cannot infer automatically. 
+Variable selection, commonly referred to as \emph{branching strategies} in most MIP solver implementations, refers to the decision of which of the currently fractional variables should be chosen to generate subproblems. There are basically three main methods most commonly used, which we discuss next. Furthermore, most MIP solvers allow the user to set priority weights for the variables, which define priority orders for variable selection. These can be useful, for example, when the user knows that the problem possesses a dependence structure between variables (e.g., location and allocation variables, where allocation can only happen if the location decision is made) that the solver cannot infer automatically. 
 
 
 \subsubsection{Maximum infeasibility}
 
-The branching strategy called \emph{maximum infeasibility} consists of choosing the variable with the fractional part as close to 0.5 as possible, or, more precisely selecting the variables $j \in \braces{1, \dots, n}$ as
+The branching strategy called \emph{maximum infeasibility} consists of choosing the variable with the fractional part as close to 0.5 as possible, or, more precisely, selecting the variables $j \in \braces{1, \dots, n}$ as
 %
 \begin{equation*}
 	\arg\max_{j \in \braces{1,\dots,n}} \min\braces{f_j, 1 - f_j} 	
 \end{equation*}
 %
-where $f_j = x_j - \lfloor x_j \rfloor$. This in effect is trying to reduce as most as possible the infeasibility of the LP relaxation solution, which in turn would more quickly lead to a feasible (i.e., integer) solution. An analogous form called \emph{minimum infeasibility} is often available, and as the name suggests, focuses on selecting the variables that are closer to being integer-valued.
+where $f_j = x_j - \lfloor x_j \rfloor$. This, in effect, is trying to reduce as most as possible the infeasibility of the LP relaxation solution, which in turn would more quickly lead to a feasible (i.e., integer) solution. An analogous form called \emph{minimum infeasibility} is often available, and as the name suggests, focuses on selecting the variables that are closer to being integer-valued.
 
 \subsubsection{Strong branching}
 
-Strong branching can be understood as an explicit look-ahead strategy. That is, to decide which variable to branch on, the method performs branching on all possible variables, and chooses the one which provides the best improvement on the dual (LP relaxation) bound. Specifically, for each fractional variable $x_j$, we can solve the LP relaxations corresponding to branching options $x_j \leq \lfloor x^\text{LP} \rfloor$ and $x_j \geq \lceil x^\text{LP} \rceil$ to obtain LP relaxation objective values $Z_j^D$ and $Z_j^U$, respectively. We then choose the fractional variable $x_j$ that leads to subproblems with the best LP relaxation objective values, defined as 
+Strong branching can be understood as an explicit look-ahead strategy. That is, to decide which variable to branch on, the method performs branching on all possible variables and chooses the one that provides the best improvement on the dual (LP relaxation) bound. Specifically, for each fractional variable $x_j$, we can solve the LP relaxations corresponding to branching options $x_j \leq \lfloor x^\text{LP} \rfloor$ and $x_j \geq \lceil x^\text{LP} \rceil$ to obtain LP relaxation objective values $Z_j^D$ and $Z_j^U$, respectively. We then choose the fractional variable $x_j$ that leads to subproblems with the best LP relaxation objective values, defined as 
 %
 \begin{equation*}
 	\arg\max_{j \in \braces{1,\dots,n}} \min\braces{Z_j^D, Z_j^U}, 	
 \end{equation*}
 % 
-assuming a minimisation problem. Strong branching thus compares the worse LP relaxation bound for each fractional $x_j$ and picks the fractional variable for which this value is the best. 
+assuming a minimisation problem. Strong branching thus compares the worst LP relaxation bound for each fractional $x_j$ and picks the fractional variable for which this value is the best. 
 
-As one might suspect, there is a trade-off related to the observed reduction in the number of nodes explored given by the more prominent improvement of the dual bound, and how computationally intensive is the method. There are however ideas that can exploit this trade-off more efficiently. First, the solution of the subproblems might yield information related to infeasibility and pruning by limit, which can be used in favour of the method. 
+As one might suspect, there is a trade-off related to the observed reduction in the number of nodes explored, given by the more prominent improvement of the dual bound, and how computationally intensive is the method. There are, however, ideas that can exploit this trade-off more efficiently. First, the solution of the subproblems might yield information related to infeasibility and pruning by limit, which can be used in favour of the method. 
 
 Another idea is to limit the number of simplex iterations performed when solving the subproblems associated with each branching option. This allows for using an approximate solution of the subproblems and potential savings in computational efforts. Some solvers offer a parameter that allows the user to set this iteration limit value.
 
