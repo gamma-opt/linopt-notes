@@ -53,13 +53,13 @@ The standard-form polyhedral set $P$ always has, by definition, $m$ active const
 \end{theorem}
 
 \begin{proof}
-	Assume that (1) and (2) are satisfied. Then the active constraints $\overline{x}_j = 0$ for $j \notin \braces{B(1), \dots, B(m)}$ and $Ax = b$ imply that
+	Assume that (1) and (2) are satisfied. Then the active constraints $\overline{x}_j = 0$ for $j \notin \braces{B(1), \dots, B(m)}$ and $A\overline{x} = b$ imply that
 %	
 	\begin{equation*}
 		\sum_{i=1}^m A_{B(i)}\overline{x}_{B(i)} = \sum_{j=1}^n A_j\overline{x}_j = A\overline{x} = b.
 	\end{equation*}
 %
-	Since the columns $\braces{A_{B(i)}}_{i \in I}$ are LI, $\braces{\overline{x}_{B(i)}}_{i \in I}$ are uniquely determined and thus $A\overline{x} = b$ has a unique solution, implying that $\overline{x}$ is a basic solution (cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}).
+	Since the columns $\braces{A_{B(i)}}_{i \in I}$ are LI, $\braces{\overline{x}_{B(i)}}_{i \in I}$ are uniquely determined and thus $A\overline{x} = b$ has a unique solution, implying that $\overline{x}$ is a basic solution (cf. Definition \ref{p1c2:def:basic_feasible_solution}).
 	
 	Conversely, assume that $\overline{x}$ is a basic solution. Let $\overline{x}_{B(1)}, \dots, \overline{x}_{B(k)}$ be the nonzero components of $\overline{x}$. Thus, the system 
 %	
@@ -119,7 +119,7 @@ We say that $B = \braces{A_{B(i)}}_{i \in I_B}$ is a \emph{basis} (or, perhaps m
 
 Let us consider the following numerical example. Consider the following set $P$
 %
-\begin{equation}  \label{p1c3:eq:example_P}
+\begin{equation*}
 	P = \left\{x \in \reals^3 :  
 		\begin{aligned}
 			& x_1 + x_2 + 2x_3 \le 8 \\
@@ -129,7 +129,7 @@ Let us consider the following numerical example. Consider the following set $P$
 			& x_1, x_2, x_3 \ge 0
 		\end{aligned}
 		\right\}, 	
-\end{equation}
+\end{equation*}
 %
 which can be written in the standard by adding slack variables $\braces{x_i}_{i \in \{4,\dots,7\}}$, yielding 
 %
@@ -198,7 +198,7 @@ An important underlying assumption in Theorem \ref{p1c3:thm:LI_and_bases} is tha
 	
 	As $\rank(A) = k$, the rows $a_{i_1}, \dots, a_{i_k}$ form a basis in the row space of $A$ and any row $a_i$, $i \in I$, can be expressed as $a^\top_i = \sum_{j=1}^k \lambda_{ij}a_j^\top$ for $\lambda_{ij} \in \reals$.
 	
-	For $y \in Q$ and $i \in I$, we have $a_i^\top y = \sum_{j=1}^k \lambda_{ij}a_j^\top y = \sum_{j=1}^k \lambda_{ij}b_{j} = b_i$, which implies that $y \in P$ and that $Q \subset P$. Consequently, $P = Q$. \qedhere			
+	For $y \in Q$ and $i \in I$, we have $a_i^\top y = \sum_{j=1}^k \lambda_{ij}a_j^\top y = \sum_{j=1}^k \lambda_{ij}b_{j} = b_i$, as the linear dependence that holds among the rows of $A$ must hold among components of $b$ as well. Otherwise $P$ would be empty. This implies that $y \in P$ and that $Q \subset P$. Consequently, $P = Q$. \qedhere			
 \end{proof}
 
 Theorem \ref{p1c3:thm:red_const} implies that any linear programming problem in standard form can be reduced to an equivalent problem with linearly independent constraints. It turns out that, in practice, most professional-grade solvers (i.e., software that implements solution methods and can be used to find optimal solutions to mathematical programming models) have \emph{preprocessing} routines to remove redundant constraints. This means that the problem is automatically treated to become smaller by not incorporating unnecessary constraints. 
@@ -302,7 +302,7 @@ We are now ready to pose the result that utilises Definition \ref{p1c3:def:line_
 \end{theorem}	 
 
 \begin{proof}
-We start with $(2) \Rightarrow (1)$, i.e., if $P$ does not contain a line, then it must have a basic feasible solution and thus, cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}, an extreme point. Let $x \in \reals^n$ be an element of $P$ and let $I = \braces{i : a_i^\top x = b_is}$. If $n$ of the vectors $a_i$, $i \in I$, are linearly independent, then $x$ is a basic feasible solution, cf. Definition \ref{p1c2:def:basic_feasible_solution}. 
+We start with $(2) \Rightarrow (1)$, i.e., if $P$ does not contain a line, then it must have a basic feasible solution and thus, cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}, an extreme point. Let $x \in \reals^n$ be an element of $P$ and let $I = \braces{i : a_i^\top x = b_i}$. If $n$ of the vectors $a_i$, $i \in I$, are linearly independent, then $x$ is a basic feasible solution, cf. Definition \ref{p1c2:def:basic_feasible_solution}. 
 
 If less than $n$ vectors are linearly independent, then all vectors $a_i$, $i \in I$, lie in a proper subspace of $\reals^n$ and, consequently, there exists a nonzero vector $d \in \reals^n$ such that $a_i^\top d = 0$ for every $i \in I$. Consider the line consisting of all points of the form $y = x + \lambda d$, with $\lambda \in \reals$. For $i \in I$, we have that 
 	$$
@@ -316,7 +316,7 @@ If less than $n$ vectors are linearly independent, then all vectors $a_i$, $i \i
 	
 	To show that $(1) \Rightarrow (3)$, we simply need to notice that if $P$ has an extreme point $x$, then it is also a basic feasible solution (cf. Theorem \ref{p1c2:thm:BFS_vertex_extreme_point}) and there are $n$ active constraints corresponding to $\braces{a_i}_{i \in I}$ linearly independent vectors.
 
-	Finally, let us show that $(3) \Rightarrow (2)$ by contradiction. Assume, without loss of generality, that $a_1, \dots, a_n$ are the $n$ linearly independent vectors. Suppose that $P$ contains a line $x + \lambda d$ where $d \neq 0$. Therefore, we have that $a_i^\top x \ge b_i$, for all $i = 1, \dots, m$ and for any $\lambda$. The only way this is possible is if $a_i^\top d =0$ for all $i = 1, \dots, m$, which implies that $d=0$, reaching a contradiction that establishes that $P$ does not contain a line.
+	Finally, let us show that $(3) \Rightarrow (2)$ by contradiction. Assume, without loss of generality, that $a_1, \dots, a_n$ are the $n$ linearly independent vectors. Suppose that $P$ contains a line $x + \lambda d$ where $d \neq 0$. Therefore, we have that $a_i^\top (x+\lambda d) \ge b_i$, for all $i = 1, \dots, m$ and for any $\lambda$. The only way this is possible is if $a_i^\top d =0$ for all $i = 1, \dots, m$. But since $\braces{a_i}_{i=1}^m$ are LI in $\reals^n$, only $d$ orthogonal to all of them is $d=0$, reaching a contradiction that establishes that $P$ does not contain a line.
 \end{proof}
 
 
@@ -335,7 +335,11 @@ We are now to state the result that proves the intuition we had when analysing t
 \begin{proof}
 	Let $Q = \braces{x \in \reals^n : Ax \geq b, c^\top x = z}$ be the (nonempty) polyhedral set of all optimal solutions. Since $Q \subset P$ and $P$ contains no line (cf. Theorem \ref{p1c3:thm:exist_extreme_point}), $Q$ contains no line either, and thus has an extreme point.
 
-	Let $\overline{x}$ be an extreme point of $Q$. By contradiction, assume that $\overline{x}$ is not an extreme point of $P$. Then, there exist $y \neq \overline{x}$, $w \neq \overline{x}$, and $\lambda \in [0,1]$ such that $\overline{x} = \lambda y + (1-\lambda)w$. Then, $c^\top \overline{x} = \lambda (c^\top y) + (1-\lambda)c^\top w$. As $c^\top \overline{x} = z$ is optimal, we have that $z \leq c^\top y$ and $z \leq c^\top w$,  and thus $z = c^\top y = c^\top w$. 
+	Let $\overline{x}$ be an extreme point of $Q$. By contradiction, assume that $\overline{x}$ is not an extreme point of $P$. Then, there exist $y \neq \overline{x}$, $w \neq \overline{x}$, and $\lambda \in [0,1]$ such that $\overline{x} = \lambda y + (1-\lambda)w$. Then, $c^\top \overline{x} = \lambda (c^\top y) + (1-\lambda)c^\top w$. As $c^\top \overline{x} = z$ is optimal, we have that $z \leq c^\top y$ and $z \leq c^\top w$. If either $z < c^\top y$ or $z < c^\top w$, we would arrive in a contradiction 
+	$$
+	z =  c^\top \overline{x} = \lambda (c^\top y) + (1-\lambda)c^\top w > \lambda z + (1-\lambda) z = z.
+	$$
+	Therefore $z = c^\top y = c^\top w$ holds. 
 	
 	Thus, $w \in Q$ and $y \in Q$, which contradicts that $\overline{x}$ is an extreme point. Thus, $\overline{x}$ must be an extreme point and, since we established that $\overline{x} \in Q$, it is also optimal. 
 \end{proof}
@@ -546,7 +550,7 @@ Theorem \ref{p1c3:thm:opt_conditions} establishes the optimality of a BFS from w
 \end{theorem}
 
 \begin{proof}
-To prove (1), assume that $\overline{c}_j \geq 0$, let $y$ be a feasible solution to $P$, and $d = y - x$. We have that $Ax = Ay = b$ and thus $Ad = 0$. Equivalently:
+To prove (1), assume that $\overline{c}_j \geq 0$, let $y$ be a feasible solution to $P$, and $d$ be a direction from $x$ to $y$ such that $d = y - x$. We have that $Ax = Ay = b$ and thus $Ad = 0$. Equivalently:
 %
 \begin{equation*}
 	B d_B + \sum_{j \in I_N}A_j d_j = 0 \Rightarrow d_B = - \sum_{j \in I_N}B^{-1}A_jd_j,
@@ -558,7 +562,7 @@ implying that
 	c^\top d = c_B^\top d_B + \sum_{j \in I_N}c_jd_j= \sum_{j \in I_N} (c_j - c_B^\top B^{-1}A_j)d_j = \sum_{j \in I_N}\overline{c}_jd_j. 
 \end{equation}
 %
-We have that $x_j = 0$ and $y_j \geq 0$	for $j \in I_N$. Thus, $d_j \geq 0$ and $\overline{c}_jd_j \geq 0$ for $j \in I_N$, which implies that $c^\top d \geq 0$ (cf. \eqref{p1c3:eq:red_cost_opt_cond}). Consequently,
+We have that $x_j = 0$ by BFS and $y_j \geq 0$ by feasibility for $j \in I_N$. Thus, $d_j \geq 0$ and $\overline{c}_jd_j \geq 0$ for $j \in I_N$, which implies that $c^\top d \geq 0$ (cf. \eqref{p1c3:eq:red_cost_opt_cond}). Consequently,
 %
 \begin{equation*}
 	c^\top d \geq 0 \Rightarrow	c^\top (y - x) \geq 0 \Rightarrow c^\top y \geq c^\top x,
