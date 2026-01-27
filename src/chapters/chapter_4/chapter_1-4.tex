@@ -435,7 +435,7 @@ We now consider the issue of converting general linear programming problems into
 Notice that this is equivalent to assuming all original problem variables (i.e., those that are not slack variables) to be initialised as zero (i.e., nonbasic) since this is a trivially available initial feasible solution. However, this approach does not work for constraints of the form $Ax \ge b$, as in this case, the transformation would take the form 
 %
 \begin{equation*}
-	Ax \geq b \Rightarrow Ax - s = b \Rightarrow Ax - s = b.	
+	Ax \geq b \Rightarrow Ax - s = b.	
 \end{equation*}
 %
 Notice that making the respective slack variable basic would yield an initial value of $-b$, making the basic solution not feasible.
@@ -510,7 +510,7 @@ In this reformulation, we make the objective function an auxiliary variable, so 
 	& x \geq 0.
 \end{align*}
 % 
-This second formulation exposes one interesting interpretation of the problem. Solving $P$ is akin to finding a set of weights $x$ that makes a convex combination (c.f. Definition \ref{p1c2:def:convex_combination_hull}) of the columns of $A$ such that it constructs (or matches) $b$ in a way that the resulting combination of the respective components of the vector $c$ is minimised. Now, let us define some nomenclature that will be useful in what follows.
+This second formulation exposes one interesting interpretation of the problem. Solving $P$ is asking to finding a set of weights $x$ that makes a convex combination (c.f. Definition \ref{p1c2:def:convex_combination_hull}) of the columns of $A$ such that it constructs (or matches) $b$ in a way that the resulting combination of the respective components of the vector $c$ is minimised. Now, let us define some nomenclature that will be useful in what follows.
 %
 \begin{definition}[$k$-dimensional simplex] \label{p1c4:def:simplex}
 	A collection of vectors $y_1, \dots, y_{k+1}$ are affinely independent if $k \leq n$ and $y_1 - y_{k+1}, \dots, y_{k} - y_{k+1}$ are linearly independent. The convex hull of $k+1$ affinely independent vectors is a $k$-dimensional simplex.

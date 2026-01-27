@@ -337,7 +337,7 @@ This bounding property can also be used as a certificate of optimality, in case 
 which, in turn, implies the optimality of $p$ (cf. Corollary \ref{p1c5:cor:weak_duality} (3)). \qedhere
 \end{proof}
 
-The proof of Theorem \ref{p1c5:thm:strong_duality} reveals something remarkable relating the simplex method and the dual variables $p$. As can be seen in \eqref{p1c5:eq:primal-dual}, for any primal feasible solution $x$, an associated dual (not necessarily) feasible solution $p$ can be immediately recovered. If the associated dual solution is also feasible, then Theorem \ref{p1c5:thm:strong_duality} guarantees that optimality ensues.
+The proof of Theorem \ref{p1c5:thm:strong_duality} reveals something remarkable relating the simplex method and the dual variables $p$. As can be seen in \eqref{p1c5:eq:primal-dual}, for any primal feasible solution $x$, an associated dual (not necessarily feasible) solution $p$ can be immediately recovered. If the associated dual solution is also feasible, then Theorem \ref{p1c5:thm:strong_duality} guarantees that optimality ensues.
 
 This means that we can interchangeably solve either a primal or a dual form of a given problem, considering aspects related to convenience and computational ease. This is particularly useful in the context of the simplex method since the prices $p$ are readily available as the algorithm progresses. In the next section, we will discuss several practical uses of this relationship in more detail. For now, let us halt this discussion for a moment and consider a geometrical interpretation of duality in the context of linear programming.
 
@@ -430,7 +430,7 @@ For nondegenerate basic feasible solutions (BFS) (i.e., $x_j > 0$, $\forall j \i
 	(c_j - p^\top A_j)x_j = 0, \text{ which yields } c_j = p^\top A_j, \, \forall j \in I_B,
 \end{equation*}
 %
-which has a unique solution $p^\top = c_B^\top B^{-1}$, as the columns $A_j$ of be are assumed to be linearly independent. In the presence of degeneracy, this is not the case anymore, typically implying that a degenerate optimal BFS will have multiple associated feasible dual variables.
+which has a unique solution $p^\top = c_B^\top B^{-1}$, as the columns $A_j$ are assumed to be linearly independent. In the presence of degeneracy, this is not the case anymore, typically implying that a degenerate optimal BFS will have multiple associated feasible dual variables.
 
 
 \subsection{Dual feasibility and optimality}
@@ -528,7 +528,7 @@ Assuming that the dual is not unbounded, the termination of the dual simplex met
 		\State {\bf initialise.} Initial basis $B$ and associated basic solution $x$.
 		\While {$x_B = B^{-1}b < 0$ for some component $i \in I_B$} \label{alg:opt_condition} 
 			\State Choose some $l$ for which $x_{B(l)} < 0$. Make $v$ the the $l^\text{th}$ row of $B^{-1}A$. 
-			\If {$u \geq 0$} \label{alg:unb_condition}
+			\If {$v \geq 0$} \label{alg:unb_condition}
 				\State {\bf return} $z = +\infty$.		
 			\Else
 				\State Form new basis $B = B \setminus \braces{l} \cup \braces{j'}$ where $j' = \arg\min_{j \in I_N : v_j < 0} \frac{\overline{c}_j}{|v_j|}$ 
