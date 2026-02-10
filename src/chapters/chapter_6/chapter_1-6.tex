@@ -450,7 +450,7 @@ The existence of extreme rays can be used to verify unboundedness in linear prog
 \begin{proof}
 	If $c^\top d < 0$, then $P$ is unbounded, since $c^\top x \rightarrow -\infty$ along $d$. Also, there exists some $x \in C$ for which $c^\top x < 0$ can be scaled to -1.
 	
-	Let $P = \braces{x \in \reals^n : a_i^\top x \geq 0, i =1,\dots,m , c^\top x = -1}$. Since $0 \in C$, $P$ has at least one extreme point $\braces{a_i}_{i=1}^m$ and thus span $\reals^n$ (cf. Theorem \ref{p1c3:thm:exist_extreme_point}). Let $d$ be one of those. As we have $n$ linearly-independent active constraints at $d$, $n-1$ of the constraints $\braces{a_i^\top x \geq 0}_{i =1}^m$ must be active (plus $c^\top x = -1$), and thus $d$ is an extreme ray.
+	Let $P = \braces{x \in \reals^n : a_i^\top x \geq 0, i =1,\dots,m , c^\top x = -1}$. Since $0 \in C$, $P$ has at least one extreme point and thus $\braces{a_i}_{i=1}^m$ span $\reals^n$ (cf. Theorem \ref{p1c3:thm:exist_extreme_point}). Let $d$ be one of those. As we have $n$ linearly-independent active constraints at $d$, $n-1$ of the constraints $\braces{a_i^\top x \geq 0}_{i =1}^m$ must be active (plus $c^\top x = -1$), and thus $d$ is an extreme ray.
 \end{proof}
 
 We can now expand the result to general polyhedral sets.
@@ -506,7 +506,7 @@ We now pose this relationship more formally via a result generally known as the 
 \begin{proof}
 	Assume that (1) is satisfied. If $p^\top A \geq 0$, then $p^\top b =$ $p^\top Ax \geq 0$, which violates (2).
 	
-	Now, consider the primal-dual pair $P : \mini\braces{0^\top x : Ax = b, x \geq 0}$ and $D : \maxi\hspace{-2pt}\braces{p^\top b : p^\top A \geq 0}$. Being $P$ infeasible, $D$ must be unbounded (instead of infeasible) since $p = 0$ is feasible for $D$. Thus, $p^\top b < 0$ for some $p \neq 0$. 	
+	Now, consider the primal-dual pair $P : \mini\braces{0^\top x : Ax = b, x \geq 0}$ and $D : \maxi\hspace{-2pt}\braces{p^\top b : p^\top A \leq 0}$. Being $P$ infeasible, $D$ must be unbounded (instead of infeasible) since $p = 0$ is feasible for $D$. Thus, there exists $\bar{p}\neq 0$ such that $\bar{p}^\top A \leq 0$ and $\bar{p}^\top b > 0$. Multiply both with $-1$ and write $p=-\bar{p}$. Now this $p$ satisfies (2). 	
 \end{proof}
 
 The Farkas' lemma has a nice geometrical interpretation that represents the mutually exclusive relationship between the two sets. For that, notice that we can think of $b$ as being a conic combination of the columns $A_j$ of $A$, for some $x \ge 0$. If that cannot be the case, then there exists a hyperplane that separates $b$ and the cone formed by the columns of $A$, $C=\braces{y \in \reals^m : y = Ax}$. This is illustrated in Figure \ref{p1c6:fig:farkas}. Notice that the separation caused by such a hyperplane with normal vector $p$ implies that $p^\top Ax \geq 0$ and $p^\top b < 0$, i.e., $Ax$ and $b$ are on the opposite sides of the hyperplane. 
